@@ -1,0 +1,528 @@
+Description,CVE_ID,label,CLBO,CLBU,CLNP,CLSF,CLOOA,CLUAF,CLCT,CLAV,CLIL,CLML,CLOBO,CLAC,CLDS,CLFR,CLTP
+(/home/seviezhou/ffmpeg/ffmpeg+0x29497f0) Shadow bytes around the buggy address: 0x100046706840: f8 f2 f2 f2 f8 f2 f2 f2 f8 f2 f2 f2 f8 f2 f2 f2 0x100046706850: f8 f2 f2 f2 f8 f2 f2 f2 f8 f2 f2 f2 f8 f2 f2 f2 0x100046706860: f8 f8 f2 f2 f8 f8 f2 f2 f8 f8 f2 f2 f8 f8 f2 f2 0x100046706870: f8 f8 f2 f2 f8 f8 f2 f2 f8 f8 f2 f2 f8 f8 f2 f2 0x100046706880: f8 f8 f2 f2 f8 f8 f2 f2 04 f2 00 00 00 00 00 00 =>0x100046706890: 00 00 00 00 00 00 00 00 f2 f2[f2]f2 07 f3 f3 f3 0x1000467068a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0x1000467068b0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0x1000467068c0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0x1000467068d0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0x1000467068e0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00,CVE-2020-24995,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"> [ 1 - libavformat/http.c ] > > After executing of http_read_stream we read each http header, where we > pass ""Transfer-Encoding: chunked.",CVE-2016-10192,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+> [ 2 - libavformat/rtmppkt.c ] > > Issue is connected with buffer overflow on the heap in RTMP protocol.,CVE-2016-10191,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+> [ 3 - ffserver.c ] > > This issue is completely like the first one and it results in heap overflow.,CVE-2016-10192,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"> After a bit of reverse engineering of RTMP protocol you can notice > that it uses chunk (of max 0x80 bytes) to _transfer_ data, but chunks > of more size could be used to _store_ the data.",CVE-2016-10191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A denial of service in the subtitle decoder in FFmpeg 3.2 and 4.1 allows attackers to hog the CPU via a crafted video file in Matroska format, because handle_open_brace in libavcodec/htmlsubtitles.c has a complex format argument to sscanf.",CVE-2019-9721,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"A heap-based Buffer Overflow vulnerability exists in FFmpeg 4.2 at libavfilter/vf_colorconstancy.c: in slice_get_derivative, which crossfade_samples_fltp, which might lead to memory corruption and other potential consequences.",CVE-2020-22029_,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+aa_read_header in libavformat/aadec.c in FFmpeg before 3.2.14 and 4.x before 4.1.4 does not check for sscanf failure and consequently allows use of uninitialized variables.,CVE-2019-12730,3,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Added one additional check for SampleEncryptionEntry (probably overkill).,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added one additional check for SampleEncryptionEntry (probably overkill).,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added one additional check for SampleEncryptionEntry (probably overkill).,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Added one additional check for SampleEncryptionEntry (probably overkill).,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.",CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.",CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.",CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.",CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Affected package: ffmpeg Affected versions: <= 3.3.4 FFmpeg could read out of bounds of buffer when it parsing an craft mp4 file.,CVE-2017-15672,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Also evaluated other box_definition.cc vector resize() calls.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Also evaluated other box_definition.cc vector resize() calls.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Also evaluated other box_definition.cc vector resize() calls.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Also evaluated other box_definition.cc vector resize() calls.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Also use the alpha image stride when copying the alpha plane, because it technically doesn't have to be the same as the image stride.",CVE-2015-1224,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An improper integer type in the mpeg4_encode_gop_header function in libavcodec/mpeg4videoenc.c in FFmpeg 2.8 and 4.0 may trigger an assertion violation while converting a crafted AVI file to MPEG4, leading to a denial of service.",CVE-2018-12458,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"An inconsistent bits-per-sample value in the ff_mpeg4_decode_picture_header function in libavcodec/mpeg4videodec.c in FFmpeg 4.0 may trigger an assertion violation while converting a crafted AVI file to MPEG4, leading to a denial of service.",CVE-2018-12459,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.",CVE-2017-5048,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.",CVE-2017-5048,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.",CVE-2017-5048,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.",CVE-2017-5048,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.",CVE-2017-5048,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"As a result, the variable ""item_num"" turns negative, bypassing the check for a large value.",CVE-2017-14169,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+As well as similar hypothetical attacks.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/ac3_parser: Check init_get_bits8() for failure.,CVE-2018-13303,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/alac: Clear pointers in allocate_buffers().,CVE-2015-6823,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/ansi: Check dimensions.,CVE-2016-7562,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/apedec: Fix integer overflow.,CVE-2017-11399,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/cavsdsp: use av_clip_uint8() for idct.,CVE-2016-7502,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/cbs_jpeg: Check length for SOS.,CVE-2020-12284,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/cdxl: Check format for BGR24.,CVE-2017-9996,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/dfa: Fix off by 1 error.,CVE-2017-9992,3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+avcodec/dnxhd_parser: Do not return invalid value from dnxhd_find_frame_end() on error.,CVE-2017-9608,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/dnxhddec: Move mb height check out of non hr branch.,CVE-2017-11719,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/exr: Check tile positions.,CVE-2016-6920,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/faxcompr: Add missing runs check in decode_uncompressed().,CVE-2015-8218,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/g726: Add missing ADDB output mask.,CVE-2016-7450,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/gif: Fix lzw buffer size.,CVE-2016-2330,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/h264: Clear delayed_pic on deallocation.,CVE-2015-3417,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/h264_slice: Limit max_contexts when slice_context_count is initialized.,CVE-2015-8661,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/h2645_parse: zero initialize the rbsp buffer.,CVE-2019-15942,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/hevc_ps: Check chroma_format_idc.,CVE-2015-8217,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/hevcdec: Avoid only partly skiping duplicate first slices.,CVE-2019-11338,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/htmlsubtitles: Fixes denial of service due to use of sscanf in inner loop for handling braces.,CVE-2019-9721,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avcodec/htmlsubtitles: Fixes denial of service due to use of sscanf in inner loop for tag scaning.,CVE-2019-9718,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avcodec/idctdsp: Transmit studio_profile to init instead of using AVC odecContext profile.,CVE-2018-12460,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/ivi: Check image dimensions.,CVE-2015-8364,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/jpeg2000dec: Clip all tile coordinates.,CVE-2015-8219,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/jpeg2000dec: More completely check cdef.,CVE-2016-2213,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/jpeg2000dwt: Check ndeclevels before calling dwt_decode*().,CVE-2015-8662,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mjpegdec: Check index in ljpeg_decode_yuv_scan() before using it.,CVE-2015-8216,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mjpegdec: Check number of components for JPEG-LS.,CVE-2015-1872,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mjpegdec: Fix small picture upscale.,CVE-2015-6819,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mpeg4videodec: Check for bitstream end in read_quant_matrix_ext().,CVE-2018-1999015,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mpeg4videodec: Check idx in mpeg4_decode_studio_block().,CVE-2019-11339,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mpeg4videodec: Check read profile before setting it.,CVE-2018-13301,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mpeg4videodec: Clear bits_per_raw_sample if it has originated from a previous instance.,CVE-2018-12459,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mpeg4videodec: Remove use of FF_PROFILE_MPEG4_SIMPLE_STUDIO as indicator of studio profile.,CVE-2018-13304,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mpeg4videoenc: Use 64 bit for times in mpeg4_encode_gop_header().,CVE-2018-12458,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/mpegvideo: Clear pointers in ff_mpv_common_init().,CVE-2015-6821,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/msrledec: avcodec/msrledec: restructure msrle_decode_pal4() based on the line number instead of the pixel pointer.,CVE-2015-3395,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/pictordec: Fix logic error.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/pngdec: Check trns more completely.,CVE-2017-7863,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/pngdec: Fix off by 1 size in decode_zbuf().,CVE-2017-7866,3,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+avcodec/pngdec: Only allow one IHDR chunk: Multiple IHDR chunks are forbidden in PNG.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"avcodec/pthread_frame: clear priv_data, avoid stale pointer in error case.",CVE-2015-6825,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/sanm: Reset sizes in destroy_buffers().,CVE-2015-6822,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/scpr: Check y in first line loop in decompress_i().,CVE-2017-9995,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/scpr: Check y in first line loop in decompress_i().,CVE-2017-9995,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/smacker: Check that the data size is a multiple of a sample vector.,CVE-2015-8365,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/tiff: Check subsample & rps values more completely,CVE-2016-2329,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/utils: Clear dimensions in ff_get_buffer() on failure.,CVE-2015-8663,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/utils: correct align value for interplay.,CVE-2017-7865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/utvideodec: Add several out of array read related checks.,CVE-2018-6912_,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+avcodec/utvideodec: Check subsample factors.,CVE-2018-7557,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/utvideodec: Fix bytes left check in decode_frame().,CVE-2018-6621,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/vc1_block: Fix mqaunt check for negative values,CVE-2018-13305,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/vp8: Do not use num_coeff_partitions in thread/buffer setup: The variable is not a constant and can lead to race conditions,CVE-2015-6761,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/vqavideo: Set video size.,CVE-2019-17542,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/webp: Always set pix_fmt.,CVE-2017-9994,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/x86/mpegvideodsp: Fix signedness bug in need_emu.,CVE-2017-17081,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avcodec/xwddec: Check bpp more completely.,CVE-2017-9991,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/aadec: Check for scanf() failure.,CVE-2019-12730,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/asfdec: Fix DoS due to lack of eof check.,CVE-2017-14057,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avformat/asfdec_o: Check size_bmp more fully.,CVE-2018-1999011,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/asfenc: Check pts.,CVE-2016-2326,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/avidec: Check nb_streams in read_gab2_sub().,CVE-2016-7905,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/avidec: Fix infinite loop in avi_read_nikon().,CVE-2016-7122,3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+avformat/avidec: Fix memleak with dv in avi.,CVE-2016-7555,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/avidec: Remove ancient assert.,CVE-2016-7785,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/cinedec: Fix DoS due to lack of eof check.,CVE-2017-14059,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avformat/flvenc: Check audio packet size.,CVE-2018-15822,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/hls: Check local file extensions.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/hls: Fix DoS due to infinite loop.,CVE-2017-14058,3,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+avformat/mms: Add missing chunksize check.,CVE-2018-1999010,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/mov: Check sample size.,CVE-2016-6164,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/movenc: Check input sample count.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/movenc: Check that frame_types other than EAC3_FRAME_TYPE_INDEPENDENT have a supported substream id.,CVE-2018-13302,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/movenc: Do not pass AVCodecParameters in avpriv_request_sample.,CVE-2018-13300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/movenc: Write version 2 of audio atom if channels is not known.,CVE-2018-14395,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/mvdec: Fix DoS due to lack of eof check.,CVE-2017-14055,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avformat/mxfdec: Fix av_log context.,CVE-2018-1999014,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/mxfdec: Fix Sign error in mxf_read_primer_pack().,CVE-2017-14169,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/nsvdec: Fix DoS due to lack of eof check in nsvs_file_offset loop.,CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avformat/nsvdec: Fix DoS due to lack of eof check in nsvs_file_offset loop.,CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avformat/pva: Check for EOF before retrying in read_part_of_packet().,CVE-2018-1999012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/rl2: Fix DoS due to lack of eof check.,CVE-2017-14056,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avformat/rmdec: Do not pass mime type in rm_read_multi() to ff_rm_read_mdpr_codecdata().,CVE-2018-1999013,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/rmdec: Fix DoS due to lack of eof check.,CVE-2017-14054,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+avformat/rtmppkt: Check for packet size mismatches.,CVE-2016-10191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/rtpdec_h264: Fix heap-buffer-overflow.,CVE-2017-14767,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+avformat/vividas: improve extradata packing checks in track_header().,CVE-2020-35964_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Avoids leaving stale pointers.,CVE-2015-6826,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Because size of packet > is not checked that it is the same as it was in the same transmission > you can first send packet with smaller size and then bigger size, and > this results in heap-overflow[1].",CVE-2016-10191,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+blank,CVE-2017-15672,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+block_cmp() in libavcodec/zmbvenc.c in FFmpeg 4.1.3 has a heap-based buffer over-read.,CVE-2019-13312,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Boxes with various sub-entries read the entry count from the user provided mp4.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Boxes with various sub-entries read the entry count from the user provided mp4.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Boxes with various sub-entries read the entry count from the user provided mp4.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Boxes with various sub-entries read the entry count from the user provided mp4.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Browse to sample file (mov_read_default_int_underflow.mp4) and debug ffmpegsumo!mov_read_default to observe behaviour What is the expected behavior?,CVE-2015-1208,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Buffer overflow vulnerability in sniff_channel_order function in aacdec_template.c in ffmpeg 3.1.2, allows attackers to execute arbitrary code (local).",CVE-2020-24995,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+But files with sensitive information like private keys and passwords generally do not use common multimedia filename extensions.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+But such solutions are fragile and tricky to implement portably and would not stop every possible attack nor would they work with all valid hls files.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"But when using this structure in read_header() of libavcodec/ffv1dec.c, It will minus a bigger ?????trailer????? than ?????buf_size????? to read ?????size????? through AV_RB24().",CVE-2017-15672,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+cbs_jpeg_split_fragment in libavcodec/cbs_jpeg.c in FFmpeg 4.1 and 4.2.2 has a heap-based buffer overflow during JPEG_MARKER_SOS handling because of a missing length check.,CVE-2020-12284,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check for duplicate SIZ marker.,CVE-2015-8363,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check for size_t and vector resize() overflow to avoid OOB writes in vector allocation.,CVE-2017-5048,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Check for size_t and vector resize() overflow to avoid OOB writes in vector allocation.,CVE-2017-5048,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Check for size_t and vector resize() overflow to avoid OOB writes in vector allocation.,CVE-2017-5048,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Check for size_t and vector resize() overflow to avoid OOB writes in vector allocation.,CVE-2017-5048,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+check segment duration value of EXTINF.,CVE-2020-13904,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+check that the element type matches before applying SBR.,CVE-2015-6820,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check ymin vs. h.,CVE-2020-35965_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check ymin vs. h. Fixes: out of array access.,CVE-2020-35965_,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Clear pointers in ff_rv34_decode_init_thread_copy().,CVE-2015-6826,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crash Address: 0x60c000000520.,CVE-2017-7865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crash Address: 0x61000000047a.,CVE-2017-7863,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crash Address: 0x7f77cbd4ca6f.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crash Address: 0x7fc58f2a0500.,CVE-2017-7866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crash Address: Crash State: vp3_h_loop_filter_c apply_loop_filter vp3_decode_frame,CVE-2015-8480,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crash State: decode_frame avcodec_decode_video2 _start.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Crash State: decode_frame_common, decode_frame_png, avcodec_decode_video2.",CVE-2017-7863,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Crash State: decode_zbuf, decode_text_chunk, decode_frame_common.",CVE-2017-7866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Crash State: ipvideo_decode_block_opcode_0xA, ipvideo_decode_opcodes, ipvideo_decode_frame.",CVE-2017-7865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Crash Type: Heap-buffer-overflow WRITE {*}.,CVE-2017-7862,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Crash Type: Heap-buffer-overflow WRITE 1.,CVE-2017-7863,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Crash Type: Heap-buffer-overflow WRITE 1.,CVE-2017-7863,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Crash Type: Stack-buffer-overflow WRITE 1.,CVE-2017-7866,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Crash Type: Use-of-uninitialized-value.,CVE-2015-8480,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+decode_frame in libavcodec/exr.c in FFmpeg 4.3.1 has an out-of-bounds write because of errors in calculations of when to perform memset zero operations.,CVE-2020-35965_,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Description Summary of the bug.,CVE-2020-20453,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Developers have expressed their dislike / objected to disabling hls by default as well as disabling hls with local files.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Do not trust the counts.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Do not trust the counts.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Do not trust the counts.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Do not trust the counts.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Due to incorrect use of strtoll function > and integer sizes (chunk_size in int64_t)[2], it was possible to pass > negative chunk_size in chunk encoding, so after computing final size > using FFMIN function later on it would be passed as argument to > avio_read function.",CVE-2016-10192,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Failure to verify causes total_size > atom.size which will result in negative size calculations later on.,CVE-2015-1208,3,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+FFmpeg <=4.3 contains a buffer overflow vulnerability in libavcodec through a crafted file that may lead to remote code execution.,CVE-2021-30123,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"FFmpeg 2.8 and 4.2.3 has a use-after-free via a crafted EXTINF duration in an m3u8 file because parse_playlist in libavformat/hls.c frees a pointer, and later that pointer is accessed in av_probe_input_format3 in libavformat/format.c.",CVE-2020-13904,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"FFmpeg 4.2 is affected by a Divide By Zero issue via libavcodec/aaccoder, which allows a remote malicious user to cause a Denial of Service",CVE-2020-20453,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"FFmpeg before 2.8.12, 3.0.x and 3.1.x before 3.1.9, 3.2.x before 3.2.6, and 3.3.x before 3.3.2 does not properly restrict HTTP Live Streaming filename extensions and demuxer names, which allows attackers to read arbitrary files via crafted playlist data.",CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FFmpeg before 2017-01-23 has an out-of-bounds write caused by a stack-based buffer overflow related to the decode_zbuf function in libavcodec/pngdec.c.,CVE-2017-7866,3,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+FFmpeg before 2017-01-24 has an out-of-bounds write caused by a heap-based buffer overflow related to the ipvideo_decode_block_opcode_0xA function in libavcodec/interplayvideo.c and the avcodec_align_dimensions2 function in libavcodec/utils.c.,CVE-2017-7865,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FFmpeg before 2017-02-04 has an out-of-bounds write caused by a heap-based buffer overflow related to the decode_frame_common function in libavcodec/pngdec.c.,CVE-2017-7863,3,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+FFmpeg before 2017-02-07 has an out-of-bounds write caused by a heap-based buffer overflow related to the decode_frame function in libavcodec/pictordec.c.,CVE-2017-7862,3,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+FFmpeg before 4.2 has a heap-based buffer overflow in vqa_decode_chunk because of an out-of-array access in vqa_decode_init in libavcodec/vqavideo.c.,CVE-2019-17542,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FFmpeg before commit 2b46ebdbff1d8dec7a3d8ea280a612b91a582869 contains a Buffer Overflow vulnerability in asf_o format demuxer that can result in heap-buffer-overflow that may result in remote code execution.,CVE-2018-1999011,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+FFmpeg before commit 5aba5b89d0b1d73164d3b81764828bb8b20ff32a contains an out of array read vulnerability in ASF_F format demuxer that can result in heap memory reading.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+FFmpeg before commit 9807d3976be0e92e4ece3b4b1701be894cd7c2e1 contains a CWE-835: Infinite loop vulnerability in pva format demuxer that can result in a Vulnerability that allows attackers to consume excessive amount of resources like CPU and RAM.,CVE-2018-1999012,3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+FFmpeg before commit a7e032a277452366771951e29fd0bf2bd5c029f0 contains a use-after-free vulnerability in the realmedia demuxer that can result in vulnerability allows attacker to read heap memory.,CVE-2018-1999013,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+FFmpeg before commit bab0716c7f4793ec42e05a5aa7e80d82a0dd4e75 contains an out of array access vulnerability in MXF format demuxer that can result in DoS.,CVE-2018-1999014,3,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+FFmpeg before commit cced03dd667a5df6df8fd40d8de0bff477ee02e8 contains multiple out of array access vulnerabilities in the mms protocol that can result in attackers accessing out of bound data.,CVE-2018-1999010,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+"FFmpeg through 4.2 has a ""Conditional jump or move depends on uninitialised value"" issue in h2645_parse because alloc_rbsp_buffer in libavcodec/h2645_parse.c mishandles rbsp_buffer.",CVE-2019-15942,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ffserver: Check chunk size.,CVE-2016-10192,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix overheads in gauss array.,CVE-2020-22029_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fix ticket: 8673. set the default EXTINF duration to 1ms if duration is smaller than 1ms.,CVE-2020-13904,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes Assertion n <= 31 && value < (1U << n) failed at libavcodec/put_bits.h:169.,CVE-2018-12458,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes inconsistency and out of array accesses.,CVE-2015-6818,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes integer overflow.,CVE-2016-2326,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes integer overflow.,CVE-2016-2326,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array access.,CVE-2015-6820,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array accesses.,CVE-2015-1872,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes out of array read.,CVE-2016-2213,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes truncation.,CVE-2018-12458,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes use of freed memory.,CVE-2015-3417,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Fixes use of uninitialized memory.,CVE-2015-6824,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 13500/clusterfuzz-testcase-minimized-ffmpeg_AV_CODEC_ID_MPEG4_fuzzer-5769760178962432.,CVE-2019-11339,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 13845/clusterfuzz-testcase-minimized-ffmpeg_AV_CODEC_ID_HEVC_fuzzer-5650370728034304.,CVE-2019-11338,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 13871/clusterfuzz-testcase-minimized-ffmpeg_AV_CODEC_ID_HEVC_fuzzer-5746167087890432.,CVE-2019-11338,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 15919/clusterfuzz-testcase-minimized-ffmpeg_AV_CODEC_ID_VQA_fuzzer-5657368257363968.,CVE-2019-17542,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 19353/clusterfuzz-testcase-minimized-ffmpeg_BSF_TRACE_HEADERS_fuzzer-5703944462663680.,CVE-2020-12284,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 19734/clusterfuzz-testcase-minimized-ffmpeg_BSF_TRACE_HEADERS_fuzzer-5673507031875584.,CVE-2020-12284,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 20170829B.mxf.,CVE-2017-14169,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 26622/clusterfuzz-testcase-minimized-ffmpeg_dem_VIVIDAS_fuzzer-6581200338288640.,CVE-2020-35964_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: 3516/attachment-311488.dat.,CVE-2017-17081,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: assert_flvenc.c:941_1.swf.,CVE-2018-15822,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: assertion failure.,CVE-2018-12459,3,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Fixes: Assertion failure.,CVE-2018-12459,3,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Fixes: blank.aa.,CVE-2019-12730,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: case5_av_frame_copy_props.mp4.,CVE-2015-3417,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: CVE-2020-20453.,CVE-2020-20453,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: division by 0.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: division by 0.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: ffmpeg_bof_1.avi.,CVE-2018-13302,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: ffmpeg_crash_2.avi.,CVE-2018-12458,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: ffmpeg_crash_3.avi.,CVE-2018-12460,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: ffmpeg_crash_5.avi.,CVE-2018-12459,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: ffmpeg_crash_6.avi.,CVE-2018-13303,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: ffmpeg_crash_7.avi.,CVE-2018-13301,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: ffmpeg_crash_8.avi.,CVE-2018-13300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_1108_1.ogg.,CVE-2018-14395,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_1108_2.ogg.,CVE-2018-14395,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_1108_3.wav.,CVE-2018-14395,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_199_1.wav.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_199_2.wav.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_199_3.wav.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_199_4.wav.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_199_5.wav.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_199_6.wav.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: fpe_movenc.c_199_7.wav.,CVE-2018-14394,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: heap_poc.,CVE-2018-7557,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: Infinite loop.,CVE-2018-1999012,3,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Fixes: integer overflow and out of array access.,CVE-2018-1999011,3,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0
+Fixes: kira-poc.,CVE-2018-7751,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: loop.asf.,CVE-2017-14057,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: loop.cine.,CVE-2017-14059,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: loop.ivr.,CVE-2017-14054,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: loop.m3u.,CVE-2017-14058,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: loop.mv.,CVE-2017-14055,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: loop.rl2.,CVE-2017-14056,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: NULL pointer dereference and out of array access.,CVE-2019-11338,3,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: Null pointer dereference.,CVE-2017-9608,3,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: null pointer dereference.,CVE-2017-9608,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: null pointer dereference.,CVE-2017-9608,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: null pointer dereference.,CVE-2017-9608,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: Out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: Out of array access.,CVE-2017-9995,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array accesses.,CVE-2020-35964_,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array read.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array read.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array read.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array read.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array read.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: out of array read.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: Out of array read.,CVE-2018-1999015,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixes: PoC.ape and others.,CVE-2017-11399,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: poc.dnxhd.,CVE-2017-11719,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: poc.mp4.,CVE-2018-6392,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: rtp_sdp/poc.sdp.,CVE-2017-14767,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: Ticket8003.,CVE-2020-20453,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fixes: use after free().,CVE-2018-1999013,3,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Fixes: use of uninitialized variables.,CVE-2019-12730,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"framework, which could result in denial of service or potentially the execution of arbitrary code if malformed files/streams are processed.",CVE-2018-15822,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Fuzz target binary: ffmpeg_VIDEO_AV_CODEC_ID_INTERPLAY_VIDEO_fuzzer.,CVE-2017-7865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fuzz target binary: ffmpeg_VIDEO_AV_CODEC_ID_PNG_fuzzer.,CVE-2017-7866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fuzzer: ffmpeg_VIDEO_AV_CODEC_ID_PICTOR_fuzzer.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fuzzer: ffmpeg_VIDEO_AV_CODEC_ID_PNG_fuzzer.,CVE-2017-7863,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fuzzer: Inferno_layout_test_unmodified.,CVE-2015-8480,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fuzzer: libFuzzer_ffmpeg_VIDEO_AV_CODEC_ID_INTERPLAY_VIDEO_fuzzer.,CVE-2017-7865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fuzzer: libFuzzer_ffmpeg_VIDEO_AV_CODEC_ID_PNG_fuzzer.,CVE-2017-7866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+h264dec: handle zero-sized NAL units in get_last_needed_nal().,CVE-2017-1000460,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"header, and we come into > http_buf_read function [1].",CVE-2016-10192,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Heap-based buffer overflow in ffserver.c in FFmpeg before 2.8.10, 3.0.x before 3.0.5, 3.1.x before 3.1.6, and 3.2.x before 3.2.2 allows remote attackers to execute arbitrary code by leveraging failure to check chunk size.",CVE-2016-10192,3,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"Heap-based buffer overflow in libavformat/rtmppkt.c in FFmpeg before 2.8.10, 3.0.x before 3.0.5, 3.1.x before 3.1.6, and 3.2.x before 3.2.2 allows remote attackers to execute arbitrary code by leveraging failure to check for RTMP packet size mismatches.",CVE-2016-10191,3,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Heap-based buffer overflow in the decode_block function in libavcodec/exr.c in FFmpeg before 3.1.3 allows remote attackers to cause a denial of service (application crash) via vectors involving tile positions.,CVE-2016-6920,3,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+"Heap-based buffer overflow in the decode_dds1 function in libavcodec/dfa.c in FFmpeg before 2.8.12, 3.0.x before 3.0.8, 3.1.x before 3.1.8, 3.2.x before 3.2.5, and 3.3.x before 3.3.1 allows remote attackers to cause a denial of service (application crash) or possibly have unspecified other impact via a crafted file.",CVE-2017-9992,3,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+"Heap-based buffer overflow in the xwd_decode_frame function in libavcodec/xwddec.c in FFmpeg before 2.8.12, 3.0.x before 3.0.8, 3.1.x before 3.1.8, 3.2.x before 3.2.5, and 3.3.x before 3.3.1 allows remote attackers to cause a denial of service (application crash) or possibly have unspecified other impact via a crafted file.",CVE-2017-9991,3,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+How to reproduce: % ffmpeg_g -t 2 -y -r 38 -i $PoC -filter_complex greyedge -target dv -loglevel 99 -map 0 -c:v:102 sgi -disposition:a:131 pam -disposition:s:1 vc2 -r 100 -ab 579k -ar 48000 tmp.avs2 ffmpeg version N-95314-g1331e00179 Copyright (c) 2000-2019 the FFmpeg developers built with clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final) configuration: --cc=clang --cxx=clang++ --ld=clang --enable-debug --toolchain=clang-asan Here's ASAN log,CVE-2020-22029_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+How to reproduce: % ffmpeg_g -t 2 -y -r 38 -i $PoC -filter_complex greyedge -target dv -loglevel 99 -map 0 -c:v:102 sgi -disposition:a:131 pam -disposition:s:1 vc2 -r 100 -ab 579k -ar 48000 tmp.avs2 ffmpeg version N-95314-g1331e00179 Copyright (c) 2000-2019 the FFmpeg developers built with clang version 6.0.0-1ubuntu2 (tags/RELEASE_600/final) configuration: --cc=clang --cxx=clang++ --ld=clang --enable-debug --toolchain=clang-asan Here's ASAN log,CVE-2020-22029_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+How to reproduce: % ffmpeg_g -y -r 14 -i tmp.wmv -map 0 -c:v:14 mpeg1video -c:v zmbv -disposition:s:19 v210 -disposition:s flv -aframes 10 -ab 45 -ac 9 -b:v 292k -strict 1 tmp_.mov ffmpeg version N-94185-gca576833e4 Copyright (c) 2000-2019 the FFmpeg developers built with clang version 9.0.0,CVE-2020-20453,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"I compiled ffmpeg with ""--toolchain=clang-asan"" to check the memory corruption and attached log file.",CVE-2020-22029_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"I compiled ffmpeg with ""--toolchain=clang-asan"" to check the memory corruption and attached log file.",CVE-2020-22029_,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+If you can align chunks right you can > achieve write-what-where condition and that results in RCE.,CVE-2016-10191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In FFmpeg 2.4 and 3.3.3, the read_data function in libavformat/hls.c does not restrict reload attempts for an insufficient list, which allows remote attackers to cause a denial of service (infinite loop).",CVE-2017-14058,3,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+"In FFmpeg 3.2 and 4.0.1, an improper argument (AVCodecParameters) passed to the avpriv_request_sample function in the handle_eac3 function in libavformat/movenc.c may trigger an out-of-array read while converting a crafted AVI file to MPEG4, leading to a denial of service and possibly an information disclosure.",CVE-2018-13300,3,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+"In FFmpeg 3.2 and 4.1, a denial of service in the subtitle decoder allows attackers to hog the CPU via a crafted video file in Matroska format, because ff_htmlmarkup_to_ass in libavcodec/htmlsubtitles.c has a complex format argument to sscanf.",CVE-2019-9718,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In FFmpeg 3.3.3, a DoS in asf_read_marker() due to lack of an EOF (End of File) check might cause huge CPU and memory consumption.",CVE-2017-14057,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In FFmpeg 3.3.3, a DoS in cine_read_header() due to lack of an EOF check might cause huge CPU and memory consumption.",CVE-2017-14059,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In FFmpeg 4.0.1, a missing check for failure of a call to init_get_bits8() in the avpriv_ac3_parse_header function in libavcodec/ac3_parser.c may trigger a NULL pointer dereference while converting a crafted AVI file to MPEG4, leading to a denial of service.",CVE-2018-13303,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In FFmpeg 4.0.1, due to a missing check for negative values of the mquant variable, the vc1_put_blocks_clamped function in libavcodec/vc1_block.c may trigger an out-of-array access while converting a crafted AVI file to MPEG4, leading to an information disclosure or a denial of service.",CVE-2018-13305,3,0,0,1,0,0,0,0,0,0,0,0,0,1,1,0
+"In FFmpeg 4.0.1, due to a missing check of a profile value before setting it, the ff_mpeg4_decode_picture_header function in libavcodec/mpeg4videodec.c may trigger a NULL pointer dereference while converting a crafted AVI file to MPEG4, leading to a denial of service.",CVE-2018-13301,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In FFmpeg 4.0.1, improper handling of frame types (other than EAC3_FRAME_TYPE_INDEPENDENT) that have multiple independent substreams in the handle_eac3 function in libavformat/movenc.c may trigger an out-of-array access while converting a crafted AVI file to MPEG4, leading to a denial of service or possibly unspecified other impact.",CVE-2018-13302,3,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+"In FFmpeg 4.1.3, there is a division by zero at adx_write_trailer in libavformat/rawenc.c.",CVE-2019-13390,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In libavcodec in FFmpeg 4.0.1, improper maintenance of the consistency between the context profile field and studio_profile in libavcodec may trigger an assertion failure while converting a crafted AVI file to MPEG4, leading to a denial of service, related to error_resilience.c, h263dec.c, and mpeg4videodec.c.",CVE-2018-13304,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In libavformat/mvdec.c in FFmpeg 3.3.3, a DoS in mv_read_header() due to lack of an EOF (End of File) check might cause huge CPU and memory consumption.",CVE-2017-14055,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+"In libavformat/mxfdec.c in FFmpeg 3.3.3 -> 2.4, a DoS in mxf_read_index_entry_array() due to lack of an EOF (End of File) check might cause huge CPU consumption.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In libavformat/nsvdec.c in FFmpeg 2.4 and 3.3.3, a DoS in nsv_parse_NSVf_header() due to lack of an EOF (End of File) check might cause huge CPU consumption.",CVE-2017-14171,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In libavformat/rl2.c in FFmpeg 3.3.3, a DoS in rl2_read_header() due to lack of an EOF (End of File) check might cause huge CPU and memory consumption.",CVE-2017-14056,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In libavformat/rmdec.c in FFmpeg 3.3.3, a DoS in ivr_read_header() due to lack of an EOF (End of File) check might cause huge CPU consumption.",CVE-2017-14054,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"In line libavcodec/h264dec.c:500 in libav(v13_dev0), ffmpeg(n3.4), chromium(56 prior Feb 13, 2017), the return value of init_get_bits is ignored and get_ue_golomb(&gb) is called on an uninitialized get_bits context, which causes a NULL deref exception.",CVE-2017-1000460,3,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"In the mxf_read_primer_pack function in libavformat/mxfdec.c in FFmpeg 3.3.3 -> 2.4, an integer signedness error might occur when a crafted file, which claims a large ""item_num"" field such as 0xffffffff, is provided.",CVE-2017-14169,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+in tickets #7980 and #7994.,CVE-2019-13312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Incorrect check results in an integer underflow, which results in MOVAtoms of arbitrary sizes.",CVE-2015-1208,3,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Integer overflow in the ape_decode_frame function in libavcodec/apedec.c in FFmpeg 2.4 through 3.3.2 allows remote attackers to cause a denial of service (out-of-array access and application crash) or possibly have unspecified other impact via a crafted APE file.,CVE-2017-11399,3,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0
+Integer overflow in the asf_write_packet function in libavformat/asfenc.c in FFmpeg before 2.8.5 allows remote attackers to cause a denial of service or possibly have unspecified other impact via a crafted PTS (aka presentation timestamp) value in a .mov file.,CVE-2016-2326,3,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+"Integer overflow in the ff_ivi_init_planes function in libavcodec/ivi.c in FFmpeg before 2.6.5, 2.7.x before 2.7.3, and 2.8.x through 2.8.2 allows remote attackers to cause a denial of service (out-of-bounds heap-memory access) or possibly have unspecified other impact via crafted image dimensions in Indeo Video Interactive data.",CVE-2015-8364,3,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Integer overflow in the mov_build_index function in libavformat/mov.c in FFmpeg before 2.8.8, 3.0.x before 3.0.3 and 3.1.x before 3.1.1 allows remote attackers to have unspecified impact via vectors involving sample size.",CVE-2016-6164,3,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Issue 449958: Heap-buffer-overflow in media::CopyPlane.,CVE-2015-1224,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It can be applied stand alone or together with other solutions.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It does appear though that the exploit should be possible with any decoder.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It does not stop leaks via remote addresses in the LAN.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It prevents the existing exploit leading to an information leak.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Its easier to just avoid it and use only studio_profile.,CVE-2018-13304,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Job Type: libfuzzer_asan_ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Job Type: libfuzzer_asan_ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Job Type: libfuzzer_asan_ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Job Type: libfuzzer_asan_ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Job Type: Linux_msan_chrome.,CVE-2015-8480,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Leaks of information from files and symlinks ending in common multimedia extensions are still possible.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"libavcodec in FFmpeg 4.0 may trigger a NULL pointer dereference if the studio profile is incorrectly detected while converting a crafted AVI file to MPEG4, leading to a denial of service, related to idctdsp.c and mpegvideo.c.",CVE-2018-12460,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"libavcodec/gif.c in FFmpeg before 2.8.6 does not properly calculate a buffer size, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted .tga file, related to the gif_image_write_image, gif_encode_init, and gif_encode_close functions.",CVE-2016-2330,3,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+"libavcodec/hevcdec.c in FFmpeg 3.4 and 4.1.2 mishandles detection of duplicate first slices, which allows remote attackers to cause a denial of service (NULL pointer dereference and out-of-array access) or possibly have unspecified other impact via crafted HEVC data.",CVE-2019-11338,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"libavcodec/scpr.c in FFmpeg 3.3 before 3.3.1 does not properly validate height and width data, which allows remote attackers to cause a denial of service (heap-based buffer overflow and application crash) or possibly have unspecified other impact via a crafted file.",CVE-2017-9995,3,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+"libavcodec/tiff.c in FFmpeg before 2.8.6 does not properly validate RowsPerStrip values and YCbCr chrominance subsampling factors, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted TIFF file, related to the tiff_decode_tag and decode_frame functions.",CVE-2016-2329,3,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+"libavcodec/webp.c in FFmpeg before 2.8.12, 3.0.x before 3.0.8, 3.1.x before 3.1.8, 3.2.x before 3.2.5, and 3.3.x before 3.3.1 does not ensure that pix_fmt is set, which allows remote attackers to cause a denial of service (heap-based buffer overflow and application crash) or possibly have unspecified other impact via a crafted file, related to the vp8_decode_mb_row_no_filter and pred8x8_128_dc_8_c functions.",CVE-2017-9994,3,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+libavformat/movenc.c in FFmpeg 3.2 and 4.0.2 allows attackers to cause a denial of service (application crash caused by a divide-by-zero error) with a user crafted audio file when converting to the MOV audio format.,CVE-2018-14395,3,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+libavformat/movenc.c in FFmpeg before 4.0.2 allows attackers to cause a denial of service (application crash caused by a divide-by-zero error) with a user crafted Waveform audio file.,CVE-2018-14394,3,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+"libswscale/swscale_unscaled.c in FFmpeg before 2.8.6 does not validate certain height values, which allows remote attackers to cause a denial of service (out-of-bounds array read access) or possibly have unspecified other impact via a crafted .cine file, related to the bayer_to_rgb24_wrapper and bayer_to_yv12_wrapper functions.",CVE-2016-2328,3,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+limiting the check to local files was suggested by nevcairiel This recommits the security fix without the author name joke which was originally requested by Nicolas.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Maintaining it consistency with studio_profile is messy.,CVE-2018-13304,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+More complex solutions like checking the path to limit access to only subdirectories of the hls path may work as an alternative.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Moreover, this big loop can be invoked multiple times if there is more than one applicable data segment in the crafted MXF file.",CVE-2017-14170,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mov: Fix negative size calculation in mov_read_default().,CVE-2015-1208,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MSE: Fix moar mp4 parsing security bugs.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MSE: Fix moar mp4 parsing security bugs.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MSE: Fix moar mp4 parsing security bugs.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MSE: Fix moar mp4 parsing security bugs.,CVE-2017-5048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+MSE: Fix Mp4 SAIO parsing overflow.,CVE-2017-5051,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Multiple integer underflows in the ff_mjpeg_decode_frame function in libavcodec/mjpegdec.c in FFmpeg before 2.7.2 allow remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted MJPEG data.,CVE-2015-6819,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+No writes were ever attempted outside of the buffer.,CVE-2019-13312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Now they result in a decode error.,CVE-2015-1224,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Or to disable hls or possibly some of its feature.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Overflowing function pointer in this > structure immediately results in rip control and then code execution.,CVE-2016-10192,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Platform Id: linux.,CVE-2017-7865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Platform Id: linux.,CVE-2017-7865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Previously we would accept malformed vp8 video files that had alpha and image planes with different dimensions.,CVE-2015-1224,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Project: ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Project: ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Project: ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Project: ffmpeg.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+rawenc: Only accept the appropriate stream type for raw muxers.,CVE-2019-13390,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recommended Security Severity: High.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recommended Security Severity: High.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recommended Security Severity: High.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Recommended Security Severity: High.,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reject vp8 video having alpha and image planes of different sizes.,CVE-2015-1224,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Reported by aohe...@gmail.com on Mon, Jan 19, 2015, 3:59 AM CST link Code UserAgent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:35.0) Gecko/20100101 Firefox/35.0 Steps to reproduce the problem: 1. chrome-asan ch-bofr-copyplane.webm What is the expected behavior?",CVE-2015-1224,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reported by Liu Bingchang.,CVE-2017-16840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Revert to zero-initializing buffers for FFmpegVideoDecoder.,CVE-2015-8480,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SampleAuxiliaryInformationOffset::Parse count can take any value between 0x0 and 0xffffffff.,CVE-2017-5051,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sanitizer: address (ASAN).,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sanitizer: address (ASAN).,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sanitizer: address (ASAN).,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Sanitizer: address (ASAN).,CVE-2017-7862,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library.,CVE-2015-6818,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several security vulnerabilities were corrected in the libav multimedia library which may lead to a denial-of-service, information disclosure or the execution of arbitrary code if a malformed file is processed.",CVE-2017-14170,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several vulnerabilities have been discovered in the FFmpeg multimedia framework, which could result in denial of service or potentially the execution of arbitrary code if malformed files/streams are processed.",CVE-2018-15822,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several vulnerabilities have been discovered in the FFmpeg multimedia framework, which could result in denial of service or potentially the execution of arbitrary code if malformed files/streams are processed.",CVE-2018-15822,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several vulnerabilities have been discovered in the FFmpeg multimedia framework, which could result in denial of service or potentially the execution of arbitrary code if malformed files/streams are processed.",CVE-2018-15822,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Several vulnerabilities have been discovered in the FFmpeg multimedia framework, which could result in denial of service or potentially the execution of arbitrary code if malformed files/streams are processed.",CVE-2018-15822,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Since non-Haar wavelets need to look into pixels outside the frame, we need to pad the buffer.",CVE-2017-16840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"So it reads the front memory of ?????bytestream?????, and get an error ?????size?????.",CVE-2017-15672,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+So one still needs to add padding on the left for the first row.,CVE-2019-13312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Subject: [CVE-2017-15672]: ffmpeg: read out of bounds of buffer when it parsing an craft mp4 file.,CVE-2017-15672,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Summary of the bug.,CVE-2020-20453,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Summary of the bug.,CVE-2020-20453,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+SUMMARY: AddressSanitizer: stack-buffer-overflow.,CVE-2020-24995,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+swscale/swscale_unscaled: Fix odd height inputs for bayer_to_yv12_wrapper().,CVE-2016-2328,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+swscale/utils: Clear pix buffers.,CVE-2015-6824,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The allocate_buffers function in libavcodec/alac.c in FFmpeg before 2.7.2 does not initialize certain context data, which allows remote attackers to cause a denial of service (segmentation violation) or possibly have unspecified other impact via crafted Apple Lossless Audio Codec (ALAC) data.",CVE-2015-6823,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The avi_read_header function in libavformat/avidec.c in FFmpeg before 3.1.4 is vulnerable to memory leak when decoding an AVI file that has a crafted ""strh"" structure.",CVE-2016-7555,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The avi_read_nikon function in libavformat/avidec.c in FFmpeg before 3.1.4 is vulnerable to infinite loop when it decodes an AVI file that has a crafted 'nctg' structure.,CVE-2016-7122,3,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+The avi_read_seek function in libavformat/avidec.c in FFmpeg before 3.1.4 allows remote attackers to cause a denial of service (assert fault) via a crafted AVI file.,CVE-2016-7785,3,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+The cavs_idct8_add_c function in libavcodec/cavsdsp.c in FFmpeg before 3.1.4 is vulnerable to reading out-of-bounds memory when decoding with cavs_decode.,CVE-2016-7502,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The cdxl_decode_frame function in libavcodec/cdxl.c in FFmpeg 2.8.x before 2.8.12, 3.0.x before 3.0.8, 3.1.x before 3.1.8, 3.2.x before 3.2.5, and 3.3.x before 3.3.1 does not exclude the CHUNKY format, which allows remote attackers to cause a denial of service (heap-based buffer overflow and application crash) or possibly have unspecified other impact via a crafted file.",CVE-2017-9996,3,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+The decode_frame function in libavcodec/utvideodec.c in FFmpeg through 3.2 allows remote attackers to cause a denial of service (out of array read) via a crafted AVI file.,CVE-2018-6621,3,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0
+"The decode_ihdr_chunk function in libavcodec/pngdec.c in FFmpeg before 2.7.2 does not enforce uniqueness of the IHDR (aka image header) chunk in a PNG image, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted image with two or more of these chunks.",CVE-2015-6818,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The decode_init function in libavcodec/utvideodec.c in FFmpeg 2.8 through 3.4.2 allows remote attackers to cause a denial of service (Out of array read) via an AVI file with crafted dimensions within chroma subsampling data.,CVE-2018-7557,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The decode_init function in libavcodec/utvideodec.c in FFmpeg through 3.4.2 allows remote attackers to cause a denial of service (out of array read) via an AVI file.,CVE-2018-10001,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The decode_plane function in libavcodec/utvideodec.c in FFmpeg through 3.4.2 allows remote attackers to cause a denial of service (out of array read) via a crafted AVI file.,CVE-2018-6912_,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The decode_uncompressed function in libavcodec/faxcompr.c in FFmpeg before 2.8.2 does not validate uncompressed runs, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted CCITT FAX data.",CVE-2015-8218,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The default max iteration count of 1000 is arbitrary and ideas for a better solution are welcome.,CVE-2017-14058,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The destroy_buffers function in libavcodec/sanm.c in FFmpeg before 2.7.2 does not properly maintain height and width values in the video context, which allows remote attackers to cause a denial of service (segmentation violation and application crash) or possibly have unspecified other impact via crafted LucasArts Smush video data.",CVE-2015-6822,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The dnxhd decoder in FFmpeg before 3.2.6, and 3.3.x before 3.3.3 allows remote attackers to cause a denial of service (NULL pointer dereference) via a crafted mov file.",CVE-2017-9608,3,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0
+The dnxhd_decode_header function in libavcodec/dnxhddec.c in FFmpeg 3.0 through 3.3.2 allows remote attackers to cause a denial of service (out-of-array access) or possibly have unspecified other impact via a crafted DNxHD file.,CVE-2017-11719,3,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0
+The existing exploit depends on a specific decoder as well.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The export function in libavfilter/vf_signature.c in FFmpeg through 3.4.2 allows remote attackers to cause a denial of service (out-of-array access) or possibly have unspecified other impact via a long filename.,CVE-2018-9841,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The ff_draw_pc_font function in libavcodec/cga_data.c in FFmpeg before 3.1.4 allows remote attackers to cause a denial of service (buffer overflow) via a crafted AVI file.,CVE-2016-7562,3,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ff_dwt_decode function in libavcodec/jpeg2000dwt.c in FFmpeg before 2.8.4 does not validate the number of decomposition levels before proceeding with Discrete Wavelet Transform decoding, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted JPEG 2000 data.",CVE-2015-8662,3,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ff_frame_thread_init function in libavcodec/pthread_frame.c in FFmpeg before 2.7.2 mishandles certain memory-allocation failures, which allows remote attackers to cause a denial of service (invalid pointer access) or possibly have unspecified other impact via a crafted file, as demonstrated by an AVI file.",CVE-2015-6825,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ff_get_buffer function in libavcodec/utils.c in FFmpeg before 2.8.4 preserves width and height values after a failure, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted .mov file.",CVE-2015-8663,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ff_hevc_parse_sps function in libavcodec/hevc_ps.c in FFmpeg before 2.8.2 does not validate the Chroma Format Indicator, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted High Efficiency Video Coding (HEVC) data.",CVE-2015-8217,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+The ff_log2_16bit_c function in libavutil/intmath.h in FFmpeg before 3.1.4 is vulnerable to reading out-of-bounds memory when it decodes a malformed AIFF file.,CVE-2016-7450,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ff_mpv_common_init function in libavcodec/mpegvideo.c in FFmpeg before 2.7.2 does not properly maintain the encoding context, which allows remote attackers to cause a denial of service (invalid pointer access) or possibly have unspecified other impact via crafted MPEG data.",CVE-2015-6821,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ff_rv34_decode_init_thread_copy function in libavcodec/rv34.c in FFmpeg before 2.7.2 does not initialize certain structure members, which allows remote attackers to cause a denial of service (invalid pointer access) or possibly have unspecified other impact via crafted (1) RV30 or (2) RV40 RealVideo data.",CVE-2015-6826,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ff_sbr_apply function in libavcodec/aacsbr.c in FFmpeg before 2.7.2 does not check for a matching AAC frame syntax element before proceeding with Spectral Band Replication calculations, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted AAC data.",CVE-2015-6820,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The filter_slice function in libavfilter/vf_transpose.c in FFmpeg through 3.4.1 allows remote attackers to cause a denial of service (out-of-array access) via a crafted MP4 file.,CVE-2018-6392,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The flv_write_packet function in libavformat/flvenc.c in FFmpeg through 2.8 does not check for an empty audio packet, leading to an assertion failure.",CVE-2018-15822,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The gmc_mmx function in libavcodec/x86/mpegvideodsp.c in FFmpeg 2.3 and 3.4 does not properly validate widths and heights, which allows remote attackers to cause a denial of service (integer signedness error and out-of-array read) via a crafted MPEG file.",CVE-2017-17081,3,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
+"The h264_slice_header_init function in libavcodec/h264_slice.c in FFmpeg before 2.8.3 does not validate the relationship between the number of threads and the number of slices, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted H.264 data.",CVE-2015-8661,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The init_tile function in libavcodec/jpeg2000dec.c in FFmpeg before 2.8.2 does not enforce minimum-value and maximum-value constraints on tile coordinates, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted JPEG 2000 data.",CVE-2015-8219,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The issue was fixed with the following commit: http://git.videolan.org/?p=ffmpeg.git;a=commitdiff;h=c20f4fcb74da2d0432c7b54499bb98f48236b904 Regards Reported by Zhibin Hu and Yihan Lian from Qihoo 360 GearTeam,CVE-2017-15672,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The jpeg2000_decode_tile function in libavcodec/jpeg2000dec.c in FFmpeg before 2.8.6 allows remote attackers to cause a denial of service (out-of-bounds array read access) via crafted JPEG 2000 data.,CVE-2016-2213,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The jpeg2000_read_main_headers function in libavcodec/jpeg2000dec.c in FFmpeg before 2.6.5, 2.7.x before 2.7.3, and 2.8.x through 2.8.2 does not enforce uniqueness of the SIZ marker in a JPEG 2000 image, which allows remote attackers to cause a denial of service (out-of-bounds heap-memory access) or possibly have unspecified other impact via a crafted image with two or more of these markers.",CVE-2015-8363,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The ljpeg_decode_yuv_scan function in libavcodec/mjpegdec.c in FFmpeg before 2.8.2 omits certain width and height checks, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted MJPEG data.",CVE-2016-10191,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The new code verfies there's enough data in the atom for this to be done.,CVE-2015-1208,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The old factor of two seemed to be a workaround that fact and only padded to the left and bottom.,CVE-2017-16840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The only obvious solution is to prevent access to sensitive information.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The padding on the right of each row is also reused as padding for the left of the next row.,CVE-2019-13312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The previous code assumed if an atom was marked with a 64-bit size extension, it actually had that data available.",CVE-2015-1208,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The problem is that as long as sensitive information gets into the decoder, the output of the decoder becomes sensitive as well.",CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The profile field is changed by code inside and outside the decoder, its not a reliable indicator of the internal codec state.",CVE-2018-13304,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The read_gab2_sub function in libavformat/avidec.c in FFmpeg before 3.1.4 allows remote attackers to cause a denial of service (NULL pointer used) via a crafted AVI file.,CVE-2016-7905,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The read_header function in libavcodec/ffv1dec.c in FFmpeg 2.4 and 3.3.4 and possibly earlier allows remote attackers to have unspecified impact via a crafted MP4 file, which triggers an out-of-bounds read.",CVE-2017-15672,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The sdp_parse_fmtp_config_h264 function in libavformat/rtpdec_h264.c in FFmpeg before 3.3.4 mishandles empty sprop-parameter-sets values, which allows remote attackers to cause a denial of service (heap buffer overflow) or possibly have unspecified other impact via a crafted sdp file.",CVE-2017-14767,3,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The smka_decode_frame function in libavcodec/smacker.c in FFmpeg before 2.6.5, 2.7.x before 2.7.3, and 2.8.x through 2.8.2 does not verify that the data size is consistent with the number of channels, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted Smacker data.",CVE-2015-8365,3,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The stride is choosen so large that it already contains padding on the right; the height also includes padding rows.,CVE-2019-13312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The studio profile decoder in libavcodec/mpeg4videodec.c in FFmpeg 4.0 before 4.0.4 and 4.1 before 4.1.2 allows remote attackers to cause a denial of service (out-of-array access) or possibly have unspecified other impact via crafted MPEG-4 video data.,CVE-2019-11339,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The svg_probe function in libavformat/img2dec.c in FFmpeg through 3.4.2 allows remote attackers to cause a denial of service (Infinite Loop) via a crafted XML file.,CVE-2018-7751,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The sws_init_context function in libswscale/utils.c in FFmpeg before 2.7.2 does not initialize certain pixbuf data structures, which allows remote attackers to cause a denial of service (segmentation violation) or possibly have unspecified other impact via crafted video data.",CVE-2015-6824,3,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+"The update_dimensions function in libavcodec/vp8.c in FFmpeg through 2.8.1, as used in Google Chrome before 46.0.2490.71 and other products, relies on a coefficient-partition count during multi-threaded operation, which allows remote attackers to cause a denial of service (race condition and memory corruption) or possibly have unspecified other impact via a crafted WebM file.",CVE-2015-6761,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"The VC-2 Video Compression encoder in FFmpeg 3.0 and 3.4 allows remote attackers to cause a denial of service (out-of-bounds read) because of incorrect buffer padding for non-Haar wavelets, related to libavcodec/vc2enc.c and libavcodec/vc2en.",CVE-2017-16840,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The version 1 needs the channel count and would divide by 0.,CVE-2018-14395,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The VideoFramePool::PoolImpl::CreateFrame function in media/base/video_frame_pool.cc in Google Chrome before 47.0.2526.73 does not initialize memory for a video-frame data structure, which might allow remote attackers to cause a denial of service (out-of-bounds memory access) or possibly have unspecified other impact by leveraging improper interaction with the vp3_h_loop_filter_c function in libavcodec/vp3dsp.c in FFmpeg.",CVE-2015-8480,3,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+There also where objections against restricting remote url file extensions.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+There is a heap-buffer-overflow at libavfilter/vf_colorconstancy.c:282 in slice_get_derivative.,CVE-2020-22029_,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+There is a heap-buffer-overflow at libavfilter/vf_colorconstancy.c:282 in slice_get_derivative.,CVE-2020-22029_,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+There's a division by zero at libavcodec/aaccoder.c:554 and 556.,CVE-2020-20453,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"These 2 fields are not always the same, it is simpler to always use the same field for detecting studio profile.",CVE-2018-12460,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This also fixes the return code for explode mode.,CVE-2019-11338,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This attack appear to be exploitable via network connectivity.,CVE-2018-1999010,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This attack appear to be exploitable via specially crafted ASF file that has to provided as input.,CVE-2018-1999015,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This attack appear to be exploitable via specially crafted MXF file which has to be provided as input.,CVE-2018-1999014,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This attack appear to be exploitable via specially crafted PVA file has to be provided as input.,CVE-2018-1999012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This attack appear to be exploitable via specially crafted RM file has to be provided as input.,CVE-2018-1999013,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This attack appears to be exploitable via specially crafted ASF file that has to be provided as input to FFmpeg.,CVE-2018-1999011,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This avoids mixing 8bit variants with pro and 10bit with non pro mode.,CVE-2018-10001,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This correctly pads by the slice size and as such reduces memory usage and potential exploits.,CVE-2017-16840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This does not affect the rawvideo muxer.,CVE-2019-13390,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This ensures that no stale pointers leak through on any path.,CVE-2015-6821,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes accesses outside of the allocated buffer that were reported.,CVE-2019-13312,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This here is a less robust but also lower inconvenience solution.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This is a follow-up announcement for DLA-1611-1,CVE-2015-6823,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This is done by offsetting the actual pointer used to access the picture from the pointer returned by av_mallocz and the formula for this offset was wrong, because it ignored that a pixel can take more than one byte when calculating the offset resulting from the left padding of the first row.",CVE-2019-13312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This reduces the attack surface of local file-system information leaking.,CVE-2017-9993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This results a heap-overflow which we found out to > be exploitable, because overflowed buffer is allocated right next to > the AVIOContext structure[3].",CVE-2016-10192,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This results in various information leaks (both stack and heap).,CVE-2015-1208,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This vulnerability appears to have been fixed in 2b46ebdbff1d8dec7a3d8ea280a612b91a582869 and later.,CVE-2018-1999011,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This vulnerability appears to have been fixed in 5aba5b89d0b1d73164d3b81764828bb8b20ff32a and later.,CVE-2018-1999015,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This vulnerability appears to have been fixed in 9807d3976be0e92e4ece3b4b1701be894cd7c2e1 and later.,CVE-2018-1999012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This vulnerability appears to have been fixed in a7e032a277452366771951e29fd0bf2bd5c029f0 and later.,CVE-2018-1999013,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This vulnerability appears to have been fixed in bab0716c7f4793ec42e05a5aa7e80d82a0dd4e75 and later.,CVE-2018-1999014,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This vulnerability appears to have been fixed in cced03dd667a5df6df8fd40d8de0bff477ee02e8 and later.,CVE-2018-1999010,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"To: ""oss-security@...ts.openwall.com"" <oss-security@...ts.openwall.com>.",CVE-2017-15672,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+track_header in libavformat/vividas.c in FFmpeg 4.3.1 has an out-of-bounds write because of incorrect extradata packing.,CVE-2020-35964_,3,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Two more security issues have been corrected in the libav multimedia library.,CVE-2015-6823,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"UserAgent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2251.0 Safari/537.36 Steps to reproduce the problem: 1.",CVE-2015-1208,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Validates the set channel layout as well as verifies that the received layout to the function matches the reference layout, so that it matches the implemented re-ordering logic.",CVE-2020-24995,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Validates the set channel layout as well as verifies that the received layout to the function matches the reference layout, so that it matches the implemented re-ordering logic.",CVE-2020-24995,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"We must check for size_t overflow when multiplying count by ""bytes_per_offset"".",CVE-2017-5051,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+We should also avoid attempting to resize vectors beyond their max_size() (potential OOB depending on stl library impl).,CVE-2017-5051,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When a crafted ASF file, which claims a large ""name_len"" or ""count"" field in the header but does not contain sufficient backing data, is provided, the loops over the name and markers would consume huge CPU and memory resources, since there is no EOF check inside these loops.",CVE-2017-14057,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When a crafted CINE file, which claims a large ""duration"" field in the header but does not contain sufficient backing data, is provided, the image-offset parsing loop would consume huge CPU and memory resources, since there is no EOF check inside the loop.",CVE-2017-14059,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When a crafted IVR file, which claims a large ""len"" field in the header but does not contain sufficient backing data, is provided, the first type==4 loop would consume huge CPU resources, since there is no EOF check inside the loop.",CVE-2017-14054,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When a crafted MV file, which claims a large ""nb_frames"" field in the header but does not contain sufficient backing data, is provided, the loop over the frames would consume huge CPU and memory resources, since there is no EOF check inside the loop.",CVE-2017-14055,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When a crafted MXF file, which claims a large ""nb_index_entries"" field in the header but does not contain sufficient backing data, is provided, the loop would consume huge CPU resources, since there is no EOF check inside the loop.",CVE-2017-14170,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When a crafted NSV file, which claims a large ""table_entries_used"" field in the header but does not contain sufficient backing data, is provided, the loop over 'table_entries_used' would consume huge CPU resources, since there is no EOF check inside the loop.",CVE-2017-14171,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When a crafted RL2 file, which claims a large ""frame_count"" field in the header but does not contain sufficient backing data, is provided, the loops (for offset and size tables) would consume huge CPU and memory resources, since there is no EOF check inside these loops.",CVE-2017-14056,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"While ffmpeg calculating ?????bytestream_end????? in ff_init_range_encoder() of libavcodec/rangecoder.c, it uses a small ?????buf_size?????.",CVE-2017-15672,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+zmbvenc allocates a buffer for a picture with padding on all four sides.,CVE-2019-13312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

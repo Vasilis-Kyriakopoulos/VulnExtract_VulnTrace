@@ -1,0 +1,379 @@
+Description,CVE_ID,label,AFCB,AFC,AFBC,AFCF,AFAM,AFF,AFR,AFMS,AFMC,AFDN,AFA,AFMO,AFCN,AFP,AFLH,AFPP
+$ xmllint -recover ohizsmaase.xml.-6355798974422201279.,CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(htmlParseNameComplex): Ditto.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(htmlParseNameComplex): Ditto.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"(pushParseTest): The input for the new test case was so small (4 bytes) that htmlParseChunk() was never called after htmlCreatePushParserCtxt(), thereby creating a false positive test failure.",CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"(pushParseTest): The input for the new test case was so small (4 bytes) that htmlParseChunk() was never called after htmlCreatePushParserCtxt(), thereby creating a false positive test failure.",CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(xmlParseConditionalSections): Halt parsing when hitting invalid input that would otherwise caused xmlParserHandlePEReference() to recurse unexpectedly.,CVE-2016-4447,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(xmlStrncatNew): Ditto.,CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* HTMLparser.c: (htmlParseName): Add bounds check.,CVE-2016-1839,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+* HTMLparser.c: (htmlParseName): Add bounds check.,CVE-2016-1839,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+* parser.c: (xmlParseElementDecl): Return early on invalid input to fix non-minimized test case (759573-2.xml).,CVE-2016-4447,2,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0
+"* parser.c: (xmlParseEndTag2): Add bounds checks before dereferencing ctxt->input->cur past the end of the buffer, or incrementing the pointer past the end of the buffer.",CVE-2016-1838,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+* parser.c: do not load external parsed entities unless needed,CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+* parser.c: do not load external parsed entities unless needed.,CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+* parserInternals.c: (xmlNextChar): Add an test to catch other issues on ctxt->input corruption proactively.,CVE-2016-1833,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+* result/errors/758588.xml.err: Ditto.,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/758588.xml.str: Ditto.,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/758588.xml: Add test result.,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/759020.xml.err: Added.,CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/759020.xml.str: Added.,CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/759020.xml: Added.,CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/759398.xml.err: Added.,CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/759398.xml.str: Added.,CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/errors/759398.xml: Added.,CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758605.html.err: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758605.html.err: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758605.html.sax: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758605.html.sax: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758605.html: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758605.html: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758606.html.err: Added.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758606.html.sax: Added.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758606.html: Added.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758606_2.html.err: Added.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758606_2.html.sax: Added.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* result/HTML/758606_2.html: Added.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* runtest.c.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* runtest.c.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/errors/758588.xml: Add regression test.,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/errors/759020.xml: Added test case.,CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/errors/759398.xml: Added test case.,CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/errors/extparsedent.xml result/errors/extparsedent.xml*:.,CVE-2013-0339,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/HTML/758605.html: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/HTML/758605.html: Added.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/HTML/758606.html: Added test case.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* test/HTML/758606_2.html: Added test case.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* xmlregexp.c: (xmlFAParseCharRange): Only advance to the next character if there is no error.,CVE-2016-1840,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+* xmlsave.c: xmlBufAttrSerializeTxtContent() if an attribute value is not UTF-8 be more careful when serializing it as we may do an out of bound access as a result.,CVE-2016-4483,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+* xmlstring.c: (xmlStrncat): Return NULL if xmlStrlen returns a negative length.,CVE-2016-1834,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"[INCLUDE0""<!ENTITYL%%N;' >test.xml $ ./xmllint_asan test.xml Copy of the test case: http://lcamtuf.coredump.cx/afl/demo/libxml2_oob.xml.",CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
++ * This stops the parser being put into a bad state later on when there is no + * more input.,CVE-2015-8241,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
++ */ + if (ctxt->instate == XML_PARSER_EOF) + return; + /* * This is only for internal subset.,CVE-2015-8241,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+<https://bugzilla.gnome.org/show_bug.cgi?id=757711>.,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+<https://bugzilla.gnome.org/show_bug.cgi?id=758605> Reviewed by David Kilzer.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+<https://bugzilla.gnome.org/show_bug.cgi?id=758605> Reviewed by David Kilzer.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"<https://bugzilla.gnome.org/show_bug.cgi?id=759398> * parser.c: (xmlParseNCNameComplex): Store start position instead of a pointer to the name since the underlying buffer may change, resulting in a stale pointer being used.",CVE-2016-1836,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+<https://bugzilla.gnome.org/show_bug.cgi?id=763071>.,CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1762,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#ERROR!,CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2. in case XPATH_OP_OR: - there is no check in the following code: arg1 = valuePop(ctxt); //can result in null.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A denial of service flaw was found in the way libxml2, a library providing support to read, modify and write XML and HTML files, performed string substitutions when entity values for entity references replacement (--noent option) was requested / enabled during the XML file parsing.",CVE-2013-0338,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"A denial of service flaw was found in the way libxml2, a library providing support to read, modify and write XML and HTML files, performed string substitutions when entity values for external entity references replacement (--noent option) was requested / enabled during the XML file parsing.",CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"A denial of service flaw was found in the way libxml2, a library providing support to read, modify and write XML and HTML files, performed string substitutions when entity values for external entity references replacement (--noent option) was requested / enabled during the XML file parsing.",CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"A flaw in libxml2 allows remote XML entity inclusion with default parser flags (i.e., when the caller did not request entity substitution, DTD validation, external DTD subset loading, or default DTD attributes).",CVE-2017-7375,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+A heap-buffer overflow was found in the way libxml2 decoded certain XML entitites.,CVE-2012-5134,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A NULL pointer dereference vulnerability exists in the xpath,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A NULL pointer dereference vulnerability exists in the xpath.c:xmlXPathCompOpEval() function of libxml2 through 2.9.8 when parsing an invalid XPath expression in the XPATH_OP_AND or XPATH_OP_OR case.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A patch to do this is below: diff --git a/parser.c b/parser.c index a65e4cc..04b0e58 100644 --- a/parser.c +++ b/parser.c @@ -6970,6 +6970,15 @@ xmlParseMarkupDecl(xmlParserCtxtPtr ctxt) { xmlParsePI(ctxt); } } + + /* + * If the parser eached end of file, then stop while we know it is failing.",CVE-2015-8241,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A remote attacker could provide a specially-crafted XML file containing an external entity expansion, when processed would lead to excessive CPU consumption (denial of service).",CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"A remote attacker could provide a specially-crafted XML file that, when processed would lead to excessive CPU consumption (denial of service).",CVE-2013-0338,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"A remote attacker could provide a specially-crafted XML file that, when processed, would lead to the exhaustion of CPU and memory resources or file descriptors.",CVE-2014-0191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A remote attacker could provide a specially-crafted XML file, which once opened in an application linked against libxml would cause that application to crash, or, potentially, execute arbitrary code with the privileges of the user running the application.",CVE-2011-1944,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A remote attacker could provide a specially-crafted XML file, which once opened in an application linked against libxml would cause that application to crash, or, potentially, execute arbitrary code with the privileges of the user running the application.",CVE-2011-1944,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A vulnerability found in libxml2 in versions before 2.9.11 shows that it did not propagate errors while parsing XML mixed content, causing a NULL dereference.",CVE-2021-3537,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"According to the xz man page, files compressed with `xz -9` currently require 65 MB to decompress, so set the limit to 100 MB.",CVE-2017-18258,2,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+add a regression test to avoid change of the behaviour in the future.,CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"Add bounds checks before dereferencing ctxt->input->cur past the end of the buffer, or incrementing the pointer past the end of the buffer.",CVE-2016-1838,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add missing increments of recursion depth counter to XML parser.,CVE-2016-3705,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add xmlHaltParser() to stop the parser.,CVE-2015-7499,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Adds further checks to partial fix in 50f06b3e.,CVE-2021-3517,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Advancing to the next character in case of an error while parsing regexp leads to an out of bounds access.,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Also do the same on Conditional Sections if the input is broken, as the structure of",CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An attacker who is able to submit a crafted file to be processed by an application linked with libxml2 could trigger a use-after-free.,CVE-2021-3518,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An attacker who is able to supply a crafted file to be processed by an application linked with the affected functionality of libxml2 could trigger an out-of-bounds read.,CVE-2021-3517,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An integer overflow, leading to heap-based buffer overflow was found in the way libxml, XML files manipulation library, processed certain XPath expressions.",CVE-2011-1944,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Applications processing untrusted XSL format inputs with the use of the libxml2 library may be vulnerable to a denial of service attack due to a crash of the application.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Approvement in LZMA error handling which prevents an infinite loop.,CVE-2018-14567,2,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+Approvement in LZMA error handling which prevents an infinite loop.,CVE-2018-14567,2,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+arg1->boolval &= arg2->boolval; //and then the application is crashing here resulting in a Denial of Service condition.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+arg1->boolval |= arg2->boolval; //crashing here due to null deref.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+As a result I ended up with a rather different patch,CVE-2015-8710,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Attribute strings are only valid if the base does not change, so add another check where the base may change.",CVE-2016-1835,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Avoid an heap buffer overflow in xmlDictComputeFastQKey.,CVE-2015-7497,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Avoid an out of bound access when serializing malformed strings.,CVE-2016-4483,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Avoid extra processing of MarkupDecl when EOF.,CVE-2015-8241,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Avoid processing entities after encoding conversion failures.,CVE-2015-7498,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"Because of that omission, the parser failed to detect attribute recursions in certain documents before running out of stack space.",CVE-2016-3705,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Both 2.9.2 and latest git code are affected.,CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Buffer overead with HTML parser in push mode.,CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Buffer overflow errors originating from xmlBufGetInputBase in 2.9.0.,CVE-2013-1969,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Buffer overflow in libxml2 allows remote attackers to execute arbitrary code by leveraging an incorrect limit for port values when handling redirects.,CVE-2017-7376,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 757711: heap-buffer-overflow in xmlFAParsePosCharGroup.,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 757711: heap-buffer-overflow in xmlFAParsePosCharGroup.,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 758588: Heap-based buffer overread in xmlParserPrintFileContextInternal.,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 758588: Heap-based buffer overread in xmlParserPrintFileContextInternal.<https://bugzilla.gnome.org/show_bug.cgi?id=758588>.,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 758605: Heap-based buffer overread in xmlDictAddString.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 758605: Heap-based buffer overread in xmlDictAddString.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 758605: Heap-based buffer overread in xmlDictAddString.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 758605: Heap-based buffer overread in xmlDictAddString.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 759398: Heap use-after-free in xmlDictComputeFastKey.,CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 759398: Heap use-after-free in xmlDictComputeFastKey.,CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Bug 763071: heap-buffer-overflow in xmlStrncat.,CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bug report: Global buffer-overflow in the htmlParseTryOrFinish function.,CVE-2017-8872,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Can be testet with xmllint and address sanitizer This was found with american fuzzy lop.,CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check return value of recursive calls to xmlParseElementChildrenContentDeclPriv and return immediately in case of errors.,CVE-2021-3537,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Check that the XPath stack isn't empty and optimize the logic operators slightly.,CVE-2018-14404,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check the liblzma error code more thoroughly to avoid infinite loops.,CVE-2018-14567,2,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0
+Check the liblzma error code more thoroughly to avoid infinite loops.,CVE-2018-14567,2,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0
+Cleanup conditional section error handling.,CVE-2015-7941,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Closed xmllint: global-buffer-overflow in xmlEncodeEntitiesInternal.,CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Code is currently assuming UTF-8 without validating.,CVE-2021-3517,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"CVE-2015-5312 Another entity expansion issue For https://bugzilla.gnome.org/show_bug.cgi?id=756733 It is one case where the code in place to detect entities expansions failed to exit when the situation was detected, leading to DoS Problem reported by Kostya Serebryany @ Google Patch provided by David Drysdale @ Google",CVE-2015-5312,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2015-7497 Avoid an heap buffer overflow in xmlDictComputeFastQKey.,CVE-2015-7497,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2015-7500 Fix memory access error due to incorrect entities boundaries.,CVE-2015-7500,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2015-8242 Buffer overead with HTML parser in push mode.,CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2016-3705 The functions xmlParserEntityCheck() and xmlParseAttValueComplex() used to call xmlStringDecodeEntities() in a recursive context without incrementing the 'depth' counter in the parser context.,CVE-2016-3705,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Depending on the context, this may expose a higher-risk attack surface in libxml2 not usually reachable with default parser flags, and expose content from local files, HTTP, or FTP servers (which might be otherwise unreachable).",CVE-2017-7375,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Description: There are two bugs in the xpath implementation in libxml2 in the file: https://github.com/GNOME/libxml2/blob/master/xpath.c function name: xmlXPathCompOpEval (2 bugs in this function) inside the big switch clause there are 2 bugs: 1. in case XPATH_OP_AND - there is no check in the following code: arg1 = valuePop(ctxt); //this could result in null.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Detect excessive entities expansion upon replacement.,CVE-2013-0338,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+Detect incoherency on GROW.,CVE-2015-7499,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Do not fetch external parameter entities.,CVE-2014-0191,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Do not fetch external parsed entities.,CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Do not process encoding values if the declaration if broken.,CVE-2015-8317,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"Double free vulnerability in libxml2 2.7.8 and other versions, as used in Google Chrome before 8.0.552.215 and other products, allows remote attackers to cause a denial of service or possibly have unspecified other impact via vectors related to XPath handling.",CVE-2010-4494,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"Double free vulnerability in libxml2, as used in Google Chrome before 14.0.835.163, allows remote attackers to cause a denial of service or possibly have unspecified other impact via vectors related to XPath handling.",CVE-2011-2834,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"Entities are feeding the parser on further processing, and if they are ill defined then it's possible to get the parser to bug.",CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Error in the code pointing to the codepoint in the stack for the current char value instead of the pointer in the input that the SAX callback expects.,CVE-2015-8242,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Even when libxml2 was instructed to parse XML document without preforming entity substitutions (i.e.,CVE-2014-0191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Exploitability: The complexity is fairly low, as the following xpath expressions are likely to be easily given by attackers remotely: 1. true() and format-number(1, """", """") 2. false() or format-number(1, """", """").",CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix a potential freeing error in XPath.,CVE-2010-4494,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix an off by one pointer access.,CVE-2011-3102,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix default template processing on namespace nodes.,CVE-2012-2871,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix inappropriate fetch of entities content For https://bugzilla.gnome.org/show_bug.cgi?id=761430.,CVE-2016-4449,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix inappropriate fetch of entities content.,CVE-2016-4449,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix infinite loop in LZMA decompression.,CVE-2018-14567,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix infinite loop in LZMA decompression.,CVE-2018-14567,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix infinite loop in xmlStringLenDecodeEntities.,CVE-2020-7595,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix looks fine.,CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix memory access error due to incorrect entities boundaries.,CVE-2015-7500,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix memory leak in xmlParseBalancedChunkMemoryRecover.,CVE-2019-19956,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix memory leak in xmlSchemaValidateStream.,CVE-2019-20388,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix missing error status in XPath evaluation.,CVE-2011-2834,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix nullptr deref with XPath logic ops.,CVE-2018-14404,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix out-of-bounds read with 'xmllint --htmlout'.,CVE-2020-24977,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix parsing short unclosed comment uninitialized access.,CVE-2015-8710,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix potential out of bound access.,CVE-2012-5134,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix some buffer conversion issues.,CVE-2013-1969,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix some potential problems on reallocation failures.,CVE-2011-1944,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix the semantic of XPath axis for namespace/attribute context nodes.,CVE-2010-4008,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Fix this by pulling out the check for the end of the input buffer into common code, and return if we reach the end of the input buffer prematurely.",CVE-2016-1833,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Fix user-after-free with `xmllint --xinclude --dropdtd`.,CVE-2021-3518,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixed by using a do-while loop so we always call htmlParseChunk() at least once.,CVE-2016-1839,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Fixed by using a do-while loop so we always call htmlParseChunk() at least once.,CVE-2016-1839,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+For browser reproduction open the html reproducers with your target browser (chrome/safari).,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=744980.,CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=744980.,CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=746048.,CVE-2015-8710,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=751603.,CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=756263.,CVE-2015-8241,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=756372.,CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=756525.,CVE-2015-7500,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=756527 and was also raised by Chromium team in the past.,CVE-2015-7498,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=756528.,CVE-2015-7497,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=758606.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"For https://bugzilla.gnome.org/show_bug.cgi?id=759020 * parser.c: (xmlParseStartTag2): Attribute strings are only valid if the base does not change, so add another check where the base may change.",CVE-2016-1835,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=759573.,CVE-2016-4447,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=759671.,CVE-2016-1762,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=765207.,CVE-2016-3705,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For https://bugzilla.gnome.org/show_bug.cgi?id=766414.,CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"For non-UTF-8 charsets, xmlNextChar() failed to check for the end of the input buffer and would continuing reading.",CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+For php reproduction run the following (php needs the xml module for DOM): make sure the php files and .xsl files reside in same directory and run the following commands: php -f xpath_or.php php -f xpath_and.php -- Guy Inbar.,CVE-2018-14404,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Found with libFuzzer.,CVE-2019-19956,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Found with libFuzzer+AddressSanitizer in fresh trunk.,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Free input buffer in xmlHaltParser.,CVE-2017-8872,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Global buffer-overflow in the htmlParseTryOrFinish function.,CVE-2017-8872,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+GNOME project libxml2 v2.9.10 has a global buffer over-read vulnerability in xmlEncodeEntitiesInternal at libxml2/entities.c.,CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+handle properly the case where we popped out of the current entity while processing a start tag.,CVE-2015-7500,2,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0
+Heap use-after-free in xmlDictComputeFastKey.,CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap use-after-free in xmlSAX2AttributeNs.,CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overflow in the xmlDictComputeFastQKey function in dict.c in libxml2 before 2.9.3 allows context-dependent attackers to cause a denial of service via unspecified vectors.,CVE-2015-7497,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Heap-based buffer overflow in the xmlFAParsePosCharGroup function in libxml2 before 2.9.4, as used in Apple iOS before 9.3.2, OS X before 10.11.5, tvOS before 9.2.1, and watchOS before 2.2.1, allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted XML document.",CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overflow in the xmlGROW function in parser.c in libxml2 before 2.9.3 allows context-dependent attackers to obtain sensitive process memory information via unspecified vectors.,CVE-2015-7499,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overflow in the xmlParseXmlDecl function in parser.c in libxml2 before 2.9.3 allows context-dependent attackers to cause a denial of service via unspecified vectors related to extracting errors after an encoding conversion failure.,CVE-2015-7498,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Heap-based buffer overflow in the xmlStrncat function in libxml2 before 2.9.4, as used in Apple iOS before 9.3.2, OS X before 10.11.5, tvOS before 9.2.1, and watchOS before 2.2.1, allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted XML document.",CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overread in htmlCurrentChar.,CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overread in xmlDictAddString.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overread in xmlDictAddString.,CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overread in xmlNextChar.,CVE-2016-1762,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer overread in xmlParserPrintFileContextInternal.,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Heap-based buffer underflow in the xmlParseAttValueComplex function in parser.c in libxml2 2.9.0 and earlier, as used in Google Chrome before 23.0.1271.91 and other products, allows remote attackers to cause a denial of service or possibly execute arbitrary code via crafted entities in an XML document.",CVE-2012-5134,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Heap-based buffer-underreads due to xmlParseName.,CVE-2016-4447,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+heap-buffer-overflow in xmlFAParsePosCharGroup.,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+heap-buffer-overflow in xmlStrncat <https://bugzilla.gnome.org/show_bug.cgi?id=763071>.,CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Here's the stack trace from address sanitizer.,CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hey, There appears to be an out-of-bounds read in libxml2 (2.9.2).",CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hi, The following crash due to a heap-based out-of-bounds memory read can be observed in an ASAN build of latest stable libxml2 (2.9.3, released 4 days ago), by feeding a malformed file to xmllint (""$ ./xmllint /path/to/file""): =================================================================.",CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hi, The following crash due to a heap-based out-of-bounds memory read can be observed in an ASAN build of latest stable libxml2 (2.9.3, released 4 days ago), by feeding a malformed file to xmllint (""$ ./xmllint --html /path/to/file""): =================================================================.",CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hi, The following crash due to a heap-based out-of-bounds memory read can be observed in an ASAN build of latest stable libxml2 (2.9.3, released 4 days ago), by feeding a malformed file to xmllint (""$ ./xmllint --html /path/to/file""): =================================================================.",CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hi, The following heap overread can be observed on an ASAN build of the latest Libxml2 stable release version 2.9.3: $ ./xmllint c01_id0051.min =================================================================.",CVE-2016-1762,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hi, The following heap use-after-free observed on an ASAN build of the latest Libxml2 version 2.9.3: $ ./xmllint c02_id0.raw.",CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hi, we found a global-buffer-overflow in xmlEncodeEntitiesInternal at libxml2/entities.c:583.",CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Hi, we found a global-buffer-overflow in xmlEncodeEntitiesInternal at libxml2/entities.c:583. version: commit 8e7c20a1 (20910-GITv2.9.10-103-g8e7c20a1) How to reproduce: build libxml2 with ASAN.",CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+https://bugzilla.gnome.org/show_bug.cgi?id=690202.,CVE-2013-1969,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"I think the fundamental problem is that a lot of the code assumes 0 terminated buffers, the problem is that the HTML parser there forgot to check for the termination when reading the 2 first characters in the comment.",CVE-2015-8710,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"ibxml2 2.9.2 does not properly stop parsing invalid input, which allows context-dependent attackers to cause a denial of service (out-of-bounds read and libxml2 crash) via crafted XML data to the (1) xmlParseEntityDecl or (2) xmlParseConditionalSections function in parser.c, as demonstrated by non-terminated entities.",CVE-2015-7941,2,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0
+"If an untrusted XML document was parsed in recovery mode and post-validated, the flaw could be used to crash the application.",CVE-2021-3537,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"If entities expansion in the XML parser is asked for, it is possble to craft relatively small input document leading to excessive on-the-fly content generation.",CVE-2013-0338,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+if not stop everything we have an internal state error.,CVE-2015-7499,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"If the option --with-lzma is used, allows remote attackers to cause a denial of service (infinite loop) via a crafted XML file.",CVE-2018-14567,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+If the string is not properly terminated do not try to convert to the given encoding.,CVE-2015-8317,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"If the XPath stack is corrupted, for example by a misbehaving extension function, the ""and"" and ""or"" XPath operators could dereference NULL pointers.",CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+I'll upload the backtrace and memory examination shortly.,CVE-2013-1969,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Increase buffer space for port in HTTP redirect support,CVE-2017-7376,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+Increase buffer space for port in HTTP redirect support.,CVE-2017-7376,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+"Integer overflow in xpath.c in libxml2 2.6.x through 2.6.32 and 2.7.x through 2.7.8, and libxml 1.8.16 and earlier, allows context-dependent attackers to cause a denial of service (crash) and possibly execute arbitrary code via a crafted XML file that triggers a heap-based buffer overflow when adding a new namespace node, related to handling of XPath expressions.",CVE-2011-1944,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It affects all versions.,CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"It also affects chrome (and I assume safari too), but it's only a client side tab crash for browsers.",CVE-2018-14404,4,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+it can be bypassed as usual with the HUGE parser option.,CVE-2013-0338,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It does indeed cause memory corruption and affects all versions from table to latest dev.,CVE-2010-4494,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"It is possible to trigger a stack overflow using a carefully crafted invalid xml file, the stack overflow occurs before libxml2 determines the xml file is invalid.",CVE-2016-3705,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"It was discovered before by another guy but for some reason, never reported or fixed.",CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"It was discovered that libxml2, a library providing support to read, modify and write XML files, incorrectly performs entity substituton in the doctype prolog, even if the application using libxml2 disabled any entity substitution.",CVE-2014-0191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It was possible to hit a negative offset in the name indexing used to randomize the dictionary key generation,CVE-2015-7497,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It was possible to hit a negative offset in the name indexing used to randomize the dictionary key generation.,CVE-2015-7497,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It's more complex than just setting ctxt->instate = XML_PARSER_EOF.,CVE-2015-7499,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+I've added reproducers for both bugs in browsers and in php.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+I've verified this bug is affecting latest PHP 5.6 with xml module which can cause a denial of service for applications accepting xpath/xslt.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+libfuzzer regression testing exposed another case where the parser would fetch content of an external entity while not in validating mode.,CVE-2016-4449,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"libxml2 2.9.0 and earlier allows context-dependent attackers to cause a denial of service (CPU and memory consumption) via an XML file containing an entity declaration with long replacement text and many references to this entity, aka ""internal entity expansion"" with linear complexity.",CVE-2013-0338,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"libxml2 2.9.0-rc1 and earlier, as used in Google Chrome before 21.0.1180.89, does not properly support a cast of an unspecified variable during handling of XSL transforms, which allows remote attackers to cause a denial of service or possibly have unknown other impact via a crafted document, related to the _xmlNs data structure in include/libxml/tree.h.",CVE-2012-2871,2,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1
+"libxml2 2.9.8, if --with-lzma is used, allows remote attackers to cause a denial of service (infinite loop) via a crafted XML file that triggers LZMA_MEMLIMIT_ERROR, as demonstrated by xmllint, a different vulnerability than CVE-2015-8035 and CVE-2018-9251.",CVE-2018-14567,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+libxml2 20904-GITv2.9.4-16-g0741801 is vulnerable to a heap-based buffer over-read in the xmlDictAddString function in dict.c.,CVE-2017-9050,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"libxml2 before 2.7.8, as used in Google Chrome before 7.0.517.44, Apple Safari 5.0.2 and earlier, and other products, reads from invalid memory locations during processing of malformed XPath expressions, which allows context-dependent attackers to cause a denial of service (application crash) via a crafted XML document.",CVE-2010-4008,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"libxml2 through 2.9.1 does not properly handle external entities expansion unless an application developer uses the xmlSAX2ResolveEntity or xmlSetExternalEntityLoader function, which allows remote attackers to cause a denial of service (resource consumption), send HTTP requests to intranet servers, or read arbitrary files via a crafted XML document, aka an XML External Entity (XXE) issue.",CVE-2013-0339,2,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0
+Limit available memory to 100MB to avoid exhaustive memory consumption by malicious files.,CVE-2017-18258,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Make sure that truncated UTF-8 sequences don't cause an out-of-bounds array access.,CVE-2020-24977,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Make sure to set 'attvalue' to NULL after freeing it.,CVE-2016-1835,2,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0
+Make sure to skip these nodes when processing XIncludes.,CVE-2021-3518,2,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0
+Move from a block list to an allow list approach to avoid descending into other node types that can't contain elements.,CVE-2021-3518,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"Multiple use-after-free vulnerabilities in libxml2 2.9.0 and possibly other versions might allow context-dependent attackers to cause a denial of service (crash) and possibly execute arbitrary code via vectors related to the (1) htmlParseChunk and (2) xmldecl_done functions, as demonstrated by a buffer overflow in the xmlBufGetInputBase function.",CVE-2013-1969,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"My life is too short at this point to try to version libxml2 API so int it is int it will remain, sorry :)",CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Namespace nodes can't be unlinked with xmlUnlinkNode.,CVE-2012-2871,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NOTE: this vulnerability may be a duplicate of CVE-2016-3627.,CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Off-by-one error in libxml2, as used in Google Chrome before 19.0.1084.46 and other products, allows remote attackers to cause a denial of service (out-of-bounds write) or possibly have unspecified other impact via unknown vectors.",CVE-2011-3102,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"On external entities, * the replacement is done before parsing stage",CVE-2015-8241,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"One place where ctxt->instate == XML_PARSER_EOF whic was set up by entity detection issues doesn't get noticed, and even overrided.",CVE-2015-8241,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"One way to repro would be: $ printf '<!DOCTYPEd[<!ENTITY\nS\t""""><!ENTITY %%\nN\t""<!ELEMENT<!",CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Otherwise malicious LZMA compressed files could consume large amounts of memory when decompressed.,CVE-2017-18258,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Otherwise the parser gets into a bad state in SKIP(3) at the end of the function.,CVE-2016-4447,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"Otherwise, struct xmlElementContent could contain unexpected null pointers, leading to a null deref when post-validating documents which aren't well-formed and parsed in recovery mode.",CVE-2021-3537,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Package: libxml2.,CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Please assign a CVE if necesary.,CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Plug that hole,CVE-2016-4449,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prevent unwanted external entity reference.,CVE-2017-7375,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Problem pointed out by Daniel Berrange <berrange@redhat.com>,CVE-2014-0191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Problem pointed out by Tom Lane <tgl@redhat.com>.,CVE-2013-0339,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Propagate error in xmlParseElementChildrenContentDeclPriv.,CVE-2021-3537,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Proposed Fix: The fix should be easy, just check for null values in arg1 before dereferencing in both cases.",CVE-2018-14404,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"READ of size 1 at 0x000000c136a1 thread T0 #0 0x45736f in xmlNextChar /root/libxml2/parserInternals.c:535 #1 0x4fd936 in xmlParseInternalSubset /root/libxml2/parser.c:8447 #2 0x52717b in xmlParseDocument /root/libxml2/parser.c:10836 #3 0x55b5b6 in xmlDoRead /root/libxml2/parser.c:15324 #4 0x55b5b6 in xmlReadFile /root/libxml2/parser.c:15386 #5 0x4183b7 in parseAndPrintFile /root/libxml2/xmllint.c:2401 #6 0x40de46 in main /root/libxml2/xmllint.c:3759 #7 0x7f920fcc7ec4 (/lib/x86_64-linux-gnu/libc.so.6+0x21ec4) #8 0x40fad9 in _start (/root/libxml2/xmllint+0x40fad9) I git bisected it back to the following commit, which is meant to stop the parser on an unterminated entity This shows that there the parser is running through xmlParseMarkupDecl, and then instate is set to XML_PARSER_EOF (in xmlStopParser), but looking at the source for xmlParseMarkupDecl, on line 6990, the instate is changed to XML_PARSER_DTD.",CVE-2015-8241,4,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+READ of size 1 at 0x5608cd40a230 thread T0 #0 0x7f6705c1cdb3 in xmlEncodeEntitiesInternal /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/entities.c:583 #1 0x5608cd1ea3f5 in xmlHTMLEncodeSend /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/xmllint.c:531 #2 0x5608cd1ea3f5 in xmlHTMLError /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/xmllint.c:642 #3 0x7f6705c7fac9 in __xmlRaiseError /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/error.c:638 #4 0x7f6705da51ec in xmlFatalErrMsgStrIntStr /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/parser.c:720 #5 0x7f6705da51ec in xmlParseElementStart /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/parser.c:10027 #6 0x7f6705dfea47 in xmlParseContent__internal_alias /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/parser.c:9865 #7 0x7f6705e16d8f in xmlParseElement__internal_alias /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/parser.c:9915 #8 0x7f6705e16d8f in xmlParseDocument__internal_alias /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/parser.c:10751 #9 0x7f6705e6a5ab in xmlDoRead /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/parser.c:15101 #10 0x7f6705e6a5ab in xmlCtxtReadFile__internal_alias /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/parser.c:15346 #11 0x5608cd1daee8 in parseAndPrintFile /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/xmllint.c:2332 #12 0x5608cd1c0741 in main /mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/xmllint.c:3732 #13 0x7f67057adb96 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21b96) #14 0x5608cd1ca1b9 in _start (/mnt/hda2/suhwan/add_project/final/FINAL_TEST_ZONE/program/xxx/libxml2/.libs/xmllint+0x1f1b9),CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"READ of size 1 at 0x60040000d5d3 thread T0 ... 0x60040000d5d3 is located 0 bytes to the right of 3-byte region [0x60040000d5d0,0x60040000d5d3) And backtrace is here: ... #7 0x000000000073320a in xmlBufAttrSerializeTxtContent (buf=0x600c0000a7c0, doc=0x601e0000ef50, attr=0x601000007ea0, string=0x60040000d5d0 <incomplete sequence \341>) at xmlsave.c:2057 #8 0x000000000072af0b in xmlAttrSerializeContent (buf=0x600c0000a820, attr=0x601000007ea0) at xmlsave.c:443 #9 0x000000000072c36c in xmlAttrDumpOutput (ctxt=0x601c0000ca60, cur=0x601000007ea0) at xmlsave.c:780 #10 0x000000000072c3b2 in xmlAttrListDumpOutput (ctxt=0x601c0000ca60, cur=0x601000007ea0) at xmlsave.c:797 #11 0x000000000072dc22 in xmlNodeDumpOutputInternal (ctxt=0x601c0000ca60, cur=0x60180000b440) at xmlsave.c:1055 #12 0x000000000072ef8a in xmlDocContentDumpOutput (ctxt=0x601c0000ca60, cur=0x601e0000ef50) at xmlsave.c:1234 #13 0x000000000073246c in xmlSaveDoc (ctxt=0x601c0000ca60, doc=0x601e0000ef50) at xmlsave.c:1936 #14 0x000000000040a238 in parseAndPrintFile (filename=0x7fffffffe759 ""ohizsmaase.xml.-6355798974422201279"", rectxt=0x0) at xmllint.c:2689 #15 0x000000000040fe5e in main (argc=3, argv=0x7fffffffe4a8) at xmllint.c:3739 A reproducer is available upon request.",CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+READ of size 1 at 0x60200000eef7 thread T0 #0 0x7fa80a8da82f in xmlFAParsePosCharGroup xmlregexp.c:5080:15 #1 0x7fa80a8d6d9b in xmlFAParseCharGroup xmlregexp.c:5102:6 #2 0x7fa80a8d4b40 in xmlFAParseCharClass xmlregexp.c:5139:2 #3 0x7fa80a8d4b40 in xmlFAParseAtom xmlregexp.c:5293 #4 0x7fa80a8d4b40 in xmlFAParsePiece xmlregexp.c:5310 #5 0x7fa80a8d3d3c in xmlFAParseBranch xmlregexp.c:5336:11 #6 0x7fa80a8a6e71 in xmlFAParseRegExp xmlregexp.c:5371:5 #7 0x7fa80a8a613d in xmlRegexpCompile__internal_alias xmlregexp.c:5467:5 #8 0x5abbb8 in test_xmlRegexpCompile testapi.c:33774:5 #9 0x5abbb8 in test_xmlregexp testapi.c:33920 #10 0x4ecdea in test_module testapi.c:52161:46 #11 0x4ebc9f in main testapi.c:147:16,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+READ of size 1 at 0x60200000eef7 thread T0 #0 0x7ff28073d82f in xmlFAParsePosCharGroup xmlregexp.c:XXXX Are the bugs in xmlregexp.c interesting at all?,CVE-2016-1840,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"READ of size 1 at 0x60300000ea56 thread T0 #0 0x46cfc4 in xmlParseConditionalSections (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x46cfc4) #1 0x46d7b3 in xmlParseMarkupDecl (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x46d7b3) #2 0x4772a3 in xmlParseInternalSubset (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x4772a3) #3 0x48e9b1 in xmlParseDocument (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x48e9b1) #4 0x4abe06 in xmlDoRead (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x4abe06) #5 0x4ac022 in xmlReadFile (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x4ac022) #6 0x40aa34 in parseAndPrintFile (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x40aa34) #7 0x411f43 in main (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x411f43) #8 0x7ffff61fcaf4 in __libc_start_main (/lib64/libc.so.6+0x21af4) #9 0x402f08 (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x402f08) 0x60300000ea56 is located 1 bytes to the right of 21-byte region [0x60300000ea40,0x60300000ea55) allocated by thread T0 here: #0 0x7ffff6f4a6a8 in __interceptor_malloc (/usr/local/lib64/libasan.so.1+0x6d6a8) #1 0x5f6d98 in xmlStrndup (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x5f6d98) #2 0x412e50 in xmlCreateEntity (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x412e50) #3 0x41320a in xmlAddEntity (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x41320a) #4 0x41373a in xmlAddDocEntity (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x41373a) #5 0x725290 in xmlSAX2EntityDecl (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x725290) #6 0x45ae8f in xmlParseEntityDecl (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x45ae8f) #7 0x46d437 in xmlParseMarkupDecl (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x46d437) #8 0x4772a3 in xmlParseInternalSubset (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x4772a3) #9 0x48e9b1 in xmlParseDocument (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x48e9b1) #10 0x4abe06 in xmlDoRead (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x4abe06) #11 0x4ac022 in xmlReadFile (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x4ac022) #12 0x40aa34 in parseAndPrintFile (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x40aa34) #13 0x411f43 in main (/home/lcamtuf/afl/TEST_ASAN/xmllint_asan+0x411f43) #14 0x7ffff61fcaf4 in __libc_start_main (/lib64/libc.so.6+0x21af4)",CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+READ of size 1 at 0x62100001c900 thread T0 #0 0x599fb8 in xmlParseXMLDecl /f/libxml2-2.9.2/parser.c:10666:2 #1 0x59b0e1 in xmlParseDocument /f/libxml2-2.9.2/parser.c:10771:2 #2 0x5be804 in xmlDoRead /f/libxml2-2.9.2/parser.c:15298:5 #3 0x5beab6 in xmlReadFile /f/libxml2-2.9.2/parser.c:15360:13 #4 0x50114d in parseAndPrintFile /f/libxml2-2.9.2/xmllint.c:2401:9 #5 0x4f8c0f in main /f/libxml2-2.9.2/xmllint.c:3759:7 #6 0x7f7c9e5e9f9f in __libc_start_main /var/tmp/portage/sys-libs/glibc-2.20-r2/work/glibc-2.20/csu/libc-start.c:289 #7 0x44cd26 in _start (/mnt/ram/xml/xmllint+0x44cd26),CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"READ of size 1 at 0x62100001c900 thread T0 #0 0x8073f8 in htmlCurrentChar libxml2-2.9.3/HTMLparser.c:439:6 #1 0x80ee62 in htmlParseCharDataInternal libxml2-2.9.3/HTMLparser.c:3011:8 #2 0x821b85 in htmlParseCharData libxml2-2.9.3/HTMLparser.c:3061:5 #3 0x7df875 in htmlParseContentInternal libxml2-2.9.3/HTMLparser.c:4634:3 #4 0x7e2f0f in htmlParseDocument libxml2-2.9.3/HTMLparser.c:4769:5 #5 0x802c55 in htmlDoRead libxml2-2.9.3/HTMLparser.c:6741:5 #6 0x8030b6 in htmlReadFile libxml2-2.9.3/HTMLparser.c:6799:13 #7 0x4f47a5 in parseAndPrintFile libxml2-2.9.3/xmllint.c:2248:8 #8 0x4ebe8f in main libxml2-2.9.3/xmllint.c:3759:7 0x62100001c900 is located 0 bytes to the right of 4096-byte region [0x62100001b900,0x62100001c900) allocated by thread T0 here: #0 0x4b8b68 in malloc llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:40 #1 0xa01a0c in xmlBufCreate libxml2-2.9.3/buf.c:137:32 #2 0x550aca in xmlSwitchInputEncodingInt libxml2-2.9.3/parserInternals.c:1205:34 #3 0x54f5ce in xmlSwitchToEncodingInt libxml2-2.9.3/parserInternals.c:1281:12 #4 0x54f278 in xmlSwitchEncoding libxml2-2.9.3/parserInternals.c:1101:11 #5 0x808eea in htmlCurrentChar libxml2-2.9.3/HTMLparser.c:518:13 #6 0x804a38 in htmlParseNameComplex libxml2-2.9.3/HTMLparser.c:2496:9 #7 0x7cc29d in htmlParseName libxml2-2.9.3/HTMLparser.c:2483:12 #8 0x7ec211 in htmlParseDocTypeDecl libxml2-2.9.3/HTMLparser.c:3424:12 #9 0x7debf4 in htmlParseContentInternal libxml2-2.9.3/HTMLparser.c:4585:3 #10 0x7e2f0f in htmlParseDocument libxml2-2.9.3/HTMLparser.c:4769:5 #11 0x802c55 in htmlDoRead libxml2-2.9.3/HTMLparser.c:6741:5 #12 0x8030b6 in htmlReadFile libxml2-2.9.3/HTMLparser.c:6799:13 #13 0x4f47a5 in parseAndPrintFile libxml2-2.9.3/xmllint.c:2248:8 #14 0x4ebe8f in main libxml2-2.9.3/xmllint.c:3759:7",CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+READ of size 1 at 0x6290000051ff thread T0 #0 0x533c8e in xmlParserPrintFileContextInternal libxml2-2.9.3/error.c:192:6 #1 0x54088a in xmlReportError libxml2-2.9.3/error.c:406:9 #2 0x53884f in __xmlRaiseError libxml2-2.9.3/error.c:633:2 #3 0x56f0ec in xmlFatalErr libxml2-2.9.3/parser.c:540:5 #4 0x569c98 in xmlGROW libxml2-2.9.3/parser.c:2077:9 #5 0x62bcb3 in xmlParseEndTag2 libxml2-2.9.3/parser.c:9846:5 #6 0x61d620 in xmlParseElement libxml2-2.9.3/parser.c:10238:2 #7 0x63be9b in xmlParseDocument libxml2-2.9.3/parser.c:10912:2 #8 0x672b74 in xmlDoRead libxml2-2.9.3/parser.c:15390:5 #9 0x673041 in xmlReadFile libxml2-2.9.3/parser.c:15452:13 #10 0x4f5b60 in parseAndPrintFile libxml2-2.9.3/xmllint.c:2401:9 #11 0x4ebe8f in main libxml2-2.9.3/xmllint.c:3759:7,CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+READ of size 1 at 0x7ffe56c100c1 thread T0 #0 0xb6d62b in xmlSAX2TextNode /root/libxml2/SAX2.c:1868 #1 0xb7159a in xmlSAX2Characters /root/libxml2/SAX2.c:2550 #2 0x6b53ee in htmlParseTryOrFinish /root/libxml2/HTMLparser.c:5740 #3 0x6b53ee in htmlParseChunk /root/libxml2/HTMLparser.c:6097 #4 0x416aae in parseAndPrintFile /root/libxml2/xmllint.c:2215 #5 0x40e119 in main /root/libxml2/xmllint.c:3759 #6 0x7fa7dec00ec4 (/lib/x86_64-linux-gnu/libc.so.6+0x21ec4) #7 0x40fc0c in _start (/root/libxml2/xmllint+0x40fc0c),CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+READ of size 1 at 0xb4c00137 thread T0 #0 0x8832927 in xmlSAX2AttributeNs libxml2-2.9.3/SAX2.c:2035 #1 0x8844b09 in xmlSAX2StartElementNs libxml2-2.9.3/SAX2.c:2409 #2 0x812819e in xmlParseStartTag2 libxml2-2.9.3/parser.c:9756 #3 0x8171cb2 in xmlParseElement libxml2-2.9.3/parser.c:10129 #4 0x817bfe9 in xmlParseDocument libxml2-2.9.3/parser.c:10912 #5 0x81b5589 in xmlDoRead libxml2-2.9.3/parser.c:15390 #6 0x81b5589 in xmlReadFile libxml2-2.9.3/parser.c:15452 #7 0x805d5a9 in parseAndPrintFile libxml2-2.9.3/xmllint.c:2401 #8 0x8051352 in main libxml2-2.9.3/xmllint.c:3759 #9 0xb5fada82 in __libc_start_main /build/buildd/eglibc-2.19/csu/libc-start.c:287 #10 0x80555c0 in _start (libxml2-2.9.3/bin/xmllint+0x80555c0),CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+READ of size 1 at 0xb5800597 thread T0 #0 0x809ceef in xmlNextChar ~/libxml2-2.9.3/parserInternals.c:535 #1 0x814cfd7 in xmlParseInternalSubset ~/libxml2-2.9.3/parser.c:8472 #2 0x817b450 in xmlParseDocument ~/libxml2-2.9.3/parser.c:10880 #3 0x81b5589 in xmlDoRead ~/libxml2-2.9.3/parser.c:15390 #4 0x81b5589 in xmlReadFile ~/libxml2-2.9.3/parser.c:15452 #5 0x805d5a9 in parseAndPrintFile ~/libxml2-2.9.3/xmllint.c:2401 #6 0x8051352 in main ~/libxml2-2.9.3/xmllint.c:3759 #7 0xb6006a82 in __libc_start_main /build/buildd/eglibc-2.19/csu/libc-start.c:287 #8 0x80555c0 in _start (~/libxml2-2.9.3/libxml293/bin/xmllint+0x80555c0),CVE-2016-1762,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"READ of size 73661 at 0x631000010810 thread T0 #0 0x4a2f24 in __asan_memcpy llvm/projects/compiler-rt/lib/asan/asan_interceptors.cc:393 #1 0xd026b2 in xmlDictAddString libxml2-2.9.3/dict.c:285:5 #2 0xd009e8 in xmlDictLookup libxml2-2.9.3/dict.c:926:11 #3 0x806e4d in htmlParseNameComplex libxml2-2.9.3/HTMLparser.c:2517:12 #4 0x7cc29d in htmlParseName libxml2-2.9.3/HTMLparser.c:2483:12 #5 0x7ca6f1 in htmlParseEntityRef libxml2-2.9.3/HTMLparser.c:2682:16 #6 0x820a0d in htmlParseReference libxml2-2.9.3/HTMLparser.c:4044:8 #7 0x7df716 in htmlParseContentInternal libxml2-2.9.3/HTMLparser.c:4619:3 #8 0x7e2f0f in htmlParseDocument libxml2-2.9.3/HTMLparser.c:4769:5 #9 0x802c55 in htmlDoRead libxml2-2.9.3/HTMLparser.c:6741:5 #10 0x8030b6 in htmlReadFile libxml2-2.9.3/HTMLparser.c:6799:13 #11 0x4f47a5 in parseAndPrintFile libxml2-2.9.3/xmllint.c:2248:8 #12 0x4ebe8f in main libxml2-2.9.3/xmllint.c:3759:7 0x631000010810 is located 0 bytes to the right of 65552-byte region [0x631000000800,0x631000010810) allocated by thread T0 here: #0 0x4b8ef0 in realloc llvm/projects/compiler-rt/lib/asan/asan_malloc_linux.cc:61 #1 0xa079a5 in xmlBufGrowInternal libxml2-2.9.3/buf.c:486:23 #2 0xa06722 in xmlBufGrow libxml2-2.9.3/buf.c:515:11 #3 0x72fef4 in xmlParserInputBufferGrow libxml2-2.9.3/xmlIO.c:3326:9 #4 0x543b22 in xmlParserInputGrow libxml2-2.9.3/parserInternals.c:320:8 #5 0x8067f4 in htmlParseNameComplex libxml2-2.9.3/HTMLparser.c:2511:6 #6 0x7cc29d in htmlParseName libxml2-2.9.3/HTMLparser.c:2483:12 #7 0x7ca6f1 in htmlParseEntityRef libxml2-2.9.3/HTMLparser.c:2682:16 #8 0x820a0d in htmlParseReference libxml2-2.9.3/HTMLparser.c:4044:8 #9 0x7df716 in htmlParseContentInternal libxml2-2.9.3/HTMLparser.c:4619:3 #10 0x7e2f0f in htmlParseDocument libxml2-2.9.3/HTMLparser.c:4769:5 #11 0x802c55 in htmlDoRead libxml2-2.9.3/HTMLparser.c:6741:5 #12 0x8030b6 in htmlReadFile libxml2-2.9.3/HTMLparser.c:6799:13 #13 0x4f47a5 in parseAndPrintFile libxml2-2.9.3/xmllint.c:2248:8 #14 0x4ebe8f in main libxml2-2.9.3/xmllint.c:3759:7",CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Regards, Gustavo.",CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reported and fix provided by David Drysdale @ Google.,CVE-2015-7497,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reported and fixed by Hugh Davenport.,CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Reported by Kostya Serebryany @ Google.,CVE-2015-7500,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+run following cmd xmllint --htmlout $PoC poc Here's ASAN log.,CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Set memory limit for LZMA decompression.,CVE-2017-18258,2,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+"Shall I attach the details now or wait until this bug is marked as ""Only for libxml2 developers""?",CVE-2016-1840,4,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"Since upstream is not responding, i think it is a good time to publish some details here.",CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"size_t, no, you can't change the API to return a 64bit when it was an int as this is both an ABI and API breakage on a variety of platforms.",CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Started by Chris Evans, I added a few more place where the error should have been set in the evaluation context.",CVE-2011-2834,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Stop parsing on entities boundaries errors.,CVE-2015-7941,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"Subject: CVE request: out-of-bounds read parsing an XML in libxml2 using recover mode Hi, We found an out-of-bounds read parsing a specially crafted xml in libxml2 if recover mode is used.",CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The (1) xmlParserEntityCheck and (2) xmlParseAttValueComplex functions in parser.c in libxml2 2.9.3 do not properly keep track of the recursion depth, which allows context-dependent attackers to cause a denial of service (stack consumption and application crash) via a crafted XML document containing a large number of nested entity references.",CVE-2016-3705,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+The attached document will cause an out of bounds heap read access in the function xmlParseXMLDecl.,CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The comprehensive fix is to change the return type of xmlStrlen() to size_t so that it doesn't overflow.,CVE-2016-1834,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+The count was incremented before the allocation and not fixed in case of failure * xpath.c: corrects a few instances where the available count of some structure is updated before we know the allocation actually succeeds,CVE-2011-1944,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+The count was incremented before the allocation and not fixed in case of failure.,CVE-2011-1944,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+the current pointer to the input has to be between the base and end.,CVE-2015-7499,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The --dropdtd option can leave dangling pointers in entity reference nodes.,CVE-2021-3518,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The error handling of Conditional Section also need to be straightened as the structure of the document can't be guessed on a failure there and it's better to stop parsing as further errors are likely to be irrelevant.,CVE-2015-7941,2,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+The error was traced back into xmlBufGetInputBase.,CVE-2013-1969,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The fix for this would be to check the instate in xmlParseMarkupDecl after it parses an entry, and if EOF is reached, then stop.",CVE-2015-8241,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"The greatest impact from this flaw is to confidentiality, integrity, and availability.",CVE-2021-3518,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The highest threat from this vulnerability is to system availability.,CVE-2021-3537,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The HTML parser was too optimistic when processing comments and didn't check for the end of the stream on the first 2 characters.,CVE-2015-8710,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The htmlCurrentChar function in libxml2 before 2.9.4, as used in Apple iOS before 9.3.2, OS X before 10.11.5, tvOS before 9.2.1, and watchOS before 2.2.1, allows remote attackers to cause a denial of service (heap-based buffer over-read) via a crafted XML document.",CVE-2016-1833,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The htmlParseComment function in HTMLparser.c in libxml2 allows attackers to obtain sensitive information, cause a denial of service (out-of-bounds heap memory access and application crash), or possibly have unspecified other impact via an unclosed HTML comment.",CVE-2015-8710,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The htmlParseTryOrFinish function in HTMLparser.c in libxml2 2.9.4 allows attackers to cause a denial of service (buffer over-read) or information disclosure.,CVE-2017-8872,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The issue has been fixed in commit 50f06b3e.,CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The most likely impact of this flaw is to application availability, with some potential impact to confidentiality and integrity if an attacker is able to use memory information to further exploit the application.",CVE-2021-3517,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The pointers from the context input were not properly reset after that call which can do reallocations.,CVE-2013-1969,2,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0
+The problem is doing it in a consistent and safe fashion.,CVE-2015-7499,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The processing of namespace and attributes nodes was not compliant to the XPath-1.0 specification.,CVE-2010-4008,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"The xmlBufAttrSerializeTxtContent function in xmlsave.c in libxml2 allows context-dependent attackers to cause a denial of service (out-of-bounds read and application crash) via a non-UTF-8 attribute value, related to serialization.",CVE-2016-4483,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xmlDictAddString function in libxml2 before 2.9.4, as used in Apple iOS before 9.3.2, OS X before 10.11.5, tvOS before 9.2.1, and watchOS before 2.2.1, allows remote attackers to cause a denial of service (heap-based buffer over-read) via a crafted XML document.",CVE-2016-1839,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xmlNextChar function in libxml2 2.9.2 does not properly check the state, which allows context-dependent attackers to cause a denial of service (heap-based buffer over-read and application crash) or obtain sensitive information via crafted XML data.",CVE-2015-8241,2,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+The xmlNextChar function in libxml2 before 2.9.4 allows remote attackers to cause a denial of service (heap-based buffer over-read) via a crafted XML document.,CVE-2016-1762,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xmlParseElementDecl function in parser.c in libxml2 before 2.9.4 allows context-dependent attackers to cause a denial of service (heap-based buffer underread and application crash) via a crafted file, involving xmlParseName.",CVE-2016-4447,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The xmlParseMisc function in parser.c in libxml2 before 2.9.3 allows context-dependent attackers to cause a denial of service (out-of-bounds heap read) via unspecified vectors related to incorrect entities boundaries and start tags.,CVE-2015-7500,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xmlParserHandlePEReference function in parser.c in libxml2 before 2.9.2, as used in Web Listener in Oracle HTTP Server in Oracle Fusion Middleware 11.1.1.7.0, 12.1.2.0, and 12.1.3.0 and other products, loads external parameter entities regardless of whether entity substitution or validation is enabled, which allows remote attackers to cause a denial of service (resource consumption) via a crafted XML document.",CVE-2014-0191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xmlPArserPrintFileContextInternal function in libxml2 before 2.9.4, as used in Apple iOS before 9.3.2, OS X before 10.11.5, tvOS before 9.2.1, and watchOS before 2.2.1, allows remote attackers to cause a denial of service (heap-based buffer over-read) via a crafted XML document.",CVE-2016-1838,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xmlParseXMLDecl function in parser.c in libxml2 before 2.9.3 allows context-dependent attackers to obtain sensitive information via an (1) unterminated encoding value or (2) incomplete XML declaration in XML data, which triggers an out-of-bounds heap read.",CVE-2015-8317,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The xmlSAX2TextNode function in SAX2.c in the push interface in the HTML parser in libxml2 before 2.9.3 allows context-dependent attackers to cause a denial of service (stack-based buffer over-read and application crash) or obtain sensitive information via crafted XML data.,CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xmlStringLenDecodeEntities function in parser.c in libxml2 before 2.9.3 does not properly prevent entity expansion, which allows context-dependent attackers to cause a denial of service (CPU consumption) via crafted XML data, a different vulnerability than CVE-2014-3660.",CVE-2015-5312,2,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+"The xz_decomp function in xzlib.c in libxml2 2.9.8, if --with-lzma is used, allows remote attackers to cause a denial of service (infinite loop) via a crafted XML file that triggers LZMA_MEMLIMIT_ERROR, as demonstrated by xmllint, a different vulnerability than CVE-2015-8035.",CVE-2018-9251,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The xz_head function in libxml2 allows remote attackers to cause a denial of service (memory consumption) via a crafted LZMA file, because the decoder functionality does not restrict memory usage to what is required for a legitimate file.",CVE-2017-18258,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"The xz_head function in xzlib.c in libxml2 before 2.9.6 allows remote attackers to cause a denial of service (memory consumption) via a crafted LZMA file, because the decoder functionality does not restrict memory usage to what is required for a legitimate file.",CVE-2017-18258,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Then xmlSchemaVStart->xmlSchemaPreRun initialize vctxt->xsiAssemble to 0 again which cause the alloced schema can not be freed anymore.,CVE-2019-20388,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+There appears to be an out-of-bounds read in libxml2 (2.9.2).,CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"There are times, like on unterminated entities that it's preferable to stop parsing, even if that means less error reporting.",CVE-2015-7941,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+There is a flaw in the xml entity encoding functionality of libxml2 in versions before 2.9.11.,CVE-2021-3517,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+There's a flaw in libxml2 in versions before 2.9.11.,CVE-2021-3518,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This also avoids scanning entity declarations and even modifying them inadvertently during XInclude processing.,CVE-2021-3518,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+This avoids miscalculation of available bytes.,CVE-2017-8872,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This can be easily automated using a wrapper html that loads the xml and reloads the page (attached).,CVE-2010-4494,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes the minimized test case (759573.xml).,CVE-2016-4447,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This is a safe fix for branches.,CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This issue is related to the handling of external parameter entities.,CVE-2014-0191,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"This normally won't cause a crash, but is visible under ASAN or Valgrind.",CVE-2015-7941,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This patch accounts for those replacement and stop parsing after a given threshold.,CVE-2013-0338,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This slightly modifies the output of 754946 in regression tests.,CVE-2015-7500,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This then causes an issue when the macro NEXT is called twice more, the first time it will read EOF, then the second time it will overread the buffer into global memory space, causing a crash in ASAN.",CVE-2015-8241,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This was branched from https://bugzilla.gnome.org/show_bug.cgi?id=762100 Reproducer and Fixes are available when this bug is private.,CVE-2016-3705,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This was found on git master, commit cf77e60515045bdd66f2c59c69a06e603b470eae When compiled with ASAN, it gives the following crash $ ./xmllint --html --push ~/fuzzing/xml-html-push-crashes-tmin/id\:000000* /root/fuzzing/xml-html-push-crashes-tmin/id:000000,sig:06,src:000000,op:flip1,pos:5:1: HTML parser error : htmlParseStartTag: invalid element name <>0 ^ =================================================================.",CVE-2015-8242,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Truncated UTF-8 input can cause out-of-bounds array access.,CVE-2021-3517,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Unless explicietely asked for when validating or replacing entities with their value.,CVE-2013-0339,2,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+Unless explicitely asked for when validating or replacing entities with their value.,CVE-2014-0191,2,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+Update the public function to reuse that new internal routine.,CVE-2015-7499,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Use-after-free vulnerability in the xmlDictComputeFastKey function in libxml2 before 2.9.4, as used in Apple iOS before 9.3.2, OS X before 10.11.5, tvOS before 9.2.1, and watchOS before 2.2.1, allows remote attackers to cause a denial of service via a crafted XML document.",CVE-2016-1836,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Use-after-free vulnerability in the xmlSAX2AttributeNs function in libxml2 before 2.9.4, as used in Apple iOS before 9.3.2 and OS X before 10.11.5, allows remote attackers to cause a denial of service via a crafted XML document.",CVE-2016-1835,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Validate UTF8 in xmlEncodeEntities.,CVE-2021-3517,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"Vulnerability class: Null deref, Denial of Service.",CVE-2018-14404,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+W.r.t.,CVE-2016-1834,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"WebKitGTK+ recently bumped the libxml2 dependency to 2.9.0, and immediately buffer overflow errors started appearing, signalled by the following stderr output in some test cases: internal buffer error : No error message provided.",CVE-2013-1969,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When ctxt->instate == XML_PARSER_EOF,xmlParseStringEntityRef return NULL which cause a infinite loop in xmlStringLenDecodeEntities Found with libFuzzer.",CVE-2020-7595,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When ctxt->schema is NULL, xmlSchemaSAXPlug->xmlSchemaPreRun alloc a new schema for ctxt->schema and set vctxt->xsiAssemble to 1.",CVE-2019-20388,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When doc is NULL, namespace created in xmlTreeEnsureXMLDecl is bind to newDoc->oldNs, in this case, set newDoc->oldNs to NULL and free newDoc will cause a memory leak.",CVE-2019-19956,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+"when parser was run without the XML_PARSE_NOENT option, which is the default), libxml2 loaded external entities, which could lead to some XML eXternal Entities (XXE) attacks.",CVE-2014-0191,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+when the end of the internal subset isn't properly detected xmlParseInternalSubset should just return instead of trying to process input further.,CVE-2016-1762,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"When we hit a convwersion failure when switching encoding it is bestter to stop parsing there, this was treated as a fatal error but the parser was continuing to process to extract more errors, unfortunately that makes little sense as the data is obviously corrupt and can potentially lead to unexpected behaviour.",CVE-2015-7498,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"Without ASAN, there is potential to get input that could cause out of bounds memory to be returned to userspace through the use of libxml2, which could be used to cause denial of service attacks, or gain sensitive information.",CVE-2015-8241,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"XML external entity (XXE) vulnerability in the xmlStringLenDecodeEntities function in parser.c in libxml2 before 2.9.4, when not in validating mode, allows context-dependent attackers to read arbitrary files or cause a denial of service (resource consumption) via unspecified vectors.",CVE-2016-4449,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+xmllint: global-buffer-overflow in xmlEncodeEntitiesInternal.,CVE-2020-24977,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+xmlParseBalancedChunkMemoryRecover in parser.c in libxml2 before 2.9.10 has a memory leak related to newDoc->oldNs.,CVE-2019-19956,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+xmlSchemaPreRun in xmlschemas.c in libxml2 2.9.10 allows an xmlSchemaValidateStream memory leak.,CVE-2019-20388,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+xmlStringLenDecodeEntities in parser.c in libxml2 2.9.10 has an infinite loop in a certain end-of-file situation.,CVE-2020-7595,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

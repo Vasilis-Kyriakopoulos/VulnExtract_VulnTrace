@@ -1,0 +1,101 @@
+Description,CVE_ID,label,AFCB,AFC,AFBC,AFCF,AFAM,AFF,AFR,AFMS,AFMC,AFDN,AFA,AFMO,AFCN,AFP,AFLH,AFPP
+(e.g.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A buffer overflow vulnerability in the dhcp6 client of systemd allows a malicious dhcp6 server to overwrite heap memory in systemd-networkd.,CVE-2018-15688,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A flaw was found in systemd-journald.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A flaw was found in systemd-journald.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A local attacker can use this flaw to disclose process memory data.,CVE-2018-16866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A local attacker could provide a specially-crafted packet that when processed by systemd would lead to systemd daemon crash or, potentially, arbitrary code execution with the privileges of the user running the daemon.",CVE-2013-4391,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A local attacker, or a remote one if systemd-journal-remote is used, may use this flaw to crash systemd-journald or execute code with journald privileges.",CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"A malicious DNS server can exploit this via a response with a specially crafted TCP payload to trick systemd-resolved into allocating a buffer that's too small, and subsequently write arbitrary data beyond the end of it.",CVE-2017-9445,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A race condition in chown_one() of systemd allows an attacker to cause systemd to set arbitrary permissions on arbitrary files.,CVE-2018-15687,4,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+A stack-based buffer overflow vulnerability was found in getpwnam()/getgrnam() functions of NSS module nss-mymachines provided by systemd.,CVE-2015-7510,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A vulnerability in unit_deserialize of systemd allows an attacker to supply arbitrary state across systemd re-execution via NotifyAccess.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Adding the base parameter to strtoul() seems like it would be an incomplete fix.,CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Affected releases are systemd versions up to and including 239.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Affected releases are systemd versions up to and including 239.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Affected releases are systemd: versions up to and including 239.,CVE-2018-15688,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An allocation of memory without limits, that could result in the stack clashing with another memory region, was discovered in systemd-journald when many entries are sent to the journal socket.",CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An attacker is not able to significantly increase their chances even if they were able to force journald to restart repeatedly: default StartLimit* settings will throttle restarts to 5/se,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An attacker with local access can exploit this via services with certain configurations to modify the file permissions of arbitrary files.,CVE-2018-15687,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"An integer overflow, leading to heap-based buffer overflow flaw was found in the way journald functionality of systemd, a system and service manager, processed native messages.",CVE-2013-4391,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An issue was discovered in button_open in login/logind-button.c in systemd before 243.,CVE-2019-20386,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An out of bounds read was discovered in systemd-journald in the way it parses log messages that terminate with a colon ':'.,CVE-2018-16866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An out-of-bounds read when parsing a crafted syslog message that could lead to information disclosure.,CVE-2018-16866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+An uncontrolled alloca() by writing a crafted message to /run/systemd/journal/socket that results in a stack buffer overflow.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+basic/user-util: always use base 10 for user/group numbers.,CVE-2020-13776,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+bugfix of null pointer p->question dereferencing (#6020),CVE-2017-9217,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+bus_open leak sd_event_source when udevadm trigger.,CVE-2019-20386,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"change the main-pid, control-pid, etc.)",CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+chown-recursive: let's rework the recursive logic to use O_PATH.,CVE-2018-15687,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+create a username 0).,CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+dhcp6 packet size calculation fixes.,CVE-2018-15688,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+discussions in #156.,CVE-2018-16866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+don't accept arbitrarily sized journal data fields.,CVE-2013-4391,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+during a package upgrade) allowing for state injection.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Effectively this means that we will reject such strings as a username/uid/groupname/gid where strict mode is used, and try to look up a user/group with such a name in relaxed mode.",CVE-2020-13776,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"Existing use of E2BIG is replaced with ENOBUFS (entry too long), and E2BIG is reused for the new error condition (too many fields).",CVE-2018-16865,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Fixes a vulnerability originally found by Jann Horn from Google.,CVE-2018-15687,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"For example, ""0x2b3bfa0"" would be interpreted as UID==45334432 and ""01750"" would be interpreted as UID==1000.",CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Function unit_deserialize() in file unit.c does not properly handle lines longer than LINE_MAX and the content of a property longer than that is parsed as part of the serialized state, allowing an attacker to corrupt the state of the service (e.g.",CVE-2018-15686,2,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0
+"Function unit_deserialize() in file unit.c does not properly handle lines longer than LINE_MAX and the content of a property longer than that is parsed as part of the serialized state, allowing an attacker to corrupt the state of the service (e.g. change the main-pid, control-pid, etc.)",CVE-2018-15686,2,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0
+"id, getent passwd).",CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In systemd 223 through 235, a remote DNS server can respond with a custom crafted DNS NSEC resource record to trigger an infinite loop in the dns_packet_read_type_window() function of the 'systemd-resolved' service and cause a DoS of the affected service. ",CVE-2017-15908,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In systemd 223 through 235, a remote DNS server can respond with a custom crafted DNS NSEC resource record to trigger an infinite loop in the dns_packet_read_type_window() function of the 'systemd-resolved' service and cause a DoS of the affected service.",CVE-2017-15908,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In systemd through 233, certain sizes passed to dns_packet_new in systemd-resolved can cause it to allocate a buffer that's too small.",CVE-2017-9445,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Integer overflow in the valid_user_field function in journal/journald-native.c in systemd allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via a large journal data field, which triggers a heap-based buffer overflow.",CVE-2013-4391,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+It seems the only correct solution would be to require a flag on the command line when the caller wishes to specify a numeric UID rather than a username.,CVE-2020-13776,2,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0
+It was possible to reach the 128K limit of units by attempting to load a bunch of nonsense.,CVE-2012-1101,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"It would allow hex numbers to be recognised as string usernames, but you still wouldn't be able to use decimal numbers as a username, which apparently is allowed by the POSIX standard.",CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+journal: do not remove multiple spaces after identifier in syslog message.,CVE-2018-16866,2,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0
+journald: don't accept arbitrarily sized journal data fields.,CVE-2013-4391,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+journal-remote: set a limit on the number of fields in a message.,CVE-2018-16865,2,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+Maybe it would make sense to somehow cover the sending side too.,CVE-2018-15688,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Merge pull request #10519 from poettering/serialize-fixes,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Merge pull request #7184 from keszybz/resolved-loop.,CVE-2017-15908,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NOTE: this issue exists because of an incomplete fix for CVE-2017-1000082,CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+nss-mymachines: do not allow overlong machine names.,CVE-2015-7510,2,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0
+"On my host, when executing the udevadm trigger, I only receive the change event, which causes memleak",CVE-2019-20386,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+resolved: bugfix of null pointer p->question dereferencing (#6020),CVE-2017-9217,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+resolved: fix loop on packets with pseudo dns types.,CVE-2017-15908,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+resolved: simplify alloc size calculation.,CVE-2017-9445,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"RHEL7 is currently shipping older versions, and thus is not vulnerable.",CVE-2015-7510,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Since the function changed is fairly low-level and fairly widely used, this affects multiple tools: loginctl show-user/enable-linger/disable-linger foo', the third argument in sysusers.d, fourth and fifth arguments in tmpfiles.d, etc.",CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Single space is used as separator.,CVE-2018-16866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+So it seems that it's not uncommon for dhcp6-client to get the length wrong.,CVE-2018-15688,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+So let's follow suit and only accept numbers in decimal notation.,CVE-2020-13776,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Stack-based buffer overflow in the getpwnam and getgrnam functions of the NSS module nss-mymachines in systemd.,CVE-2015-7510,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Statement: This issue did not affect the versions of systemd as shipped with Red Hat Enterprise Linux 7.,CVE-2015-7510,4,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"systemd 37-1 does not properly handle non-existent services, which causes a denial of service (failure of login procedure).",CVE-2012-1101,2,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0
+systemd is vulnerable to improper dereference of symlinks in the core/chown_recursive.c:chown_one() function.,CVE-2018-15687,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+systemd is vulnerable to line splitting via long lines read by fgets() in the unit_deserialize() function during daemon-reexec (e.g.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Systemd services with `NotifyAccess != none` and malicious executables can exploit this vulnerability resulting corrupted process state.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"systemd through v245 mishandles numerical usernames such as ones composed of decimal digits or 0x followed by hex digits, as demonstrated by use of root privileges when privileges of the 0x0 user account were intended.",CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+systemd-resolved through 233 allows remote attackers to cause a denial of service (daemon crash) via a crafted DNS response with an empty question section.,CVE-2017-9217,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Testing on rhel-7 bears this out approximately.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+That way we can pin a specific inode and analyze it and manipulate it without it being swapped out beneath our hands.,CVE-2018-15687,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The allocation size was calculated in a complicated way, and for values close to the page size we would actually allocate less than requested.",CVE-2017-9445,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The bug was introduced with the _nss_mymachines_getpwnam_r() & _nss_mymachines_getgrnam_r() functions, in v223.",CVE-2015-7510,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The exploit described by reporter is a stack clash: since crafted input can cause a maximum alloca() of 4GiB (which may not be entirely written to) it is possible to jump over the guard page if the randomized offset between the stack and the next writeable segment on the heap is smaller than this.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The receiving side is more or less covered by the dhcp6-client fuzzer (which has helped to find three similar issues this month).,CVE-2018-15688,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The rest of the time, this attack will be harmless (and noisy, as journald will log the message).",CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This behaviour is definitely not expected by users, since tools generally only accept decimal numbers (e.g.",CVE-2020-13776,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"This behaviour is definitely not expected by users, since tools generally only accept decimal numbers.",CVE-2020-13776,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+This can be used to improperly influence systemd execution and possibly lead to root privilege escalation.,CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This can lead to a denial of service attack or arbitrary code execution in some cases.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This is claimed to occur approx 1/2048 of the time.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This matches the change done for systemd-journald, hence forming the second part of the fix for CVE-2018-16865",CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This means that names like 0x2b3bfa0 would be ambiguous: they are a valid user name according to our documented relaxed rules, but they would also be parsed as numeric uids.",CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This parsing was used also in cases where either a user/group name or number may be specified.,CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+unit: garbage collect units with load error.,CVE-2012-1101,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Units that failed to load were never cleaned up.,CVE-2012-1101,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Versions from v221 to v239 are vulnerable.,CVE-2018-16866,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Versions through v240 are vulnerable.,CVE-2018-16865,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+We would like to report a vulnerability about systemd which allows to DOS the systemd-resolve service.,CVE-2017-15908,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+We would parse numbers with base prefixes as user identifiers.,CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When executing the udevadm trigger command, a memory leak may occur.",CVE-2019-20386,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When systemd re-executes, the state is serialized and then deserialized after the re-execution.",CVE-2018-15686,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When using systemd's features CacheDirectory, LogsDirectory or StateDirectory together with the DynamicUser feature, systemd needs to recursively change ownership of those directories.",CVE-2018-15687,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"While doing this, when the file is not a link the file mode is re-set to be sure the kernel doesn't change it (which could happen with SUID/SGID files), but an attacker may be able to bypass the link check and change the mode of any file in the filesystem.",CVE-2018-15687,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"while other tools only accept user names and thus will interpret such strings as user names without even attempting to convert them to numbers (su, ssh).",CVE-2020-13776,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"You could test for a string username before trying the parameter as a UID, but that can lead to unpredictable behaviour (e.g.",CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+#NAME?,CVE-2020-13776,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

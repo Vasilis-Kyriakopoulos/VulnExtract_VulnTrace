@@ -1,0 +1,620 @@
+Description,CVE_ID,label,AFCB,AFC,AFBC,AFCF,AFAM,AFF,AFR,AFMS,AFMC,AFDN,AFA,AFMO,AFCN,AFP,AFLH,AFPP
+(65 bytes isn't a lot.),CVE-2017-13001,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14461/LDP: Fix a bounds check.,CVE-2018-14461,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14462/ICMP: Add a missing bounds check in icmp_print().,CVE-2018-14462,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14463/VRRP: Add a missing bounds check in vrrp_print().,CVE-2018-14463,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14464/LMP: Add a missing bounds check in lmp_print_data_link_subobjs().,CVE-2018-14464,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14465/RSVP: Add a missing bounds check in rsvp_obj_print().,CVE-2018-14465,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14466/Rx: fix an over-read bug,CVE-2018-14466,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14466/Rx: fix an over-read bug.,CVE-2018-14466,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14467/BGP: Fix BGP_CAPCODE_MP.,CVE-2018-14467,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14468/FRF.16: Add a missing length check.,CVE-2018-14468,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+(for 4.9.3) CVE-2018-14469/ISAKMP: Add a missing bounds check.,CVE-2018-14469,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14470/Babel: fix an existing length check.,CVE-2018-14470,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+(for 4.9.3) CVE-2018-14879/fix -V to fail invalid input safely get_next_file() did not check the return value of strlen() and underflowed an array index if the line read by fgets() from the file started with \\0.,CVE-2018-14879,2,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+(for 4.9.3) CVE-2018-14879/fix -V to fail invalid input safely.,CVE-2018-14879,2,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+(for 4.9.3) CVE-2018-14880/OSPFv3: Fix a bounds check.,CVE-2018-14880,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14881/BGP: Fix BGP_CAPCODE_RESTART.,CVE-2018-14881,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14882/ICMP6 RPL: Add a missing bounds check,CVE-2018-14882,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-14882/ICMP6 RPL: Add a missing bounds check.,CVE-2018-14882,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-16227/IEEE 802.11: add a missing bounds check.,CVE-2018-16227,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-16228/HNCP: make buffer access safer print_prefix() has a buffer and does not initialize it.,CVE-2018-16228,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-16228/HNCP: make buffer access safer.,CVE-2018-16228,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"(for 4.9.3) CVE-2018-16229/DCCP: Fix printing ""Timestamp"" and ""Timestamp Echo"" options",CVE-2018-16229,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+"(for 4.9.3) CVE-2018-16229/DCCP: Fix printing ""Timestamp"" and ""Timestamp Echo"" options.",CVE-2018-16229,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-16230/BGP: fix decoding of MP_REACH_NLRI.,CVE-2018-16230,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-16300/BGP: prevent stack exhaustion.,CVE-2018-16300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) CVE-2018-16452/SMB: prevent stack exhaustion.,CVE-2018-16452,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) LMP: Add some missing bounds checks,CVE-2019-15166,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"(for 4.9.3) LMP: Add some missing bounds checks In lmp_print_data_link_subobjs(), these problems were identified through code review.",CVE-2019-15166,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+(for 4.9.3) SMB: Add two missing bounds checks,CVE-2018-16451,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"(Found by code inspection, not by a capture.)",CVE-2017-13725,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"(This also lets us eliminate the check for the ""stable"" argument being present in the captured data; rewrite the code to print that to make it a bit clearer.)",CVE-2017-12898,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+(This change was ported from commit 6df4852 in the master branch.),CVE-2018-16229,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"16 bytes of IPv6 address, 16 bytes of subnet mask.",CVE-2017-13689,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a bounds check and a comment to bgp_capabilities_print().,CVE-2018-14467,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a bounds check and a comment to bgp_capabilities_print().,CVE-2018-14467,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a bounds check before fetching data,CVE-2017-13023,2,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a bounds check before fetching data,CVE-2017-13023,2,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a bounds check in name_len().,CVE-2017-12893,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a bounds check.,CVE-2017-13004,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a comment.,CVE-2018-14461,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a length check to fix that and remove a useless boundary check from a loop because the boundary is tested for the full length of ""V"" before the switch block.",CVE-2017-13055,2,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Add a missing bounds check,CVE-2017-12988,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check,CVE-2017-12988,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+add a missing bounds check,CVE-2017-12988,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+add a missing bounds check for Ubik.,CVE-2017-13049,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check in icmp_print().,CVE-2018-14462,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check in lmp_print_data_link_subobjs().,CVE-2018-14464,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check in rsvp_obj_print().,CVE-2018-14465,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check in vrrp_print().,CVE-2018-14463,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check.,CVE-2017-12988,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check.,CVE-2017-12988,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add a missing bounds check.,CVE-2017-12988,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+add a missing length check,CVE-2017-12999,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+Add a missing length check.,CVE-2017-12999,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+Add a missing length check.,CVE-2017-12999,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+Add a missing option length check.,CVE-2017-13017,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+Add a test using the capture file supplied by Katie Holly.,CVE-2017-13038,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s),CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't be rejected as an invalid capture.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't cause 'tcpdump: pcap_loop: truncated dump file'",CVE-2017-13023,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't cause 'tcpdump: pcap_loop: truncated dump file'",CVE-2017-13023,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't cause 'tcpdump: pcap_loop: truncated dump file'",CVE-2017-13023,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add a test using the capture file supplied by the reporter(s), modified so the capture file won't cause 'tcpdump: pcap_loop: truncated dump file'",CVE-2017-13023,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add a test using the capture file supplied by the reporter(s).,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add an intermediate bounds check to make it safe.,CVE-2018-16227,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add bounds checks to ip_printroute().,CVE-2017-13022,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add bounds checks when printing time stamp options.,CVE-2017-13037,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add bounds checks,",CVE-2017-13026,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+"Add bounds checks, do a common check to make sure we captured the entire subTLV, add checks to make sure the subTLV fits within the TLV.",CVE-2017-13026,2,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+add checks to make sure the subTLV fits within the TLV.,CVE-2017-13026,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+add DHCPv4-Data bounds checks,CVE-2017-13044,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+add DHCPv6-Data bounds checks,CVE-2017-13042,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add length checks.,CVE-2017-13687,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+Add missing bounds check.,CVE-2017-12991,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add missing checks to dhcpv6_print().,CVE-2017-13042,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add missing checks to make this safe.,CVE-2018-16230,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add more bounds checks.,CVE-2017-12993,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add more bounds checks.,CVE-2017-12993,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+add some bounds checks,CVE-2017-13045,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add some comments.,CVE-2018-16229,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add some missing bounds checks,CVE-2017-13002,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add some missing bounds checks.,CVE-2017-13002,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add some missing bounds checks.,CVE-2017-13002,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add tests using the capture files supplied by the reporter(s),CVE-2017-13004,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add tests using the capture files supplied by the reporter(s), modified so the capture files won't be rejected as an invalid capture.",CVE-2017-13016,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Add tests using the capture files supplied by the reporter(s), modified so the capture files won't be rejected as an invalid capture.",CVE-2017-13016,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add tests using the capture files supplied by the reporter(s).,CVE-2017-13004,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add tests using the capture files supplied by the reporter(s).,CVE-2017-13004,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add tests using the capture files supplied by the reporter(s).,CVE-2017-13004,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add tests using the capture files supplied by the reporter(s).,CVE-2017-13004,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Add the missing check.,CVE-2018-14879,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add two bounds checks before fetching data,CVE-2017-13005,2,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add two missing bounds checks,CVE-2018-16451,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+Add two tests using the capture files supplied by the reporter(s),CVE-2018-14462,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"After we advance the pointer by the length value in the buffer, make sure it points to something in the captured data.",CVE-2017-12893,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0
+"Also, add some infinite-pointer-loop captures.",CVE-2017-12995,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Also, change mobility_print() to return -1 if it runs up against the end of the packet, and stop dissecting if it does so.",CVE-2017-12985,2,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+"Also, make the buffer bigger.",CVE-2017-13011,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Also, note the places where we print the entire payload.",CVE-2017-13690,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Also, put the buffer on the stack; no reason to make it static.",CVE-2017-13001,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"Always print the SNPA, and flag it as such;",CVE-2017-13016,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"Always print the SNPA, and flag it as such; only print it as a MAC address if it's 6 bytes long.",CVE-2017-13016,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"An IPv6 address plus subnet mask is 32 bytes, not 20 bytes.",CVE-2017-13689,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Bhargava Shastry, SecT/TU Berlin, had independently identified this vulnerability by means of fuzzing and provided the packet capture file for the test.",CVE-2018-16230,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Buffer Over-read.,CVE-2019-1010220,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Calculate the reply payload length in a local variable.,CVE-2019-15161,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"Check before fetching the ""access"" part of the NFSv3 ACCESS results.",CVE-2017-12898,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check before fetching the length from the included packet's IPv4 header.,CVE-2017-13012,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Check for DNS compression pointers that don't point backwards.,CVE-2017-12995,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Check for print routines returning -1 when running past the end.,CVE-2017-12895,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+"Check for running out of packet data before checking for running out of captured data, and distinguish between running out of packet data (which might just mean ""no more strings"") and running out of captured data (which means ""truncated"").",CVE-2017-12902,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Check for the presence of the entire IPv6 fragment header.,CVE-2017-13031,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+Check that the entire ar_stat field is present in the capture.,CVE-2017-12898,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Clean up bounds checking.,CVE-2017-12992,2,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+Clean up other length tests while we're at it.,CVE-2017-13032,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0
+"clean up some other bounds checks,",CVE-2017-13688,2,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+Clean up some whitespace in tests/TESTLIST while we're at it.,CVE-2017-13031,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+Clean up the output a bit while we're at it.,CVE-2017-12997,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+CVE-2017-12893/SMB/CIFS: Add a bounds check in name_len().,CVE-2017-12893,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+"CVE-2017-12894/In lookup_bytestring(), take the length of the byte string into account.",CVE-2017-12894,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+CVE-2017-12895/ICMP: Check the availability of data before checksumming it.,CVE-2017-12895,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12896/ISAKMP: Do bounds checks in isakmp_rfc3948_print().,CVE-2017-12896,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12897/ISO CLNS: Use ND_TTEST() for the bounds checks in isoclns_print().,CVE-2017-12897,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12898/NFS: Fix bounds checking.,CVE-2017-12898,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12899/DECnet: Fix bounds checking.,CVE-2017-12899,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12900/Properly terminate all struct tok arrays.,CVE-2017-12900,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12901/EIGRP: Do more length checks.,CVE-2017-12901,2,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+CVE-2017-12902/Zephyr: Fix bounds checking.,CVE-2017-12902,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12985/IPv6: Check for print routines returning -1 when running past the end.,CVE-2017-12895,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12986/IPv6 R.H.: Update to reflect the actual IPv6 RFC.,CVE-2017-12986,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12987/IEEE 802.11: Fix processing of TIM IE.,CVE-2017-12987,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12988/TELNET: Add a missing bounds check.,CVE-2017-12988,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12989/RESP: Make sure resp_get_length() advances the pointer for invalid lengths.,CVE-2017-12989,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0
+CVE-2017-12990/Fix printing of ISAKMPv1 Notification payload data.,CVE-2017-12990,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12991/BGP: Add missing bounds check.,CVE-2017-12991,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12992/RIPng: Clean up bounds checking.,CVE-2017-12992,2,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+CVE-2017-12993/Juniper: Add more bounds checks.,CVE-2017-12993,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12994/BGP: Move a test inside a loop.,CVE-2017-12994,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12995/Check for DNS compression pointers that don't point backwards.,CVE-2017-12995,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12996/PIMv2: Make sure PIM TLVs have the right length.,CVE-2017-12996,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0
+CVE-2017-12998/IS-IS: Check for 2 bytes if we're going to fetch 2 bytes.,CVE-2017-12998,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-12999/IS-IS: Add a missing length check.,CVE-2017-12999,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+CVE-2017-13000/IEEE 802.15.4: Fix bug introduced two fixes prior.,CVE-2017-13000,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13001/NFS: Don't copy more data than is in the file handle.,CVE-2017-13001,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+CVE-2017-13002/AODV: Add some missing bounds checks.,CVE-2017-13002,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13004/Juniper: Add a bounds check.,CVE-2017-13004,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13005/NFS: Add two bounds checks before fetching data.,CVE-2017-13005,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13007/PKTAP: Pass a properly updated struct pcap_pkthdr to the sub-dissector.,CVE-2017-13007,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13008/IEEE 802.11: Fix TIM bitmap copy to copy from p + offset.,CVE-2017-13008,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13010/BEEP: Do bounds checking when comparing strings.,CVE-2017-13010,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13011/Properly check for buffer overflow in bittok2str_internal().,CVE-2017-13011,2,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13012/ICMP: Add a missing bounds check.,CVE-2017-13012,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13013/ARP: Fix printing of ARP protocol addresses.,CVE-2017-13013,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13014/White Board: Do more bounds checks.,CVE-2017-13014,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13015/EAP: Add more bounds checks.,CVE-2017-13015,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13016/ES-IS: Fix printing of addresses in RD PDUs.,CVE-2017-13016,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13017/DHCPv6: Add a missing option length check.,CVE-2017-13017,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+CVE-2017-13018/PGM: Add a missing bounds check.,CVE-2017-13018,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13020/VTP: Add some missing bounds checks.,CVE-2017-13020,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13021/ICMP6: Add a missing bounds check.,CVE-2017-13021,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13022/IP: Add bounds checks to ip_printroute().,CVE-2017-13022,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13023/IPv6 mobility: Add a bounds check before fetching data.,CVE-2017-13023,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13024/IPv6 mobility: Add a bounds check before fetching data,CVE-2017-13024,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13024/IPv6 mobility: Add a bounds check before fetching data.,CVE-2017-13024,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13025/IPv6 mobility: Add a bounds check before fetching data,CVE-2017-13025,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13025/IPv6 mobility: Add a bounds check before fetching data.,CVE-2017-13025,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,CVE-2017-13026,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+CVE-2017-13027/LLDP: Fix a bounds check.,CVE-2017-13027,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13028/BOOTP: Add a bounds check before fetching data,CVE-2017-13028,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13028/BOOTP: Add a bounds check before fetching data.,CVE-2017-13028,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13031/Check for the presence of the entire IPv6 fragment header.,CVE-2017-13031,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13032/RADIUS: Check whether a byte exists before testing its value.,CVE-2017-13032,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13034/PGM: Add a bounds check.,CVE-2017-13034,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13035/Properly handle IS-IS IDs shorter than a system ID (MAC address).,CVE-2017-13035,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+CVE-2017-13036/OSPFv3: Add a bounds check before fetching data,CVE-2017-13036,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13036/OSPFv3: Add a bounds check before fetching data.,CVE-2017-13036,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13037/IP: Add bounds checks when printing time stamp options.,CVE-2017-13037,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13038/PPP: Do bounds checking.,CVE-2017-13038,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13041/ICMP6: Add more bounds checks.,CVE-2017-13041,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13042/HNCP: add DHCPv6-Data bounds checks.,CVE-2017-13042,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13043/BGP: fix decoding of MVPN route types 6 and 7 RFC 6514 Section 4.6 defines the structure for Shared Tree Join (6) and Source Tree Join (7) multicast VPN route types.,CVE-2017-13043,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13044/HNCP: add DHCPv4-Data bounds checks.,CVE-2017-13044,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13045/VQP: add some bounds checks.,CVE-2017-13045,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13046/BGP: fix an existing bounds check for PMSI Tunnel.,CVE-2017-13046,2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13047/ES-IS: put an existing bounds check right.,CVE-2017-13047,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13048/RSVP: fix decoding of Fast Reroute objects.,CVE-2017-13048,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13049/Rx: add a missing bounds check for Ubik.,CVE-2017-13049,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13051/RSVP: fix bounds checks for UNI.,CVE-2017-13051,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13053/BGP: fix VPN route target bounds checks.,CVE-2017-13053,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13053/BGP: fix VPN route target bounds checks.,CVE-2017-13053,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13054/LLDP: add a missing length check.,CVE-2017-13054,2,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0
+CVE-2017-13055/IS-IS: fix an Extended IS Reachability sub-TLV.,CVE-2017-13055,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13687/CHDLC: Improve bounds and length checks.,CVE-2017-13687,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0
+CVE-2017-13688/OLSR: Do bounds checks before we fetch data.,CVE-2017-13688,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13689/IKEv1: Fix addr+subnet length check.,CVE-2017-13689,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0
+CVE-2017-13690/IKEv2: Fix some bounds checks.,CVE-2017-13690,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+CVE-2017-13725/IPv6 R.H.: Check for the existence of all fields before fetching them.,CVE-2017-13725,2,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+CVE-2017-16808/AoE: Add a missing bounds check.,CVE-2017-16808,2,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0
+"decode_multicast_vpn() didn't implement the Source AS field of that structure properly, adjust the offsets to put it right.",CVE-2017-13043,2,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0
+"decode_rt_routing_info() didn't check bounds before fetching 4 octets of the origin AS field and could over-read the input buffer, put it right.",CVE-2017-13053,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"decode_rt_routing_info() didn't check bounds before fetching 4 octets of the origin AS field and could over-read the input buffer, put it right.",CVE-2017-13053,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"dhcpv4_print() in print-hncp.c had the same bug as dhcpv6_print(), apply a fix along the same lines.",CVE-2017-13044,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"do a common check to make sure we captured the entire subTLV,",CVE-2017-13026,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+Do bounds checking as we access items.,CVE-2017-12992,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Do bounds checking.,CVE-2017-13038,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Do more bounds checks.,CVE-2017-13014,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+do sanity checks on PHB header length before allocating memory.,CVE-2019-15165,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Do some additional length checks while we're at it.,CVE-2017-12994,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+Don't crash if crypt() fails.,CVE-2019-15163,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Don't fetch the length field from the header until after we've checked for the existence of a field at or after that field.,CVE-2017-13725,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"Don't pass the remaining caplen - that's too hard to get right, and we were getting it wrong in at least one case;",CVE-2017-12897,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Don't pass the remaining caplen - that's too hard to get right, and we were getting it wrong in at least one case; just use ND_TTEST().",CVE-2017-12897,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+don't print the address as an IPv4 address.,CVE-2017-13013,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Don't use an 8-bit loop counter.,CVE-2017-12997,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Enforce a limit on how many times bgp_attr_print() can recurse.,CVE-2018-16300,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Enforce a limit on how many times smb_fdata() can recurse.,CVE-2018-16452,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Fix a bounds check,CVE-2017-13027,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix a bounds check,CVE-2017-13027,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix a space.,CVE-2018-14882,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+fix an existing bounds check for PMSI Tunnel,CVE-2017-13046,2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+fix an existing length check,CVE-2018-14470,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0
+fix an Extended IS Reachability sub-TLV,CVE-2017-13055,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix bounds checking.,CVE-2017-12899,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix bounds checking.,CVE-2017-12899,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Fix bounds checking.,CVE-2017-12899,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+fix bounds checks for UNI,CVE-2017-13051,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix bug introduced two fixes prior.,CVE-2017-13000,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix printing of ISAKMPv1 Notification payload data.,CVE-2017-12990,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix processing of TIM IE.,CVE-2017-12987,2,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fix some bounds checks.,CVE-2017-13690,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+"Fix the bounds checking for the NFSv3 WRITE procedure to check whether the length of the opaque data being written is present in the captured data, not just whether the byte count is present in the captured data.",CVE-2017-12898,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+Fix TIM bitmap copy to copy from p + offset.,CVE-2017-13008,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+fix VPN route target bounds checks,CVE-2017-13053,2,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0
+Fixup the part of rsvp_obj_print() that decodes the GENERALIZED_UNI object from RFC 3476 Section 3.1 to check the sub-objects inside that object more thoroughly.,CVE-2017-13051,2,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+"furthest forward in the packet, not the item before it.",CVE-2017-12898,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+get_next_file() did not check the return value of strlen() and underflowed an array index if the line read by fgets() from the file started with \\0.,CVE-2018-14879,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+get_next_file() did not check the return value of strlen() and underflowed an array index if the line read by fgets() from the file started with \0.,CVE-2018-14879,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+has a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+has a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+has a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+has buffer over-reads,CVE-2018-16451,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+hncp_print_rec() validates each HNCP TLV to be within the declared as well as the on-the-wire packet space.,CVE-2017-13042,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+"However, dhcpv6_print() in the same file didn't do the same for the DHCPv6 options within the HNCP DHCPv6-Data TLV value, which could cause an out-of-bounds read when decoding an invalid packet.",CVE-2017-13042,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Identify the NET as such.,CVE-2017-13016,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+ieee802_11_print() tried to access the Mesh Flags subfield of the Mesh Control field to find the size of the latter and increment the expected 802.11 header length before checking it is fully present in the input buffer.,CVE-2018-16227,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"If decode_prefix6() returns a negative number, don't print buf.",CVE-2019-1010220,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"If it returns a negative number, it hasn't necessarily filled in buf, so just return immediately; this is similar to the IPv4 code path, wherein we just return a negative number, and print nothing, on an error.",CVE-2019-1010220,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"If one is, don't run past the end.",CVE-2017-13035,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.",CVE-2017-13013,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"If we're skipping over padding before the *real* flags, check whether the real flags are in the captured data before fetching it.",CVE-2017-12899,2,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"If you have a for (i = 0; i < N; i++) loop, you'd better make sure that i is big enough to hold N - not N-1, N. The TLV length here is 9 bits long, not 8 bits long, so an 8-bit loop counter will overflow and you can loop infinitely.",CVE-2017-12997,2,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0
+Improve bounds and length checks.,CVE-2017-13687,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0
+In aodv_extension() do a bounds check on the extension header before we look at it.,CVE-2017-13002,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+In aoev1_reserve_print() check bounds before trying to print an Ethernet address.,CVE-2017-16808,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In aoev1_reserve_print() check bounds, before trying to print an Ethernet address.",CVE-2017-16808,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+In babel_print_v2() the non-verbose branch for an Update TLV compared the TLV Length against 1 instead of 10 (probably a typo),CVE-2018-14470,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
+"In babel_print_v2() the non-verbose branch for an Update TLV compared the TLV Length against 1 instead of 10 (probably a typo), put it right.",CVE-2018-14470,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0
+In ikev1_n_print() check bounds before trying to fetch the replay detection status.,CVE-2018-14469,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In isis_print_is_reach_subtlv() one of the case blocks did not check that the sub-TLV ""V"" is actually present and could over-read the input buffer.",CVE-2017-13055,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"In isis_print_is_reach_subtlv() one of the case blocks did not check that the sub-TLV ""V"" is actually present and could over-read the input buffer.",CVE-2017-13055,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"In ldp_tlv_print(), the FT Session TLV length must be 12, not 8 (RFC3479)",CVE-2018-14461,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"In ldp_tlv_print(), the FT Session TLV length must be 12, not 8 (RFC3479).",CVE-2018-14461,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"In lldp_private_8023_print() the case block for subtype 4 (Maximum Frame Size TLV, IEEE 802.3bc-2009 Section 79.3.4) did not include the length check",CVE-2017-13054,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+In mfr_print() check this before trying to read those 4 bytes.,CVE-2018-14468,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"In RFC 1883, the Type 0 routing header had a 1-byte reserved field and a 3-byte strict/loose bit map; in RFC 2460, that changed to a 4-byte reserved field.",CVE-2017-12986,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+In rsvp_obj_print() the case block for Class-Num 205 (FAST_REROUTE) from RFC 4090 Section 4.1 could over-read accessing the buffer contents before making the bounds check.,CVE-2017-13048,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+In rx_cache_insert() and rx_cache_find() properly read the serviceId field of the rx_header structure as a 16-bit integer.,CVE-2018-14466,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+In rx_cache_insert() and rx_cache_find() properly read the serviceId field of the rx_header structure as a 16-bit integer.,CVE-2018-14466,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+"Include a test for the ""check before fetching the ""access"" part..."" fix, using the capture supplied by the reporter(s).",CVE-2017-12898,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Include Security working under the Mozilla SOS program had independently identified this vulnerability in 2018 by means of code audit.,CVE-2018-14880,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"It also fetched the varying number of octets of the route target field from 4 octets lower than the correct offset, put it right.",CVE-2017-13053,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+It also used the same temporary buffer explicitly through as_printf() and implicitly through bgp_vpn_rd_print() so the end result of snprintf() was not what was originally intended.,CVE-2017-13053,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"It can fail, so make sure it doesn't before comparing its result with the password.",CVE-2019-15163,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"It may call decode_prefix6(), which also does not initialize the buffer on invalid input.",CVE-2018-16228,4,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+lmp_print_data_link_subobjs() in print-lmp.c in tcpdump before 4.9.3 lacks certain bounds checks.,CVE-2019-15166,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Make sure that it always sends *endp before returning and that, for invalid lengths where we don't like a character in the length string, what it sets *endp to is past the character in question, so we don't run the risk of infinitely looping (or doing something else random) if a character in the length is invalid.",CVE-2017-12989,2,0,0,0,0,0,0,1,1,0,0,0,0,0,0,1,0
+More checks should be done.,CVE-2017-12995,4,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moreover: Add and use *_tstr[] strings.,CVE-2018-14882,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moreover: Add and use tstr[].,CVE-2018-14461,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moreover: Add and use tstr[].,CVE-2018-14461,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Moreover: Put a function definition name at the beginning of the line.,CVE-2018-16229,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Move a return to make the code a bit cleaner (i.e., make it more obvious that if we don't have enough of the PGM header, we just print the source and destination IP addresses, mark it as incomplete PGM, and don't try to look at the PGM header).",CVE-2017-13034,2,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+Need to test bounds check for the last field of the structure lsa6_hdr.,CVE-2018-14880,2,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0
+No need to test other fields.,CVE-2018-14880,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+Note one place where we don't need to do bounds checking as it's already been done.,CVE-2017-12899,4,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Note that parse_wcc_attr() is called after we've already checked whether the wcc_data is present.,CVE-2017-12898,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NULL pointer dereference,CVE-2019-15163,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+offset has already been advanced to point to the bitmap; we shouldn't add the amount to advance again.,CVE-2017-13008,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+on stack.,CVE-2019-1010220,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+One of the case blocks in ubik_print() didn't check bounds before fetching 32 bits of packet data and could overread past the captured packet data by that amount.,CVE-2017-13049,2,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+only print it as a MAC address if it's 6 bytes long.,CVE-2017-13016,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"Otherwise, if, in our search of the hash table, we come across a byte string that's shorter than the string we're looking for, we'll search past the end of the string in the hash table.",CVE-2017-12894,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Pass a properly updated struct pcap_pkthdr to the sub-dissector.,CVE-2017-13007,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Prevent a possible buffer overread in chdlc_print() and replace the custom check in chdlc_if_print() with a standard check in chdlc_print() so that the latter certainly does not over-read even when reached via juniper_chdlc_print().,CVE-2017-13687,2,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0
+print_prefix() has a buffer and does not initialize it.,CVE-2018-16228,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
+"print_prefix() has a buffer and does not initialize it. It may call decode_prefix6(), which also does not initialize the buffer on invalid input. When that happens, make sure to return from print_prefix() before trying to print the [still uninitialized] buffer.",CVE-2018-16228,2,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+Probably a copy-and-pasteo.,CVE-2017-12998,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Properly terminate all struct tok arrays.,CVE-2017-12900,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+Properly check for buffer overflow in bittok2str_internal().,CVE-2017-13011,2,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+put an existing bounds check right,CVE-2017-13047,2,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Rearrange those steps the correct way around.,CVE-2017-13048,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+Reverse the test in a for loop to test the length before testing whether we have a null byte.,CVE-2017-13032,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+rpcapd/daemon.c in libpcap before 1.9.1 allows attackers to cause a denial of service (NULL pointer dereference and daemon crash) if a crypt() call fails.,CVE-2019-15163,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+rpcapd/daemon.c in libpcap before 1.9.1 mishandles certain length values because of reuse of a variable.,CVE-2019-15161,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"rt6_print(), ah_print(), and esp_print() return -1 if they run up against the end of the packet while dissecting; if that happens, stop dissecting, don't try to fetch the next header value, because 1) *it* might be past the end of the packet and 2) we won't be using it in any case, as we'll be exiting the loop.",CVE-2017-12985,2,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+Ryan Ackroyd had independently identified this buffer over-read later by means of fuzzing and provided the packet capture file for the test.,CVE-2018-16229,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Scan the list of netinfo6 entries based on the supplied packet length, without taking the captured length into account; let the aforementioned bounds checking handle that.",CVE-2017-12992,2,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0
+Search,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several protocol parsers in tcpdump before 4.9.2 could cause a buffer overflow in util-print.c:bittok2str_internal().,CVE-2017-13011,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several protocol parsers in tcpdump before 4.9.2 could cause a buffer over-read in addrtoname.c:lookup_bytestring().,CVE-2017-12894,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Several protocol parsers in tcpdump before 4.9.2 could cause a buffer over-read in util-print.c:tok2strbuf().,CVE-2017-12900,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+sf-pcapng.c in libpcap before 1.9.1 does not properly validate the PHB header length before allocating memory.,CVE-2019-15165,2,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,0
+"Some of them are variable-length, with a field giving the total length, and therefore they can be shorter than 6 octets.",CVE-2017-13035,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+tcpdump before 4.9.3 has a heap-based buffer over-read related to aoe_print in print-aoe.c and lookup_emem in addrtoname.c.,CVE-2017-16808,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+tcpdump.org tcpdump 4.9.2 is affected by: CWE-126: Buffer Over-read.,CVE-2019-1010220,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The AODV parser in tcpdump before 4.9.2 has a buffer over-read in print-aodv.c:aodv_extension().,CVE-2017-13002,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The Apple PKTAP parser in tcpdump before 4.9.2 has a buffer over-read in print-pktap.c:pktap_if_print().,CVE-2017-13007,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The arguments to memcpy() were completely wrong.,CVE-2017-12987,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The ARP parser in tcpdump before 4.9.2 has a buffer over-read in print-arp.c, several functions.",CVE-2017-13013,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The attack vector is: The victim must open a specially crafted pcap file.,CVE-2019-1010220,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The Babel parser in tcpdump before 4.9.3 has a buffer over-read in print-babel.c:babel_print_v2().,CVE-2018-14470,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BEEP parser in tcpdump before 4.9.2 has a buffer over-read in print-beep.c:l_strnstart().,CVE-2017-13010,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:bgp_attr_print().,CVE-2017-12991,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:bgp_attr_print().,CVE-2017-12991,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:bgp_attr_print().,CVE-2017-12991,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:decode_multicast_vpn().,CVE-2017-13043,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.2 has a buffer over-read in print-bgp.c:decode_rt_routing_info().,CVE-2017-13053,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.3 allows stack consumption in print-bgp.c:bgp_attr_print() because of unlimited recursion.,CVE-2018-16300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.3 has a buffer over-read in print-bgp.c:bgp_attr_print() (MP_REACH_NLRI).,CVE-2018-16230,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.3 has a buffer over-read in print-bgp.c:bgp_capabilities_print() (BGP_CAPCODE_MP).,CVE-2018-14467,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BGP parser in tcpdump before 4.9.3 has a buffer over-read in print-bgp.c:bgp_capabilities_print() (BGP_CAPCODE_RESTART).,CVE-2018-14881,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The BOOTP parser in tcpdump before 4.9.2 has a buffer over-read in print-bootp.c:bootp_print().,CVE-2017-13028,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The bounds check in esis_print() tested one pointer at the beginning of a loop that incremented another, make the trivial fix.",CVE-2017-13047,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The Cisco HDLC parser in tcpdump before 4.9.2 has a buffer over-read in print-chdlc.c:chdlc_print().,CVE-2017-13687,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The closest thing to a specification for the contents of the payload data is draft-ietf-ipsec-notifymsg-04, and nothing in there says that it is ever a complete ISAKMP message, so don't dissect types we don't have specific code for as a complete ISAKMP message.",CVE-2017-12990,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The command-line argument parser in tcpdump before 4.9.3 has a buffer overflow in tcpdump.c:get_next_file().,CVE-2018-14879,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The component is: line 234: ""ND_PRINT((ndo, ""%s"", buf));"", in function named ""print_prefix"", in ""print-hncp.c"".",CVE-2019-1010220,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The DCCP parser in tcpdump before 4.9.3 has a buffer over-read in print-dccp.c:dccp_print_option().,CVE-2018-16229,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The DECnet parser in tcpdump before 4.9.2 has a buffer over-read in print-decnet.c:decnet_print().,CVE-2017-12899,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The DHCPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-dhcp6.c:dhcp6opt_print().,CVE-2017-13017,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The DNS parser in tcpdump before 4.9.2 could enter an infinite loop due to a bug in print-domain.c:ns_print().,CVE-2017-12995,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The EAP parser in tcpdump before 4.9.2 has a buffer over-read in print-eap.c:eap_print().,CVE-2017-13015,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The EIGRP parser in tcpdump before 4.9.2 has a buffer over-read in print-eigrp.c:eigrp_print().,CVE-2017-12901,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The FRF.16 parser in tcpdump before 4.9.3 has a buffer over-read in print-fr.c:mfr_print().,CVE-2018-14468,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The HNCP parser in tcpdump before 4.9.2 has a buffer over-read in print-hncp.c:dhcpv4_print().,CVE-2017-13044,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The HNCP parser in tcpdump before 4.9.2 has a buffer over-read in print-hncp.c:dhcpv6_print().,CVE-2017-13042,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The HNCP parser in tcpdump before 4.9.3 has a buffer over-read in print-hncp.c:print_prefix().,CVE-2018-16228,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ICMP parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp.c:icmp_print().,CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ICMP parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp.c:icmp_print().,CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ICMP parser in tcpdump before 4.9.3 has a buffer over-read in print-icmp.c:icmp_print().,CVE-2018-14462,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ICMPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp6.c:icmp6_nodeinfo_print().,CVE-2017-13041,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ICMPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-icmp6.c:icmp6_print().,CVE-2017-13021,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ICMPv6 parser in tcpdump before 4.9.3 has a buffer over-read in print-icmp6.c.,CVE-2018-14882,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IEEE 802.11 parser in tcpdump before 4.9.2 has a buffer over-read in print-802_11.c:parse_elements().,CVE-2017-12987,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IEEE 802.11 parser in tcpdump before 4.9.2 has a buffer over-read in print-802_11.c:parse_elements().,CVE-2017-12987,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IEEE 802.11 parser in tcpdump before 4.9.3 has a buffer over-read in print-802_11.c for the Mesh Flags subfield.,CVE-2018-16227,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IEEE 802.15.4 parser in tcpdump before 4.9.2 has a buffer over-read in print-802_15_4.c:ieee802_15_4_if_print().,CVE-2017-13000,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IKEv1 parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c:ikev1_id_print().,CVE-2017-13689,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IKEv1 parser in tcpdump before 4.9.3 has a buffer over-read in print-isakmp.c:ikev1_n_print().,CVE-2018-14469,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The IKEv2 parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c, several functions.",CVE-2017-13690,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The impact is: May expose Saved Frame Pointer, Return Address etc.",CVE-2019-1010220,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IP parser in tcpdump before 4.9.2 has a buffer over-read in print-ip.c:ip_printroute().,CVE-2017-13022,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IP parser in tcpdump before 4.9.2 has a buffer over-read in print-ip.c:ip_printts().,CVE-2017-13037,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IPv6 fragmentation header parser in tcpdump before 4.9.2 has a buffer over-read in print-frag6.c:frag6_print().,CVE-2017-13031,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IPv6 mobility parser in tcpdump before 4.9.2 has a buffer over-read in print-mobility.c:mobility_opt_print().,CVE-2017-13023,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IPv6 mobility parser in tcpdump before 4.9.2 has a buffer over-read in print-mobility.c:mobility_opt_print().,CVE-2017-13023,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IPv6 mobility parser in tcpdump before 4.9.2 has a buffer over-read in print-mobility.c:mobility_opt_print().,CVE-2017-13023,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-ip6.c:ip6_print().,CVE-2017-12985,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IPv6 routing header parser in tcpdump before 4.9.2 has a buffer over-read in print-rt6.c:rt6_print().,CVE-2017-12986,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IPv6 routing header parser in tcpdump before 4.9.2 has a buffer over-read in print-rt6.c:rt6_print().,CVE-2017-12986,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The ISAKMP parser in tcpdump before 4.9.2 could enter an infinite loop due to bugs in print-isakmp.c, several functions.",CVE-2017-12990,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ISAKMP parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c:isakmp_rfc3948_print().,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print().,CVE-2017-12999,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print_extd_ip_reach().,CVE-2017-12998,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ISO CLNS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isoclns_print().,CVE-2017-12897,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ISO ES-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:esis_print().,CVE-2017-13016,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ISO ES-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:esis_print().,CVE-2017-13016,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The ISO IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c, several functions.",CVE-2017-13026,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ISO IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print_id().,CVE-2017-13035,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The ISO IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c:isis_print_is_reach_subtlv().,CVE-2017-13055,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The Juniper protocols parser in tcpdump before 4.9.2 has a buffer over-read in print-juniper.c, several functions.",CVE-2017-12993,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The Juniper protocols parser in tcpdump before 4.9.2 has a buffer over-read in print-juniper.c:juniper_parse_header().,CVE-2017-13004,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The LDP parser in tcpdump before 4.9.3 has a buffer over-read in print-ldp.c:ldp_tlv_print().,CVE-2018-14461,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The LLDP parser in tcpdump before 4.9.2 could enter an infinite loop due to a bug in print-lldp.c:lldp_private_8021_print().,CVE-2017-12997,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The LLDP parser in tcpdump before 4.9.2 has a buffer over-read in print-lldp.c:lldp_mgmt_addr_tlv_print().,CVE-2017-13027,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The LLDP parser in tcpdump before 4.9.2 has a buffer over-read in print-lldp.c:lldp_private_8023_print().,CVE-2017-13054,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The LMP parser in tcpdump before 4.9.3 has a buffer over-read in print-lmp.c:lmp_print_data_link_subobjs().,CVE-2018-14464,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The loop can be executed more than once (that's kinda the whole point of a loop), so the check has to be made each time through the loop, not just once before the loop is executed.",CVE-2017-12994,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The NFS parser in tcpdump before 4.9.2 has a buffer over-read in print-nfs.c:interp_reply().,CVE-2017-12898,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The NFS parser in tcpdump before 4.9.2 has a buffer over-read in print-nfs.c:nfs_printfh().,CVE-2017-13001,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The NFS parser in tcpdump before 4.9.2 has a buffer over-read in print-nfs.c:xid_map_enter().,CVE-2017-13005,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The OLSR parser in tcpdump before 4.9.2 has a buffer over-read in print-olsr.c:olsr_print().,CVE-2017-13688,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The OSPFv3 parser in tcpdump before 4.9.2 has a buffer over-read in print-ospf6.c:ospf6_decode_v3().,CVE-2017-13036,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The OSPFv3 parser in tcpdump before 4.9.3 has a buffer over-read in print-ospf6.c:ospf6_print_lshdr().,CVE-2018-14880,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The PGM parser in tcpdump before 4.9.2 has a buffer over-read in print-pgm.c:pgm_print().,CVE-2017-13018,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The PGM parser in tcpdump before 4.9.2 has a buffer over-read in print-pgm.c:pgm_print().,CVE-2017-13018,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The PIMv2 parser in tcpdump before 4.9.2 has a buffer over-read in print-pim.c:pimv2_print().,CVE-2017-12996,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The PPP parser in tcpdump before 4.9.2 has a buffer over-read in print-ppp.c:handle_mlppp().,CVE-2017-13038,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The RADIUS parser in tcpdump before 4.9.2 has a buffer over-read in print-radius.c:print_attr_string().,CVE-2017-13032,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The RESP parser in tcpdump before 4.9.2 could enter an infinite loop due to a bug in print-resp.c:resp_get_length().,CVE-2017-12989,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The RIPng parser in tcpdump before 4.9.2 has a buffer over-read in print-ripng.c:ripng_print().,CVE-2017-12992,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The RSVP parser in tcpdump before 4.9.2 has a buffer over-read in print-rsvp.c:rsvp_obj_print().,CVE-2017-13048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The RSVP parser in tcpdump before 4.9.2 has a buffer over-read in print-rsvp.c:rsvp_obj_print().,CVE-2017-13048,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The RSVP parser in tcpdump before 4.9.3 has a buffer over-read in print-rsvp.c:rsvp_obj_print().,CVE-2018-14465,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The Rx parser in tcpdump before 4.9.3 has a buffer over-read in print-rx.c:rx_cache_find() and rx_cache_insert().,CVE-2018-14466,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The Rx protocol parser in tcpdump before 4.9.2 has a buffer over-read in print-rx.c:ubik_print().,CVE-2017-13049,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The SMB parser in tcpdump before 4.9.3 has buffer over-reads in print-smb.c:print_trans() for \MAILSLOT\BROWSE and \PIPE\LANMAN.,CVE-2018-16451,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The SMB parser in tcpdump before 4.9.3 has stack exhaustion in smbutil.c:smb_fdata() via recursion.,CVE-2018-16452,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The SMB/CIFS parser in tcpdump before 4.9.2 has a buffer over-read in smbutil.c:name_len().,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The specification says in a well-formed Magic Number information element the data is exactly 4 bytes long.,CVE-2018-14468,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header;",CVE-2017-13007,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header; pass an updated header, just as we do for PPI.",CVE-2017-13007,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+The telnet parser in tcpdump before 4.9.2 has a buffer over-read in print-telnet.c:telnet_parse().,CVE-2017-12988,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The TLV length here is 9 bits long, not 8 bits long, so an 8-bit loop counter will overflow and you can loop infinitely.",CVE-2017-12997,2,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0
+The total length of the OID is the OID length plus the length of the OID length itself.,CVE-2017-13027,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+The VQP parser in tcpdump before 4.9.2 has a buffer over-read in print-vqp.c:vqp_print().,CVE-2017-13045,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The VRRP parser in tcpdump before 4.9.3 has a buffer over-read in print-vrrp.c:vrrp_print().,CVE-2018-14463,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+The VTP parser in tcpdump before 4.9.2 has a buffer over-read in print-vtp.c:vtp_print().,CVE-2017-13020,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The White Board protocol parser in tcpdump before 4.9.2 has a buffer over-read in print-wb.c:wb_prep(), several functions.",CVE-2017-13014,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"The Zephyr parser in tcpdump before 4.9.2 has a buffer over-read in print-zephyr.c, several functions.",CVE-2017-12902,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+There was no fault; but doing the check results in a more consistent error,CVE-2019-15165,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+There was no fault; but doing the check results in a more consistent error.,CVE-2019-15165,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This addresses Include Security issue F12: [libpcap] Remote Packet Capture Daemon Null Pointer Dereference Denial of Service.,CVE-2019-15163,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This addresses Include Security issue I8: [libpcap] Remote Packet Capture Daemon Parameter Reuse.,CVE-2019-15161,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This caused an out-of-bounds read and could cause a write.,CVE-2018-14879,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer overflow,CVE-2017-13011,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer overflow discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13011,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",CVE-2017-13012,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Bhargava Shastry.,CVE-2018-14462,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Bhargava Shastry.,CVE-2018-14462,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Bhargava Shastry.,CVE-2018-14462,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Bhargava Shastry.,CVE-2018-14462,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Bhargava Shastry.,CVE-2018-14462,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter (by making an ND_TCHECK() call check for the presence in the captured data of all 4 bytes of the reserved field; we were printing it as a 4-byte field, so we needed to check for them).",CVE-2017-12986,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter.,CVE-2017-13038,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter.,CVE-2017-13038,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter.,CVE-2017-13038,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter.,CVE-2017-13038,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12893,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Henri Salo from Nixu Corporation.,CVE-2017-13049,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Henri Salo from Nixu Corporation.,CVE-2017-13049,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Include Security working under the Mozilla SOS program in 2018 by means of code audit.,CVE-2018-16230,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kamil Frankowicz.,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kamil Frankowicz.,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kamil Frankowicz.,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kamil Frankowicz.,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kamil Frankowicz.,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kamil Frankowicz.,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kamil Frankowicz.,CVE-2017-12896,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Kim Gwan Yeong.,CVE-2017-13041,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Konrad Rieck and Bhargava Shastry.,CVE-2018-14461,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Ryan Ackroyd.,CVE-2018-16227,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Wang Junjie of 360 ESG Codesafe Team.,CVE-2018-16228,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Yannick Formaggio.,CVE-2017-13007,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a buffer over-read discovered by Yannick Formaggio.,CVE-2017-13007,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a stack exhaustion,CVE-2018-16300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a stack exhaustion,CVE-2018-16300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a stack exhaustion discovered by Include Security working under the Mozilla SOS program in 2018 by means of code audit.,CVE-2018-16300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes a stack exhaustion discovered by Include Security working under the Mozilla SOS program in 2018 by means of code audit.,CVE-2018-16300,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes an infinite loop,CVE-2017-12989,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes an infinite loop,CVE-2017-12989,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes an infinite loop discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,CVE-2017-12995,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This fixes an infinite loop.,CVE-2017-12997,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"This is what BIND 9.11.0-P2 does; it not only detects pointers that loop, as ""point backwards"" means ""point before anything we\'ve processed so far, including what we\'re processing right now"", so the pointer can\'t point to itself (as that\'s what we\'re processing right now).",CVE-2017-12995,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+"This is what BIND 9.11.0-P2 does; it not only detects pointers that loop, as ""point backwards"" means ""point before anything we've processed so far, including what we're processing right now"", so the pointer can't point to itself (as that's what we're processing right now).",CVE-2017-12995,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+This may open up an attack vector involving extra data at the end of a request.,CVE-2019-15161,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+This vulnerability was discovered by Brian Carpenter & Geeknik Labs.,CVE-2018-14879,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Update another test file's tcpdump output to reflect this change.,CVE-2017-13013,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Update existing tests for changes to IS-IS dissector.,CVE-2017-13026,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Update four tests outputs accordingly.,CVE-2018-14882,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Update one of the prior test cases as it turns out it depended on this previously incorrect code path to make it to its own malformed structure further down the buffer, the bugfix has changed its output.",CVE-2017-13055,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Update two tests outputs accordingly.,CVE-2019-15166,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Updated from a Denis Ovsienko's fix.,CVE-2017-16808,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Use a pointer of the correct type in ND_TCHECK(), or use ND_TCHECK2() and provide the correct length.",CVE-2017-13690,2,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0
+Use ND_TTEST() for the bounds checks in isoclns_print().,CVE-2017-12897,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+Use ND_TTEST() rather than comparing against ndo->ndo_snapend ourselves; it's easy to get the tests wrong.,CVE-2017-12902,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+Using the same variable for the remaining request length and the reply length is confusing at best and can cause errors at worst,CVE-2019-15161,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"Using the same variable for the remaining request length and the reply length is confusing at best and can cause errors at worst (if the request had extra stuff at the end, so that the variable is non-zero).",CVE-2019-15161,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wang Junjie of 360 ESG Codesafe Team had independently identified this vulnerability in 2018 by means of fuzzing and provided the packet capture file for the test.,CVE-2018-14880,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wang Junjie of 360 ESG Codesafe Team had independently identified this vulnerability in 2018 by means of fuzzing and provided the packet capture file for the test.,CVE-2018-14880,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"We do bounds checks based on the TLV length, so if the TLV's length is too short, and we don't check for that, we could end up fetching data past the end of the TLV - including past the length of the captured data in the packet.",CVE-2017-12996,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0
+"We might, for example, want to make sure the upper 2 bits of the label length/pointer byte are 00 or 11, and that if we encounter a pointer and jump backwards to what we think is a label the label ends before the beginning of the last label we processed, to make sure the pointer doesn't point backwards into the *middle* of a label, and also make sure the entire name is <= 255 bytes long.",CVE-2017-12995,2,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
+we shouldn't add the amount to advance again.,CVE-2017-13008,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"We've already advanced the pointer past the PAN ID, if present; it now points to the address, so don't add 2 to it.",CVE-2017-13000,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"When bgp_attr_print() tried to decode the variable-length nexthop value for the NSAP VPN case, it did not check that the declared length is good to interpret the value as a mapped IPv4 or IPv6 address.",CVE-2018-16230,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0
+"When that happens, make sure to return from print_prefix() before trying to print the [still uninitialized] buffer.",CVE-2018-16228,2,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,0
+"When those functions tried to read 32 bits the extra 16 bits could be outside of the bounds checked in rx_print() for the rx_header structure, as serviceId is the last field in that structure.",CVE-2018-14466,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+which could cause an out-of-bounds read when decoding an invalid packet.,CVE-2017-13042,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"While at it, make the function print a standard marker when it detects truncated data and update some existing ES-IS tests respectively.",CVE-2017-13047,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+"While we're at it, add the RFC number, and check the validity of the length for the Hello extension.",CVE-2017-13002,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+"While we're at it, clean up some other bounds checks, so we check that we have a complete IPv4 message header if it's IPv4 and a complete IPv6 message header if it's IPv6.",CVE-2017-13688,2,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0
+"While we're at it, fix a comment, and clean up printing of V1 Nonce, V2 Authentication payloads, and v2 Notice payloads.",CVE-2017-12990,2,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0
+"While we're at it, print a truncation error if the packets are truncated, rather than just, in effect, ignoring the result of the routines that print particular packet types.",CVE-2017-13014,2,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+"While we're at it, remove some redundant tests - we've already checked, before the case statement, whether we have captured the entire information element and whether the entire information element is present in the on-the-wire packet; in the cases for particular IEs, we only need to make sure we don't go past the end of the IE.",CVE-2017-13008,2,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
+"While we're at it, remove the blank line between some checks and the UNALIGNED_MEMCPY()s they protect.",CVE-2017-13690,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
