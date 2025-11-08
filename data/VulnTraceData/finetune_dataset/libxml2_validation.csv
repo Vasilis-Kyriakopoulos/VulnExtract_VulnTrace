@@ -1,0 +1,941 @@
+text,code
+"The _bfd_slurp_extended_name_table function in bfd/archive.c in GNU binutils 2.24 and earlier allows remote attackers to cause a denial of service (invalid write, segmentation fault, and crash) via a crafted extended name table in an archive.","       bfd_ardata (abfd)->extended_names = (char *) bfd_zalloc (abfd, amt + 1);"
+* vms-alpha.c (_bfd_vms_slurp_eihd): Make sure that there is enough data in the record before attempting to parse it.,"+         if (res == res_base)
++           return FALSE;"
+"Your analysis of the bug was correct, although the correct thing to do was to jump to the error_ret label if the input buffer was too small.","+      if (PRIV (recrd.rec_size < test_len))
++       goto error_ret;"
+PR binutils/21665 bfd * opncls.c (get_build_id): Check that the section is beig enough to contain the whole note.,"+  if (size < sizeof (Elf_External_Note))
++    {
++      bfd_set_error (bfd_error_invalid_operation);
++      free (contents);
++      return NULL;
++    }"
+Use to check for corrupt pair relocs.,"+               if (psindx < 0 || psindx >= (int) PRIV (section_count))
++                 {
++                   _bfd_error_handler (_(""Corrupt EGSD record: its psindx field is too big (%#lx)""),
++                                       psindx);
++                   bfd_set_error (bfd_error_bad_value);
++                   return FALSE;
++                 }
++               entry->section = PRIV (sections)[psindx];"
+"The getvalue function in tekhex.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.28, allows remote attackers to cause a denial of service (stack-based buffer over-read and application crash) via a crafted tekhex file, as demonstrated by mishandling within the nm program.",-      int i;
+Handle archives with corrupt extended name tables.,+         bfd_ardata (abfd)->extended_names_size = 0;
+Use to check for corrupt pair relocs.,"+               if (psindx < 0 || psindx >= (int) PRIV (section_count))
++                 {
++                   _bfd_error_handler (_(""Corrupt EGSD record: its psindx field is too big (%#lx)""),
++                                       psindx);
++                   bfd_set_error (bfd_error_bad_value);
++                   return FALSE;
++                 }
++               entry->section = PRIV (sections)[psindx];"
+Handle EITR records in VMS Alpha binaries with overlarge command length parameters.,+      if (cmd_length < 4 || (ptr + cmd_length > maxptr + 4))
+"GNU Binutils 2.28 allows remote attackers to cause a denial of service (heap-based buffer over-read and application crash) via a crafted ELF file, related to MIPS GOT mishandling in the process_mips_specific function in readelf.c.",-         if (data + ent - pltgot > data_end - addr_size)
+PR binutils/22018 * elf32-i386.c (elf_i386_get_synthetic_symtab): Check for valid PLT section size.,"+      if (plt == NULL || plt->size == 0)
+        continue;"
+"The versados_mkobject function in bfd/versados.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.28, does not initialize a certain data structure, which allows remote attackers to cause a denial of service (buffer overflow and application crash) or possibly have unspecified other impact via a crafted binary file, as demonstrated by mishandling of this file during ""objdump -D"" execution.","+      tdata_type *tdata = bfd_zalloc (abfd, amt);"
+PR 24829 * readelf.c (apply_relocations): Catch potential integer overflow whilst checking reloc location against section size.,-	  if ((rloc + reloc_size) > end || (rloc < start))
+"Error in ""_bfd_hexdump"": heap-buffer-overflow","+      _bfd_hexdump (8, ptr, cmd_length - 4, 0);"
+Fix snafu checking for invalid word offsets in ARM unwind information.,"+  if (
++      sec->sh_size < 4
++      || word_offset > (sec->sh_size - 4)
+       || ((bfd_signed_vma) word_offset) < 0)
+     return FALSE;"
+"The getvalue function in tekhex.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.28, allows remote attackers to cause a denial of service (stack-based buffer over-read and application crash) via a crafted tekhex file, as demonstrated by mishandling within the nm program.",-         int offsetlen = flag & 0x7;
+Check for buffer overrun when printing out rae insns.,"-                 if (bpc > 1 && inf->display_endian == BFD_ENDIAN_LITTLE)
+-                   {
+-                     for (k = bpc - 1; k >= 0; k--)
+-                       printf (""%02x"", (unsigned) data[j + k]);
+-                     putchar (' ');
+-                   }
+-                 else"
+Check for buffer overrun when printing out rae insns.,+                 if (j + bpc <= stop_offset * opb)
+"The get_build_id function in opncls.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.28, allows remote attackers to cause a denial of service (heap-based buffer over-read and application crash) via a crafted file in which a certain size field is larger than a corresponding data field, as demonstrated by mishandling within the objdump program.",       oappend (names_bnd[modrm.reg]);
+"fix out of range subtraction, seg fault from a NULL pointer and memory exhaustion, all from parsing corrupt binaries.","          if (archive_file_offset != 0)
+            section.sh_size = archive_file_size - section.sh_offset;"
+PR binutils/21345 * readelf.c (get_program_headers): Check for there being too many program headers before attempting to allocate space for them.,"+      if (conflictsno * sizeof (* iconf) > current_file_size)
++       {
++         error (_(""Overlarge number of conflicts detected: %lx\n""),
++                (long) conflictsno);
++         return FALSE;
++       }"
+This can cause _objalloc_alloc to return a pointer to a memory region which is smaller than expected.,   len = (len + OBJALLOC_ALIGN - 1) &~ (OBJALLOC_ALIGN - 1);
+Running size (or gdb and probably others) on the reproducer results in a buffer stack overflow.,-      char hdr[8];
+"Your analysis of the bug was correct, although the correct thing to do was to jump to the error_ret label if the input buffer was too small.","+      if (PRIV (recrd.rec_size < test_len))
++       goto error_ret;"
+Prevent invalid array accesses when disassembling a corrupt bfin binary.,"+#define regs_hi(x, i) REGNAME (decode_regs_hi[(((i) << 3) | (x)) & 31])"
+Fix stack buffer overflows when parsing corrupt ihex files.,"-       sprintf (buf, ""\\%03o"", (unsigned int) c);"
+Check for buffer overflow before writing relocated values.,"+               if (start + reloc->r_offset + reloc_size >= end)
++                 error (_(""MN10300 sym diff reloc writes past end of section (%p vs %p)\n""),
++                        start + reloc->r_offset + reloc_size, end);
++               else
++                 byte_put (start + reloc->r_offset, value, reloc_size);"
+"Error in ""ieee_object_p"": stack-buffer-overflow",-  unsigned char buffer[300];
+But it does not forbid directory traversal in the paths.,"+      if (amt > (bfd_size_type) bfd_get_size (abfd))
++       goto byebye;"
+Check for an empty or very small group section.,"+         if (idx == NULL || shdr->sh_size < 4)
++           {
++             _bfd_error_handler (_(""%B: group section '%A' has no contents""),
++                                 abfd, shdr->bfd_section);
++             elf_tdata (abfd)->group_sect_ptr[i] = NULL;
++             bfd_set_error (bfd_error_bad_value);
++             return FALSE;
++           }"
+> > binutils* objdump.c (disassemble_section): Skip any section that is > bigger > than the entire file.,+  if (size < 0x24)
+"When ""uvalue"" is a specific value, ""block_start + uvalue"" will cause integer overflow.", 	  rloc = start + rp->r_offset;
+"Error in ""aarch64_ext_ldst_reglist"": global-buffer-overflow","   if (expected_num != data[value].num_elements || data[value].is_reserved)
+     return 0;"
+PR binutils/21581 (ieee_archive_p): Use a static buffer to avoid compiler bugs.,+  static unsigned char buffer[512];
+Extend check of cmd_length.,+      if (cmd_length < 4 || (ptr + cmd_length > maxptr + 4))
+(alpha_vms_object_p): Check for a truncated record.,"+         if (res == res_base)
++           return FALSE;"
+PR binutils/17533 * archive.c (_bfd_slurp_extended_name_table): Handle archives with corrupt extended name tables.,"+      if (amt > (bfd_size_type) bfd_get_size (abfd))
++       goto byebye;"
+* compress.c (bfd_get_full_section_contents): Check for and reject a section whoes size is greater than the size of the entire file.,+  size = bfd_get_section_size (sect);
+"If reloc pointer is NULL, discard all saved state.","+      target_specific_reloc_handling (NULL, NULL, NULL, NULL, 0);"
+Check for symbol table overflow before accessing symbol value.,"+           if (sym_index >= num_syms)
++             error (_(""RL78_SYM reloc contains invalid symbol index %lu\n""),
++                    sym_index);
++           else
++             {
++               saved_sym2 = symtab[sym_index].st_value;
++               saved_sym2 += reloc->r_addend;
++             }
+            return TRUE;"
+"opcodes/i386-dis.c in GNU Binutils 2.28 does not consider the number of registers for bnd mode, which allows remote attackers to cause a denial of service (buffer overflow and application crash) or possibly have unspecified other impact via a crafted binary file, as demonstrated by mishandling of this file during ""objdump -D"" execution.","+      if (reg > 0x3)
++       {
++         oappend (""(bad)"");
++         return;
++       }"
+Use to check for corrupt pair relocs.,+       (alpha_vms_object_p): Check for a truncated record.
+The print_symbol_for_build_attribute function in readelf.c in GNU Binutils 2017-04-12 allows remote attackers to cause a denial of service (invalid read and SEGV) via a crafted ELF file.,-  if (saved_file == NULL || file != saved_file)
+Fix seg fault attempting to unget an EOF character.,"+             else if (ch2 != EOF)
+                {
+                  UNGET (ch2);
+                }"
+Fix address violation parsing a corrupt texhex format file.,"+  if (src >= endp)
++    return FALSE;"
+"The process_otr function in bfd/versados.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.28, does not validate a certain offset, which allows remote attackers to cause a denial of service (buffer overflow and application crash) or possibly have unspecified other impact via a crafted binary file, as demonstrated by mishandling of this file during ""objdump -D"" execution.",+      unsigned int i;
+(_bfd_vms_slurp_egsd): Check for an invalid section index.,"+                   if (psindx < 0 || psindx >= (int) PRIV (section_count))
++                     {
++                       _bfd_error_handler (_(""Corrupt EGSD record: its psindx field is too big (%#lx)""),
++                                           psindx);
++                       bfd_set_error (bfd_error_bad_value);
++                       return FALSE;
++                     }
++                    entry->code_section = PRIV (sections)[psindx];"
+binutils/ * readelf.c (process_mips_specific): Remove error reporting from GOT[1] processing.,"-             error (_(""Invalid got entry - %#lx - overflows GOT table\n""),
+-                    (long) ent);"
+(_bfd_vms_slurp_egsd): Check for an invalid section index.,"+  if (PRIV (recrd.buf_size) < sizeof (* eeom))
++    {
++      _bfd_error_handler (_(""Corrupt EEOM record - size is too small""));
++      bfd_set_error (bfd_error_bad_value);
++      return FALSE;
++    }"
+PR other/54411: integer overflow in objalloc_alloc.,   len = (len + OBJALLOC_ALIGN - 1) &~ (OBJALLOC_ALIGN - 1);
+"The process_otr function in bfd/versados.c in the Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.28, does not validate a certain offset, which allows remote attackers to cause a denial of service (buffer overflow and application crash) or possibly have unspecified other impact via a crafted binary file, as demonstrated by mishandling of this file during ""objdump -D"" execution.",-      int i;
+Joshua Rogers reported a stack buffer overflow in ihex.c (ihex_bad_byte).,"-       sprintf (buf, ""\\%03o"", (unsigned int) c);"
+Fix stack buffer overflow when printing bad bytes in Intel Hex objects.,-         char hdr[8];
+x86: Check for valid PLT section size Update x86 get_synthetic_symtab to check for valid PLT section size before examining PLT section contents.,"+      if (plt == NULL || plt->size == 0)
+        continue;"
+Fix seg-faults in objdump when disassembling a corrupt versados binary.,"-      tdata_type *tdata = bfd_alloc (abfd, amt);"
+Fix seg-faults in objdump when disassembling a corrupt versados binary.,-      int i;
+"Remove the extra error reporting code then, introduced with commit 75ec1fdbb797 (""Fix runtime seg-fault in readelf when parsing a corrupt MIPS binary."")","-             error (_(""Invalid got entry - %#lx - overflows GOT table\n""),
+-                    (long) ent);"
+* libbfd.c (_bfd_generic_get_section_contents): Check for and reject a section whoes size + offset is greater than the size of the entire file.,+  size = bfd_get_section_size (sect);
+x86: Check for valid PLT section size Update x86 get_synthetic_symtab to check for valid PLT section size before examining PLT section contents.,"+      if (plt == NULL || plt->size == 0)
+        continue;"
+Fix stack buffer overflows when parsing corrupt ihex files.,-                 char datum = * ((char *) eopt + offset + len);
+PR 21813 (alpha_vms_object_p): Check for a truncated record.,"+               if (psindx < 0 || psindx >= (int) PRIV (section_count))
++                 {
++                   _bfd_error_handler (_(""Corrupt EGSD record: its psindx field is too big (%#lx)""),
++                                       psindx);
++                   bfd_set_error (bfd_error_bad_value);
++                   return FALSE;
++                 }
++               entry->section = PRIV (sections)[psindx];"
+Use to check for corrupt pair relocs.,"+  if (PRIV (recrd.buf_size) < sizeof (* eeom))
++    {
++      _bfd_error_handler (_(""Corrupt EEOM record - size is too small""));
++      bfd_set_error (bfd_error_bad_value);
++      return FALSE;
++    }"
+> > binutils* objdump.c (disassemble_section): Skip any section that is > bigger > than the entire file.,"   if (inote.descsz == 0
+       || inote.type != NT_GNU_BUILD_ID
+       || inote.namesz != 4 
++      || strncmp (inote.namedata, ""GNU"", 4) != 0
++      || size < (12 + BFD_ALIGN (inote.namesz, 4) + inote.descsz))"
+x86: Check for valid PLT section size Update x86 get_synthetic_symtab to check for valid PLT section size before examining PLT section contents.,"+      if (plts[j].type == plt_unknown
++         && (plt->size >= (lazy_plt->plt_entry_size
++                           + lazy_plt->plt_entry_size)))"
+PR binutils/21962 * tekhex.c (getsym): Fix check for source pointer walking off the end of the input buffer.,"+  for (i = 0; i < len && (src + i) < endp; i++)
+     dstp[i] = src[i];"
+"The Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.29, does not validate the PLT section size, which allows remote attackers to cause a denial of service (heap-based buffer over-read and application crash) via a crafted ELF file, related to elf_i386_get_synthetic_symtab in elf32-i386.c and elf_x86_64_get_synthetic_symtab in elf64-x86-64.c.","+      if (plt == NULL || plt->size == 0)
+        continue;"
+PR binutils/21595 * aarch64-dis.c (aarch64_ext_ldst_reglist): Check for an out of range value.,"+  if (value >= ARRAY_SIZE (data))
++    return 0;"
+binutils* objdump.c (disassemble_section): Skip any section that is bigger than the entire file.,+  size = bfd_get_section_size (sect);
+Fix stack buffer overflows when parsing corrupt ihex files.,-         char hdr[8];
+Check for symbol table overflow before accessing symbol value.,"+               if (sym_index >= num_syms)
++                 error (_(""MN10300 reloc contains invalid symbol index %lu\n""),
++                        sym_index);"
+(ihex_bad_byte): Prevent (now impossible to trigger) stack overflow and incorrect escape sequence handling.,-      char hdr[8];
+* compress.c (bfd_get_full_section_contents): Check for and reject a section whoes size is greater than the size of the entire file.,+  if (size < 0x24)
+Fixes out of array access. ,line[index] = (line[index / 3] + line[(index + 1) / 3] + line[(index + 2) / 3] + 1) / 3;
+The studio profile decoder in libavcodec/mpeg4videodec.c in FFmpeg 4.0 before 4.0.4 and 4.1 before 4.1.2 allows remote attackers to cause a denial of service (out-of-array access) or possibly have unspecified other impact via crafted MPEG-4 video data.,             j = scantable[idx++];
+More complex solutions like checking the path to limit access to only subdirectories of the hls path may work as an alternative.,"+    if (av_strstart(proto_name, ""file"", NULL)) {
++        if (strcmp(c->allowed_extensions, ""ALL"") && !av_match_ext(url, c->allowed_extensions)) {
++            av_log(s, AV_LOG_ERROR,
++                ""Filename extension of \'%s\' is not a common multimedia extension, blocked for security reasons.\n""
++                ""If you wish to override this adjust allowed_extensions, you can set it to \'ALL\' to allow all\n"",
++                url);
++            return AVERROR_INVALIDDATA;
++        }
++    }"
+aa_read_header in libavformat/aadec.c in FFmpeg before 3.2.14 and 4.x before 4.1.4 does not check for sscanf failure and consequently allows use of uninitialized variables.,"+            ret = sscanf(val, ""%""SCNu32""%""SCNu32""%""SCNu32""%""SCNu32,
+                    &header_key_part[0], &header_key_part[1], &header_key_part[2], &header_key_part[3]);"
+FFmpeg before commit 9807d3976be0e92e4ece3b4b1701be894cd7c2e1 contains a CWE-835: Infinite loop vulnerability in pva format demuxer that can result in a Vulnerability that allows attackers to consume excessive amount of resources like CPU and RAM.,"+            if (avio_feof(pb)) {
++                return AVERROR_EOF;
++            }"
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.","+  RCHECK_MEDIA_LOGGED(bytes_needed.IsValid(), reader->media_log(),
++                      ""Extreme SGPD count exceeds implementation limit."");"
+Issue 449958: Heap-buffer-overflow in media::CopyPlane.,"-             vpx_image->stride[VPX_PLANE_Y],"
+"When a crafted ASF file, which claims a large ""name_len"" or ""count"" field in the header but does not contain sufficient backing data, is provided, the loops over the name and markers would consume huge CPU and memory resources, since there is no EOF check inside these loops.","+        if (avio_feof(pb))
++            return AVERROR_INVALIDDATA;"
+avcodec/mpeg4videodec: Check idx in mpeg4_decode_studio_block().,"+            if (idx > 63)
++                return AVERROR_INVALIDDATA;"
+More complex solutions like checking the path to limit access to only subdirectories of the hls path may work as an alternative.,"static const AVOption hls_options[] = {
+     {""live_start_index"", ""segment index to start live streams at (negative values are from the end)"",
+         OFFSET(live_start_index), AV_OPT_TYPE_INT, {.i64 = -3}, INT_MIN, INT_MAX, FLAGS},
++    {""allowed_extensions"", ""List of file extensions that hls is allowed to access"",
++        OFFSET(allowed_extensions), AV_OPT_TYPE_STRING,
++        {.str = ""3gp,aac,avi,flac,mkv,m3u8,m4a,m4s,m4v,mpg,mov,mp2,mp3,mp4,mpeg,mpegts,ogg,ogv,oga,ts,vob,wav""},
++        INT_MIN, INT_MAX, FLAGS},
+     {NULL}
+ };"
+avformat/mms: Add missing chunksize check.,         p += chunksize;
+avformat/rmdec: Fix DoS due to lack of eof check.,"+            for (j = 0; j < len; j++) {
++                if (avio_feof(pb))
++                    return AVERROR_INVALIDDATA;
+                av_log(s, AV_LOG_DEBUG, ""%X"", avio_r8(pb));
++            }"
+The cavs_idct8_add_c function in libavcodec/cavsdsp.c in FFmpeg before 3.1.4 is vulnerable to reading out-of-bounds memory when decoding with cavs_decode. ,-        dst[i + 5*stride] = cm[ dst[i + 5*stride] + ((b2 - b6) >> 7)];
+"The ljpeg_decode_yuv_scan function in libavcodec/mjpegdec.c in FFmpeg before 2.8.2 omits certain width and height checks, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted MJPEG data.","+                        if (   h * mb_x + x >= s->width
++                            || v * mb_y + y >= s->height) {
++                        } else if (bits<=8) {"
+Fixes use of freed memory.,"for (i = 0; i < H264_MAX_PICTURE_COUNT; i++)
+             ff_h264_unref_picture(h, &h->DPB[i]);"
+"The ff_frame_thread_init function in libavcodec/pthread_frame.c in FFmpeg before 2.7.2 mishandles certain memory-allocation failures, which allows remote attackers to cause a denial of service (invalid pointer access) or possibly have unspecified other impact via a crafted file, as demonstrated by an AVI file.",             goto error;
+"The VideoFramePool::PoolImpl::CreateFrame function in media/base/video_frame_pool.cc in Google Chrome before 47.0.2526.73 does not initialize memory for a video-frame data structure, which might allow remote attackers to cause a denial of service (out-of-bounds memory access) or possibly have unspecified other impact by leveraging improper interaction with the vp3_h_loop_filter_c function in libavcodec/vp3dsp.c in FFmpeg.","+    for (size_t i = 0; i < num_planes; ++i) {
++      memset(frame->data(i),
++             0,
++             VideoFrame::PlaneSize(frame->format(),
++                                   i,
++                                   frame->coded_size()).GetArea());
++    }"
+Fixes: out of array accesses.,-                xd_size += len;
+Fixes: out of array access.,"-        strcpy(filename, sic->filename);"
+FFmpeg before 2017-02-04 has an out-of-bounds write caused by a heap-based buffer overflow related to the decode_frame_common function in libavcodec/pngdec.c.,             uint8_t *row = &s->image_buf[s->image_linesize * y];
+avcodec/pngdec: Fix off by 1 size in decode_zbuf().,"+        av_bprint_get_buffer(bp, 2, &buf, &buf_size);"
+avformat/aadec: Check for scanf() failure.,"+            if (ret != 4)
++                return AVERROR_INVALIDDATA;"
+"In FFmpeg 4.0.1, due to a missing check of a profile value before setting it, the ff_mpeg4_decode_picture_header function in libavcodec/mpeg4videodec.c may trigger a NULL pointer dereference while converting a crafted AVI file to MPEG4, leading to a denial of service.","+            mpeg4_decode_profile_level(s, gb, &profile, &level);"
+Avoids leaving stale pointers. ,+        r->cbp_chroma       = NULL;
+Fixes: out of array read. ,"             get_bits(gb, 8);"
+avcodec/utvideodec: Add several out of array read related checks.,"+            if (3 * ((dst + send * stride - dest + 7)/8) > get_bits_left(&cbit))
++                return AVERROR_INVALIDDATA;"
+But files with sensitive information like private keys and passwords generally do not use common multimedia filename extensions.,"static const AVOption hls_options[] = {
+     {""live_start_index"", ""segment index to start live streams at (negative values are from the end)"",
+         OFFSET(live_start_index), AV_OPT_TYPE_INT, {.i64 = -3}, INT_MIN, INT_MAX, FLAGS},
++    {""allowed_extensions"", ""List of file extensions that hls is allowed to access"",
++        OFFSET(allowed_extensions), AV_OPT_TYPE_STRING,
++        {.str = ""3gp,aac,avi,flac,mkv,m3u8,m4a,m4s,m4v,mpg,mov,mp2,mp3,mp4,mpeg,mpegts,ogg,ogv,oga,ts,vob,wav""},
++        INT_MIN, INT_MAX, FLAGS},
+     {NULL}
+ };"
+"The ff_sbr_apply function in libavcodec/aacsbr.c in FFmpeg before 2.7.2 does not check for a matching AAC frame syntax element before proceeding with Spectral Band Replication calculations, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted AAC data.","+    if (id_aac != sbr->id_aac) {
++        av_log(ac->avctx, AV_LOG_ERROR,
++            ""element type mismatch %d != %d\n"", id_aac, sbr->id_aac);
++        sbr_turnoff(sbr);
++    }"
+"libavcodec/gif.c in FFmpeg before 2.8.6 does not properly calculate a buffer size, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted .tga file, related to the gif_image_write_image, gif_encode_init, and gif_encode_close functions. ",+    s->buf_size = avctx->width*avctx->height*2 + 1000;
+"The ff_rv34_decode_init_thread_copy function in libavcodec/rv34.c in FFmpeg before 2.7.2 does not initialize certain structure members, which allows remote attackers to cause a denial of service (invalid pointer access) or possibly have unspecified other impact via crafted (1) RV30 or (2) RV40 RealVideo data.",+        r->intra_types_hist = NULL;
+avcodec/gif: Fix lzw buffer size.,+    s->buf_size = avctx->width*avctx->height*2 + 1000;
+"libavcodec/hevcdec.c in FFmpeg 3.4 and 4.1.2 mishandles detection of duplicate first slices, which allows remote attackers to cause a denial of service (NULL pointer dereference and out-of-array access) or possibly have unspecified other impact via crafted HEVC data.","-        av_log(s->avctx, AV_LOG_ERROR, ""Two slices reporting being the first in the same frame.\n"");"
+"libavcodec/gif.c in FFmpeg before 2.8.6 does not properly calculate a buffer size, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted .tga file, related to the gif_image_write_image, gif_encode_init, and gif_encode_close functions.",+    s->buf_size = avctx->width*avctx->height*2 + 1000;
+avformat/rtmppkt: Check for packet size mismatches.,"+                size,"
+"Validates the set channel layout as well as verifies that the received layout to the function matches the reference layout, so that it matches the implemented re-ordering logic.","+    if (layout == PREFIX_FOR_22POINT2 && tags == 16 && i == 8) {
++        const uint8_t (*reference_layout_map)[3] = aac_channel_layout_map[12];
++        for (int j = 0; j < tags; j++) {
++            if (layout_map[j][0] != reference_layout_map[j][0] ||
++                layout_map[j][2] != reference_layout_map[j][2])
++                goto end_of_layout_definition;
++        }"
+Do not trust the counts.,"+  base::CheckedNumeric<size_t> bytes_needed =
++      base::CheckMul(bytes_per_edit, static_cast<size_t>(count));"
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.",+  RCHECK(reader->HasBytes(bytes_needed.ValueOrDie()));
+Fixes: out of array access.,    s->height = AV_RL16(&s->avctx->extradata[8]);
+avcodec/xwddec: Check bpp more completely.,"+        } else if (bpp == 8 && pixdepth == 8) {
+             avctx->pix_fmt = AV_PIX_FMT_GRAY8;
+         }"
+"libavcodec/tiff.c in FFmpeg before 2.8.6 does not properly validate RowsPerStrip values and YCbCr chrominance subsampling factors, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted TIFF file, related to the tiff_decode_tag and decode_frame functions.",+    if (s->rps <= 0 || s->rps % s->subsampling[1]) {
+"FFmpeg before 2.8.12, 3.0.x and 3.1.x before 3.1.9, 3.2.x before 3.2.6, and 3.3.x before 3.3.2 does not properly restrict HTTP Live Streaming filename extensions and demuxer names, which allows attackers to read arbitrary files via crafted playlist data.","+    if (av_strstart(proto_name, ""file"", NULL)) {
++        if (strcmp(c->allowed_extensions, ""ALL"") && !av_match_ext(url, c->allowed_extensions)) {
++            av_log(s, AV_LOG_ERROR,
++                ""Filename extension of \'%s\' is not a common multimedia extension, blocked for security reasons.\n""
++                ""If you wish to override this adjust allowed_extensions, you can set it to \'ALL\' to allow all\n"",
++                url);
++            return AVERROR_INVALIDDATA;
++        }
++    }"
+"The ff_rv34_decode_init_thread_copy function in libavcodec/rv34.c in FFmpeg before 2.7.2 does not initialize certain structure members, which allows remote attackers to cause a denial of service (invalid pointer access) or possibly have unspecified other impact via crafted (1) RV30 or (2) RV40 RealVideo data.",+        r->cbp_luma         = NULL;
+"Validates the set channel layout as well as verifies that the received layout to the function matches the reference layout, so that it matches the implemented re-ordering logic.",+    if (layout == AV_CH_LAYOUT_22POINT2) {
+"libavcodec/scpr.c in FFmpeg 3.3 before 3.3.1 does not properly validate height and width data, which allows remote attackers to cause a denial of service (heap-based buffer overflow and application crash) or possibly have unspecified other impact via a crafted file.","+            if (y >= avctx->height)
++                return AVERROR_INVALIDDATA;"
+The decode_plane function in libavcodec/utvideodec.c in FFmpeg through 3.4.2 allows remote attackers to cause a denial of service (out of array read) via a crafted AVI file.,"+                if (c->packed_stream_size[i][j] > left)
+                     return AVERROR_INVALIDDATA;"
+"In FFmpeg 4.0.1, due to a missing check of a profile value before setting it, the ff_mpeg4_decode_picture_header function in libavcodec/mpeg4videodec.c may trigger a NULL pointer dereference while converting a crafted AVI file to MPEG4, leading to a denial of service.","-    s->avctx->level   = get_bits(gb, 4);"
+Fixes: Out of array access. ,             j = scantable[idx++];
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.",   entries.resize(count);
+avcodec/mjpegdec: Check index in ljpeg_decode_yuv_scan() before using it.,"+                        if (   h * mb_x + x >= s->width
++                            || v * mb_y + y >= s->height) {
++                        } else if (bits<=8) {"
+The cavs_idct8_add_c function in libavcodec/cavsdsp.c in FFmpeg before 3.1.4 is vulnerable to reading out-of-bounds memory when decoding with cavs_decode. ,-        dst[i + 7*stride] = cm[ dst[i + 7*stride] + ((b0 - b4) >> 7)];
+avcodec/mpeg4videodec: Check read profile before setting it.,"+    if (*profile == 0 && *level == 8) {
++        *level = 0;"
+"The init_tile function in libavcodec/jpeg2000dec.c in FFmpeg before 2.8.2 does not enforce minimum-value and maximum-value constraints on tile coordinates, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted JPEG 2000 data.","+    tile->coord[1][1] = av_clip((tiley + 1) * s->tile_height + s->tile_offset_y, s->image_offset_y, s->height);"
+The cavs_idct8_add_c function in libavcodec/cavsdsp.c in FFmpeg before 3.1.4 is vulnerable to reading out-of-bounds memory when decoding with cavs_decode. ,-        dst[i + 3*stride] = cm[ dst[i + 3*stride] + ((b3 + b7) >> 7)];
+avcodec/mpegvideo: Clear pointers in ff_mpv_common_init(). ,"-    memset(&s->last_picture, 0, sizeof(s->last_picture));"
+"The sws_init_context function in libswscale/utils.c in FFmpeg before 2.7.2 does not initialize certain pixbuf data structures, which allows remote attackers to cause a denial of service (segmentation violation) or possibly have unspecified other impact via crafted video data.","+    FF_ALLOCZ_OR_GOTO(c, c->chrUPixBuf, c->vChrBufSize * 3 * sizeof(int16_t *), fail);"
+The jpeg2000_decode_tile function in libavcodec/jpeg2000dec.c in FFmpeg before 2.8.6 allows remote attackers to cause a denial of service (out-of-bounds array read access) via crafted JPEG 2000 data.,-    if (s->cdef[0] < 0) {
+FFmpeg before 2017-01-23 has an out-of-bounds write caused by a stack-based buffer overflow related to the decode_zbuf function in libavcodec/pngdec.c.,"+        if (buf_size < 2) {
+             ret = AVERROR(ENOMEM);
+             goto fail;
+         }"
+The decode_init function in libavcodec/utvideodec.c in FFmpeg through 3.4.2 allows remote attackers to cause a denial of service (out of array read) via an AVI file.,         c->slices      = avctx->extradata[9] + 1;
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.","-  if (reader->version() == 1) {
+-    RCHECK(reader->HasBytes(count * 20));
+-  }"
+Fixes: out of array read. ,"         av_log(avctx, AV_LOG_DEBUG, ""Encoder version %d.%d.%d.%d\n"",
+                avctx->extradata[3], avctx->extradata[2],
+                avctx->extradata[1], avctx->extradata[0]);"
+avcodec/mpeg4videodec: Remove use of FF_PROFILE_MPEG4_SIMPLE_STUDIO as indicator of studio profile.,"     if(s->avctx->hwaccel && s->avctx->hwaccel->decode_slice           ||
+        !s->cur_pic.f                                                  ||
+-       s->cur_pic.field_picture                                       ||
+-       s->avctx->profile == FF_PROFILE_MPEG4_SIMPLE_STUDIO
++       s->cur_pic.field_picture
+     )"
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.","+  RCHECK_MEDIA_LOGGED(bytes_needed.IsValid(), reader->media_log(),
++                      ""Extreme SBGP count exceeds implementation limit."");"
+Integer overflow in the ape_decode_frame function in libavcodec/apedec.c in FFmpeg 2.4 through 3.3.2 allows remote attackers to cause a denial of service (out-of-array access and application crash) or possibly have unspecified other impact via a crafted APE file.,"-    decoded_buffer_size = 2LL * FFALIGN(blockstodecode, 8) * sizeof(*s->decoded_buffer);"
+avcodec/mjpegdec: Check index in ljpeg_decode_yuv_scan() before using it.,"+                        if (   h * mb_x + x >= s->width
++                            || v * mb_y + y >= s->height) {
++                        } else if (bits<=8) {"
+Fixes out of array access.,-                    pic->data[0][row_ptr + pixel_ptr] = stream_byte >> 4;
+Fixes: out of array access.,             dst[y * linesize + x] = clr;
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.","+  base::CheckedNumeric<size_t> bytes_needed =
++      base::CheckMul(bytes_per_entry, static_cast<size_t>(count));"
+avcodec/sanm: Reset sizes in destroy_buffers().,"+    init_sizes(ctx, 0, 0);"
+avcodec/gif: Fix lzw buffer size.,"+    ff_lzw_encode_init(s->lzw, s->buf, s->buf_size,"
+avformat/flvenc: Check audio packet size.,"+    if (par->codec_type == AVMEDIA_TYPE_AUDIO && !pkt->size) {
++        av_log(s, AV_LOG_WARNING, ""Empty audio Packet\n"");
++        return AVERROR(EINVAL);
++    }"
+Check for size_t and vector resize() overflow to avoid OOB writes in vector allocation.,+  RCHECK(reader->HasBytes(bytes_needed.ValueOrDie()));
+Failure to verify causes total_size > atom.size which will result in negative size calculations later on.,+            if (a.size == 1 && total_size + 8 <= atom.size) {
+Fixes: out of array read.,"             v = get_bits(gb, 8);"
+avcodec/faxcompr: Add missing runs check in decode_uncompressed().,"+        if (*runs >= runend) {
++            av_log(avctx, AV_LOG_ERROR, ""uncompressed run overrun\n"");
++            return AVERROR_INVALIDDATA;
++        }"
+"The decode_ihdr_chunk function in libavcodec/pngdec.c in FFmpeg before 2.7.2 does not enforce uniqueness of the IHDR (aka image header) chunk in a PNG image, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted image with two or more of these chunks.","+    if (s->state & PNG_IHDR) {
++        av_log(avctx, AV_LOG_ERROR, ""Multiple IHDR\n"");
++        return AVERROR_INVALIDDATA;
++    }"
+track_header in libavformat/vividas.c in FFmpeg 4.3.1 has an out-of-bounds write because of incorrect extradata packing.,"-                if (delta > data_len[j]) {
+-                    return AVERROR_INVALIDDATA;
+-                }"
+avcodec/htmlsubtitles: Fixes denial of service due to use of sscanf in inner loop for handling braces.,+            an += scanbraces(in);
+libavformat/movenc.c in FFmpeg 3.2 and 4.0.2 allows attackers to cause a denial of service (application crash caused by a divide-by-zero error) with a user crafted audio file when converting to the MOV audio format.,+        if (track->timescale > UINT16_MAX || !track->par->channels) {
+ffserver: Check chunk size.,+            av_assert0(len <= c->chunk_size);
+"In FFmpeg 4.0.1, a missing check for failure of a call to init_get_bits8() in the avpriv_ac3_parse_header function in libavcodec/ac3_parser.c may trigger a NULL pointer dereference while converting a crafted AVI file to MPEG4, leading to a denial of service.","-    init_get_bits8(&gb, buf, size);"
+avformat/hls: Check local file extensions.,"+    if (av_strstart(proto_name, ""file"", NULL)) {
++        if (strcmp(c->allowed_extensions, ""ALL"") && !av_match_ext(url, c->allowed_extensions)) {
++            av_log(s, AV_LOG_ERROR,
++                ""Filename extension of \'%s\' is not a common multimedia extension, blocked for security reasons.\n""
++                ""If you wish to override this adjust allowed_extensions, you can set it to \'ALL\' to allow all\n"",
++                url);
++            return AVERROR_INVALIDDATA;
++        }
++    }"
+"The dnxhd decoder in FFmpeg before 3.2.6, and 3.3.x before 3.3.3 allows remote attackers to cause a denial of service (NULL pointer dereference) via a crafted mov file.","-                if (dctx->remaining <= 0) {
+-                    dctx->remaining = dnxhd_get_hr_frame_size(cid, dctx->w, dctx->h);
+-                    if (dctx->remaining <= 0)
+-                        return dctx->remaining;"
+There is a heap-buffer-overflow at libavfilter/vf_colorconstancy.c:282 in slice_get_derivative.,"                         dst[INDX2D(r, c, width)] += GAUSS(src, r + GINDX(filtersize, g), c,
+-                                                          width, height, width, gauss[GINDX(filtersize, g)]);
++                                                          width, height, width, gauss[g]);"
+FFmpeg before commit 9807d3976be0e92e4ece3b4b1701be894cd7c2e1 contains a CWE-835: Infinite loop vulnerability in pva format demuxer that can result in a Vulnerability that allows attackers to consume excessive amount of resources like CPU and RAM.,"+            if (avio_feof(pb)) {
++                return AVERROR_EOF;
++            }"
+"libavcodec/tiff.c in FFmpeg before 2.8.6 does not properly validate RowsPerStrip values and YCbCr chrominance subsampling factors, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via a crafted TIFF file, related to the tiff_decode_tag and decode_frame functions.","+            if (s->subsampling[i] <= 0) {
++                av_log(s->avctx, AV_LOG_ERROR, ""subsampling %d is invalid\n"", s->subsampling[i]);
++                return AVERROR_INVALIDDATA;
++            }"
+"In FFmpeg 4.0.1, a missing check for failure of a call to init_get_bits8() in the avpriv_ac3_parse_header function in libavcodec/ac3_parser.c may trigger a NULL pointer dereference while converting a crafted AVI file to MPEG4, leading to a denial of service.","     err = ff_ac3_parse_header(&gb, hdr);"
+swscale/utils: Clear pix buffers.,"+    FF_ALLOCZ_OR_GOTO(c, c->chrUPixBuf, c->vChrBufSize * 3 * sizeof(int16_t *), fail);"
+avcodec/cavsdsp: use av_clip_uint8() for idct.,+        dst[i + 2*stride] = av_clip_uint8( dst[i + 2*stride] + ((b2 + b6) >> 7));
+avcodec/mpeg4videodec: Remove use of FF_PROFILE_MPEG4_SIMPLE_STUDIO as indicator of studio profile.,"     if (avctx->bits_per_raw_sample > 8) {
+-        av_assert1(avctx->profile == FF_PROFILE_MPEG4_SIMPLE_STUDIO);
++        av_assert1(s->studio_profile);
+         return avctx->pix_fmt;
+     }"
+Clear pointers in ff_rv34_decode_init_thread_copy().,+        r->intra_types_hist = NULL;
+"In line libavcodec/h264dec.c:500 in libav(v13_dev0), ffmpeg(n3.4), chromium(56 prior Feb 13, 2017), the return value of init_get_bits is ignored and get_ue_golomb(&gb) is called on an uninitialized get_bits context, which causes a NULL deref exception.","-            if (ret < 0)
+-                return ret;"
+Do not trust the counts.,+  RCHECK(count <= entries.max_size());
+avcodec/msrledec: avcodec/msrledec: restructure msrle_decode_pal4() based on the line number instead of the pixel pointer.,+    int line = avctx->height - 1;
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.","else {
+-    RCHECK(reader->HasBytes(count * 12));
+-  }"
+Clear pointers in ff_rv34_decode_init_thread_copy().,+        r->mb_type          = NULL;
+avformat/nsvdec: Fix DoS due to lack of eof check in nsvs_file_offset loop.,"+        if(avio_feof(pb))
++            return AVERROR_INVALIDDATA;"
+avcodec/dnxhddec: Move mb height check out of non hr branch.,         ctx->data_offset = 0x280;
+The dnxhd_decode_header function in libavcodec/dnxhddec.c in FFmpeg 3.0 through 3.3.2 allows remote attackers to cause a denial of service (out-of-array access) or possibly have unspecified other impact via a crafted DNxHD file.,"     if (ctx->mb_height > 68 && ff_dnxhd_check_header_prefix_hr(header_prefix)) {
+         ctx->data_offset = 0x170 + (ctx->mb_height << 2);
+     }"
+avformat/avidec: Fix infinite loop in avi_read_nikon().,-            while (avio_tell(s->pb) < tag_end) {
+"A denial of service in the subtitle decoder in FFmpeg 3.2 and 4.1 allows attackers to hog the CPU via a crafted video file in Matroska format, because handle_open_brace in libavcodec/htmlsubtitles.c has a complex format argument to sscanf.","-            an += sscanf(in, ""{\\an%*1u}%n"", &len) >= 0 && len > 0;"
+Fixes: out of array access.,-    av_assert0(decoded_buffer_size <= INT_MAX);
+Check for bitstream end in read_quant_matrix_ext(). ,"+        if (get_bits_left(gb) < 64*8)
++            return AVERROR_INVALIDDATA;"
+"FFmpeg before 2.8.12, 3.0.x and 3.1.x before 3.1.9, 3.2.x before 3.2.6, and 3.3.x before 3.3.2 does not properly restrict HTTP Live Streaming filename extensions and demuxer names, which allows attackers to read arbitrary files via crafted playlist data.","static const AVOption hls_options[] = {
+     {""live_start_index"", ""segment index to start live streams at (negative values are from the end)"",
+         OFFSET(live_start_index), AV_OPT_TYPE_INT, {.i64 = -3}, INT_MIN, INT_MAX, FLAGS},
++    {""allowed_extensions"", ""List of file extensions that hls is allowed to access"",
++        OFFSET(allowed_extensions), AV_OPT_TYPE_STRING,
++        {.str = ""3gp,aac,avi,flac,mkv,m3u8,m4a,m4s,m4v,mpg,mov,mp2,mp3,mp4,mpeg,mpegts,ogg,ogv,oga,ts,vob,wav""},
++        INT_MIN, INT_MAX, FLAGS},
+     {NULL}
+ };"
+FFmpeg before commit 9807d3976be0e92e4ece3b4b1701be894cd7c2e1 contains a CWE-835: Infinite loop vulnerability in pva format demuxer that can result in a Vulnerability that allows attackers to consume excessive amount of resources like CPU and RAM.,             pes_header_data_length = avio_r8(pb);
+"avcodec/pthread_frame: clear priv_data, avoid stale pointer in error case.",+            copy->priv_data = NULL;
+Fixes out of array access,         sbr->kx[0] = sbr->kx[1];
+avcodec/mjpegdec: Fix small picture upscale.,+                        ((uint16_t*)line)[w - 1] = ((uint16_t*)line)[(w - 1) / 3];
+"The ljpeg_decode_yuv_scan function in libavcodec/mjpegdec.c in FFmpeg before 2.8.2 omits certain width and height checks, which allows remote attackers to cause a denial of service (out-of-bounds array access) or possibly have unspecified other impact via crafted MJPEG data.",+        prev_pkt[channel_id].read = 0;
+avcodec/cdxl: Check format for BGR24.,+    } else if (encoding == 1 && (c->bpp == 6 || c->bpp == 8) && c->format != CHUNKY) {
+avcodec/mjpegdec: Check number of components for JPEG-LS.,"+        } else if (s->nb_components != 1) {
++            av_log(s->avctx, AV_LOG_ERROR, ""Unsupported number of components %d\n"", s->nb_components);
++            return AVERROR_PATCHWELCOME;
++        }"
+Fixes: Infinite loop.,             pes_flags              = avio_rb16(pb);
+MSE: Fix moar mp4 parsing security bugs.,+  RCHECK(sample_count <= sample_depends_on_.max_size());
+avcodec/vp8: Do not use num_coeff_partitions in thread/buffer setup: The variable is not a constant and can lead to race conditions,"-                   FFMIN(s->num_coeff_partitions, avctx->thread_count) > 1;"
+Revert to zero-initializing buffers for FFmpegVideoDecoder.,"+    for (size_t i = 0; i < num_planes; ++i) {
++      memset(frame->data(i),
++             0,
++             VideoFrame::PlaneSize(frame->format(),
++                                   i,
++                                   frame->coded_size()).GetArea());
++    }"
+avformat/avidec: Fix memleak with dv in avi.,+                av_freep(&s->streams[0]->internal);
+Fixes: out of array accesses.,"-            ret = ff_alloc_extradata(st->codecpar, 64 + xd_size + xd_size / 255);"
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.","+  RCHECK_MEDIA_LOGGED(bytes_needed.IsValid(), reader->media_log(),
++                      ""Extreme ELST count exceeds implementation limit."");"
+Added one additional check for SampleEncryptionEntry (probably overkill).,+  size_t sample_count = reader->box_size() - reader->pos();
+"An integer overflow in FFmpeg in Google Chrome prior to 57.0.2987.98 for Mac, Windows, and Linux and 57.0.2987.108 for Android allowed a remote attacker to perform an out of bounds memory write via a crafted video file, related to ChunkDemuxer.",   for (uint32_t i = 0; i < count; ++i) {
+avcodec/g726: Add missing ADDB output mask.,"+    } else if (avctx->width % FONT_WIDTH || avctx->height % s->font_height) {
++        av_log(avctx, AV_LOG_ERROR, ""Invalid dimensions %d %d\n"", avctx->width, avctx->height);
++        return AVERROR(EINVAL);
+     }"
+check segment duration value of EXTINF. ,"+                if (duration < 0.001 * AV_TIME_BASE) {
++                    av_log(c->ctx, AV_LOG_WARNING, ""Cannot get correct #EXTINF value of segment %s,""
++                                    "" set to default value to 1ms.\n"", seg->url);
++                    duration = 0.001 * AV_TIME_BASE;
++                }"
+The cavs_idct8_add_c function in libavcodec/cavsdsp.c in FFmpeg before 3.1.4 is vulnerable to reading out-of-bounds memory when decoding with cavs_decode. ,-        dst[i + 6*stride] = cm[ dst[i + 6*stride] + ((b1 - b5) >> 7)];
+"Additionally, verify we have enough bytes to continue parsing before allocating vectors to store parsed data.",+  RCHECK(count <= entries.max_size());
+track_header in libavformat/vividas.c in FFmpeg 4.3.1 has an out-of-bounds write because of incorrect extradata packing.,-                xd_size += len;
+"In line libavcodec/h264dec.c:500 in libav(v13_dev0), ffmpeg(n3.4), chromium(56 prior Feb 13, 2017), the return value of init_get_bits is ignored and get_ue_golomb(&gb) is called on an uninitialized get_bits context, which causes a NULL deref exception. ","-            if (ret < 0)
+-                return ret;"
+avcodec/jpeg2000dec: Clip all tile coordinates.,"+    tile->coord[1][1] = av_clip((tiley + 1) * s->tile_height + s->tile_offset_y, s->image_offset_y, s->height);"
+avformat/vividas: improve extradata packing checks in track_header().,avformat/vividas: improve extradata packing checks in track_header().
+"In FFmpeg 4.0.1, improper handling of frame types (other than EAC3_FRAME_TYPE_INDEPENDENT) that have multiple independent substreams in the handle_eac3 function in libavformat/movenc.c may trigger an out-of-array access while converting a crafted AVI file to MPEG4, leading to a denial of service or possibly unspecified other impact.","+        } else {
++            if (hdr->substreamid != 0) {
++                avpriv_request_sample(mov->fc, ""Multiple non EAC3 independent substreams"");
++                ret = AVERROR_PATCHWELCOME;
++                goto end;
++            }
+         }"
+"Integer overflow in the ff_ivi_init_planes function in libavcodec/ivi.c in FFmpeg before 2.6.5, 2.7.x before 2.7.3, and 2.8.x through 2.8.2 allows remote attackers to cause a denial of service (out-of-bounds heap-memory access) or possibly have unspecified other impact via crafted image dimensions in Indeo Video Interactive data.",-    if (cfg->pic_width < 1 || cfg->pic_height < 1 ||
+avcodec/msrledec: avcodec/msrledec: restructure msrle_decode_pal4() based on the line number instead of the pixel pointer.,+                line--;
+avformat/rtmppkt: Check for packet size mismatches.,"+        av_log(NULL, AV_LOG_ERROR, ""RTMP packet size mismatch %d != %d\n"","
+The decode_plane function in libavcodec/utvideodec.c in FFmpeg through 3.4.2 allows remote attackers to cause a denial of service (out of array read) via a crafted AVI file.,"+                    if ((bits + 1) * 8 > get_bits_left(&pbit))
++                        return AVERROR_INVALIDDATA;"
+"The destroy_buffers function in libavcodec/sanm.c in FFmpeg before 2.7.2 does not properly maintain height and width values in the video context, which allows remote attackers to cause a denial of service (segmentation violation and application crash) or possibly have unspecified other impact via crafted LucasArts Smush video data.","+    init_sizes(ctx, 0, 0);"
+avcodec/ac3_parser: Check init_get_bits8() for failure.,"     err = ff_ac3_parse_header(&gb, hdr);"
+The dnxhd_decode_header function in libavcodec/dnxhddec.c in FFmpeg 3.0 through 3.3.2 allows remote attackers to cause a denial of service (out-of-array access) or possibly have unspecified other impact via a crafted DNxHD file.,if (buf_size < ctx->data_offset) {
+"While ffmpeg calculating “bytestream_end” in ff_init_range_encoder() of libavcodec/rangecoder.c, it uses a small “buf_size”.",-             f->slice_count < MAX_SLICES && 3 < p - c->bytestream_start;
+avcodec/ansi: Check dimensions.,"+    } else if (avctx->width % FONT_WIDTH || avctx->height % s->font_height) {
++        av_log(avctx, AV_LOG_ERROR, ""Invalid dimensions %d %d\n"", avctx->width, avctx->height);
++        return AVERROR(EINVAL);
+     }"
+The old factor of two seemed to be a workaround that fact and only padded to the left and bottom.,-    av_freep(&s->buffer);
+zero initialize the rbsp buffer. ,"     if (rbsp->rbsp_buffer_alloc_size >= size &&
+-        (!rbsp->rbsp_buffer_ref || av_buffer_is_writable(rbsp->rbsp_buffer_ref)))
++        (!rbsp->rbsp_buffer_ref || av_buffer_is_writable(rbsp->rbsp_buffer_ref))) {
++        av_assert0(rbsp->rbsp_buffer);
++        memset(rbsp->rbsp_buffer + min_size, 0, AV_INPUT_BUFFER_PADDING_SIZE);
+         return;
++    }"
+Stack-based buffer overflow in the parse_device function in archive_read_support_format_mtree.c in libarchive before 3.2.1 allows remote attackers to execute arbitrary code via a crafted mtree file.,-			if (argc > MAX_PACK_ARGS) {
+"While pruning trailing text from ar filenames, we did not check for an empty filename.","+       if (p < filename) {
++               archive_set_error(&a->archive, ARCHIVE_ERRNO_MISC,
++                   ""Found entry with empty filename"");
++               return (ARCHIVE_FATAL);
++       }"
+"The last of this batch is a quasi-infinite loop in the warc code (patch 4), where data isn't consumed after being written out, so a large Content-Length can be used to consume almost limitless time and space, leading to a DoS condition.",		*bsz = 0U;
+Issue #767: Buffer overflow printing a filename.,			outbuff[i] = '\0';
+"(Each byte would get expanded to a four-charcter octal-style escape of the form ""\123"" resulting in >20 characters for the >5 byte multibyte character.)",-		if (i > (sizeof(outbuff) - 20)) {
+ibarchive: heap-based buffer overflow in xml_data (archive_read_support_format_xar.c).,	while (char_cnt-- > 0) {
+Fix typo in preprocessor macro in archive_read_format_zip_cleanup().,-#if HAVA_LZMA_H && HAVE_LIBLZMA
+"libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service).",*buff = zip->uncompressed_buffer_pointer;
+Stack-based buffer overflow in the parse_device function in archive_read_support_format_mtree.c in libarchive before 3.2.1 allows remote attackers to execute arbitrary code via a crafted mtree file.,-			if (argc > MAX_PACK_ARGS) {
+"libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to be exploitable via the victim opening a specially crafted 7zip file.","-		*buff = __archive_read_ahead(a, 1, &bytes_avail);"
+Avoid a double-free when a window size of 0 is specified.,"    new_window = realloc(rar->lzss.window, new_size);"
+This means that in some cases is not enough do few hours of fuzzing and believe that there aren?????t more bugs????? A crafted file causes a stack-buffer overflow write.,-		if (i > (sizeof(outbuff) - 20)) {
+"When reading OS X metadata entries in Zip archives that were stored without compression, libarchive would use the uncompressed entry size to allocate a buffer but would use the compressed entry size to limit the amount of data copied into that buffer.","+		if (rsrc->uncompressed_size != rsrc->compressed_size) {
++			archive_set_error(&a->archive, ARCHIVE_ERRNO_FILE_FORMAT,
++			    ""Malformed OS X metadata entry: inconsistent size"");
++			return (ARCHIVE_FATAL);
++		}"
+This is a simple NULL dereference leading to a crash.,"+    if (new_size == 0) {
++      archive_set_error(&a->archive, ARCHIVE_ERRNO_FILE_FORMAT,
++                        ""Zero window size is invalid."");
++      return (ARCHIVE_FATAL);
++    }"
+Stack-based buffer overflow in the parse_device function in archive_read_support_format_mtree.c in libarchive before 3.2.1 allows remote attackers to execute arbitrary code via a crafted mtree file.,+			numbers[argc++] = (unsigned long)mtree_atol(&p);
+Fail with negative lha->compsize in lha_read_file_header_1(). ,"+	if (lha->compsize < 0)
++		goto invalid;"
+archive_strncat_l(): allocate and do not convert if length == 0.,+       if (_p == NULL || n == 0) {
+"The last of this batch is a quasi-infinite loop in the warc code (patch 4), where data isn't consumed after being written out, so a large Content-Length can be used to consume almost limitless time and space, leading to a DoS condition.",			len = field[n].end - field[n].start;
+bsdtar in libarchive before 3.2.0 allows remote attackers to cause a denial of service (infinite loop) via an ISO with a directory that is a member of itself.,	file->parent = parent;
+"reject sparse blocks with negative size or offset, detect overflow when tracking sparse blocks","+       if (remaining < 0 || offset < 0) {
++               archive_set_error(&a->archive, ARCHIVE_ERRNO_MISC, ""Malformed sparse map data"");
++               return (ARCHIVE_FATAL);
++       }"
+"but only a few hundred bytes of data, causes a quasi-infinite loop.",	if (nrd < 0) {
+Fix integer overflow when computing location of volume descriptor,-	skipsize = LOGICAL_BLOCK_SIZE * vd->location;
+Issue 761: Heap overflow reading corrupted 7Zip files.,			zip->entry_names = malloc(ll);
+as->s[as->length] = '\0'; // **Heap overflow** occurs as it tries to write beyond the allocated heap memory.,			as->s[as->length] = '\0';
+Fix typo in preprocessor macro in archive_read_format_zip_cleanup().,+#if HAVE_LZMA_H && HAVE_LIBLZMA
+"libarchive version commit 9693801580c0cf7c70e862d305270a16b52826a7 onwards (release v3.2.0 onwards) contains a CWE-20: Improper Input Validation vulnerability in WARC parser - libarchive/archive_read_support_format_warc.c, _warc_read() that can result in DoS - quasi-infinite run time and disk usage from tiny file.","	rab = __archive_read_ahead(a, 1U, &nrd);"
+Crash Type: Heap-buffer-overflow READ {*},-      filename[filename_size++] = '\0';
+"If a 7-Zip archive declares a rediculously large number of substreams, it can overflow an internal counter, leading a subsequent memory allocation to be too small for the substream data.","+			if (unpack_streams > SIZE_MAX - UMAX_ENTRY) {
++				return (-1);
++			}"
+Issue 403: Buffer underflow parsing 'ar' header.,"                if (ar->strtab == NULL || number > ar->strtab_size) {
+                        archive_set_error(&a->archive, EINVAL,
++                           ""Can't find long filename for GNU/SVR4 archive entry"");
+                        archive_entry_copy_pathname(entry, filename);
+                        ar_parse_common_header(ar, entry, h);
++                       return (ARCHIVE_FATAL);
+                }"
+"If an OS X metadata entry is stored without compression, abort the entire archive if the compressed and uncompressed data sizes do not match.","+		if (rsrc->uncompressed_size != rsrc->compressed_size) {
++			archive_set_error(&a->archive, ARCHIVE_ERRNO_FILE_FORMAT,
++			    ""Malformed OS X metadata entry: inconsistent size"");
++			return (ARCHIVE_FATAL);
++		}"
+Fix integer overflow when computing location of volume descriptor.,-	skipsize = LOGICAL_BLOCK_SIZE * vd->location;
+"libarchive version commit 416694915449219d505531b1096384f3237dd6cc onwards (release v3.1.0 onwards) contains a CWE-415: Double Free vulnerability in RAR decoder - libarchive/archive_read_support_format_rar.c, parse_codes(), realloc(rar->lzss.window, new_size) with new_size = 0 that can result in Crash/DoS.","    new_window = realloc(rar->lzss.window, new_size);"
+"bsdtar: An error in archive_string_append_from_wcs() (archive_string.c) triggers an out-of-bounds write in heap memory that results into a crash, via a specially crafted archive file.",			end = as->s + as->buffer_length - MB_CUR_MAX -1;
+Detect cycles in the ISO directory tree,"+	for (filep = parent; filep != NULL; filep = filep->parent) {
++		if (filep->offset == offset) {
++			archive_set_error(&a->archive, ARCHIVE_ERRNO_FILE_FORMAT,
++			    ""Directory structure contains loop"");
++			return (NULL);
++		}
++	}"
+Fix typo in preprocessor macro in archive_read_format_zip_cleanup().,-#if HAVA_LZMA_H && HAVE_LIBLZMA
+"The warc decoder only used read ahead, it wouldn't actually consume data that had previously been printed.","+	if (w->unconsumed) {
++		__archive_read_consume(a, w->unconsumed);
++		w->unconsumed = 0U;
++	}"
+libarchive: bsdtar: heap-based buffer overflow in read_Header (archive_read_support_format_7zip.c).,"			h->attrBools = calloc((size_t)zip->numFiles,
+			    sizeof(*h->attrBools));"
+"The last of this batch is a quasi-infinite loop in the warc code (patch 4), where data isn't consumed after being written out, so a large Content-Length can be used to consume almost limitless time and space, leading to a DoS condition.",			st = field[n].start + 1;
+Stack-based buffer overflow in the parse_device function in archive_read_support_format_mtree.c in libarchive before 3.2.1 allows remote attackers to execute arbitrary code via a crafted mtree file.,-			numbers[argc++] = (unsigned long)mtree_atol(&p);
+"Integer signedness error in the archive_write_zip_data function in archive_write_set_format_zip.c in libarchive 3.1.2 and earlier, when running on 64-bit machines, allows context-dependent attackers to cause a denial of service (crash) via unspecified vectors, which triggers an improper conversion between unsigned and signed types, leading to a buffer overflow.","	return ((a->format_write_data)(a, buff, s));"
+==27792==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x631000010800 at pc 0x6169dd bp 0x7ffff41b2ef0 sp 0x7ffff41b2ee0.,"        p = __archive_read_ahead(a, ENC_HEADER_SIZE, NULL);"
+"I've not been able to reproduce this, but have expanded the conversion buffer to 128 bytes on the belief that no multibyte character set has a single character of more than 32 bytes.",+		if (i > (sizeof(outbuff) - 128)) {
+Fail if entry is too small for encryption header.,"+       if (0 == (zip->entry->zip_flags & ZIP_LENGTH_AT_END)) {
++           zip->entry_bytes_remaining -= ENC_HEADER_SIZE;
++       }"
+Integer overflow in the archive_read_format_tar_skip function in archive_read_support_format_tar.c in libarchive before 3.2.0 allows remote attackers to cause a denial of service (crash) via a crafted tar file.,"+               if (!p->hole) {
++                       if (p->remaining >= INT64_MAX - request) {
++                               return ARCHIVE_FATAL;
++                       }
+                        request += p->remaining;
++               }"
+"The last of this batch is a quasi-infinite loop in the warc code (patch 4), where data isn't consumed after being written out, so a large Content-Length can be used to consume almost limitless time and space, leading to a DoS condition.",      new_size = rar_fls((unsigned int)rar->unp_size) << 1;
+"libarchive 3.3.2 allows remote attackers to cause a denial of service (xml_data heap-based buffer over-read and application crash) via a crafted xar archive, related to the mishandling of empty strings in the atol8 function in archive_read_support_format_xar.c.",	while (digit >= 0 && digit < 10  && char_cnt-- > 0) {
+"I suppose the cpio code could sanity-check the symlink size and return ARCHIVE_FATAL in this case without even trying to read it, but that would be a fairly minor improvement.","+		if (cpio->entry_bytes_remaining > 1024 * 1024) {
++			archive_set_error(&a->archive, ENOMEM,
++			    ""Rejecting malformed cpio archive: symlink contents exceed 1 megabyte"");
++			return (ARCHIVE_FATAL);
++		}"
+Issue #767: Buffer overflow printing a filename.,"			fprintf(f, ""%s"", outbuff);"
+A race condition in chown_one() of systemd allows an attacker to cause systemd to set arbitrary permissions on arbitrary files.,"-        else
+-                r = fchown(fd, uid, gid);"
+"The allocation size was calculated in a complicated way, and for values close to the page size we would actually allocate less than requested.","-        if (mtu <= UDP_PACKET_HEADER_SIZE)
+-                a = DNS_PACKET_SIZE_START;"
+"In systemd through 233, certain sizes passed to dns_packet_new in systemd-resolved can cause it to allocate a buffer that's too small.","-        else
+-                a = mtu - UDP_PACKET_HEADER_SIZE;"
+"The allocation size was calculated in a complicated way, and for values close to the page size we would actually allocate less than requested.","-        if (mtu <= UDP_PACKET_HEADER_SIZE)
+-                a = DNS_PACKET_SIZE_START;"
+don't accept arbitrarily sized journal data fields.,+#define DATA_SIZE_MAX (1024*1024*64)
+An out-of-bounds read when parsing a crafted syslog message that could lead to information disclosure.,         *buf = p + e;
+don't accept arbitrarily sized journal data fields.,"+                        if (l > DATA_SIZE_MAX) {
++                                log_debug(""Received binary data block too large, ignoring."");
++                                break;
++                        }"
+resolved: fix loop on packets with pseudo dns types,"+                for (; bitmask; bit++, bitmask >>= 1)"
+"Existing use of E2BIG is replaced with ENOBUFS (entry too long), and E2BIG is reused for the new error condition (too many fields).","+                        if (r == -ENOBUFS)
++                                log_warning_errno(r, ""Entry is above the maximum of %u, aborting connection %p."",
+                                                  DATA_SIZE_MAX, connection);"
+bugfix of null pointer p->question dereferencing (#6020),"        if (p->question->n_keys != 1)
+                return 0;"
+"Existing use of E2BIG is replaced with ENOBUFS (entry too long), and E2BIG is reused for the new error condition (too many fields).","-                        if (r == -E2BIG)
+-                                log_warning_errno(r, ""Entry is too above maximum of %u, aborting connection %p."","
+bus_open leak sd_event_source when udevadm trigger.,"         r = sd_event_add_io(b->manager->event, &b->io_event_source, b->fd, EPOLLIN, button_dispatch, b);"
+chown-recursive: let's rework the recursive logic to use O_PATH.,"+        xsprintf(procfs_path, ""/proc/self/fd/%i"", fd);"
+"A malicious DNS server can exploit this via a response with a specially crafted TCP payload to trick systemd-resolved into allocating a buffer that's too small, and subsequently write arbitrary data beyond the end of it.","-        if (a < DNS_PACKET_HEADER_SIZE)
+-                a = DNS_PACKET_HEADER_SIZE;"
+"This behaviour is definitely not expected by users, since tools generally only accept decimal numbers.","+        r = safe_atou32_full(s, 10, &uid);"
+"This behaviour is definitely not expected by users, since tools generally only accept decimal numbers.",         assert_cc(sizeof(uid_t) == sizeof(uint32_t));
+"Function unit_deserialize() in file unit.c does not properly handle lines longer than LINE_MAX and the content of a property longer than that is parsed as part of the serialized state, allowing an attacker to corrupt the state of the service (e.g.","+                if (r == 0) 
++                        break;"
+"If decode_prefix6() returns a negative number, don't print buf.","+        if (plenbytes < 0)
++            return plenbytes;"
+CVE-2017-13038/PPP: Do bounds checking.,+    if (length < 2) {
+"We do bounds checks based on the TLV length, so if the TLV's length is too short, and we don't check for that, we could end up fetching data past the end of the TLV - including past the length of the captured data in the packet.",+				if (olen != 2) {
+fix VPN route target bounds checks,"+	ND_TCHECK2(pptr[5], (plen + 7) / 8);"
+This fixes a buffer over-read discovered by Bhargava Shastry.," 				ND_PRINT((ndo, "", (bad vrrp cksum %x)"",
+ 					EXTRACT_16BITS(&bp[6])));"
+put an existing bounds check right,-                    ND_TCHECK(*pptr);
+Fix some bounds checks.,"+	ND_TCHECK2(*ext, sizeof(a));"
+add checks to make sure the subTLV fits within the TLV.,"+            if (stlv_len < ISIS_SUBTLV_SPB_INSTANCE_VLAN_TUPLE_LEN)
++              goto trunc;"
+Using the same variable for the remaining request length and the reply length is confusing at best and can cause errors at worst,-		plen+= sizeof(struct rpcap_findalldevs_if);
+CVE-2017-12896/ISAKMP: Do bounds checks in isakmp_rfc3948_print().,+	ND_TCHECK(bp[3]);
+The Rx parser in tcpdump before 4.9.3 has a buffer over-read in print-rx.c:rx_cache_find() and rx_cache_insert().,-		    rxent->serviceId == EXTRACT_32BITS(&rxh->serviceId) &&
+One of the case blocks in ubik_print() didn't check bounds before fetching 32 bits of packet data and could overread past the captured packet data by that amount., 			temp = EXTRACT_32BITS(bp);
+CVE-2017-12993/Juniper: Add more bounds checks.,+        ND_TCHECK(*sh);
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin."," 		ND_PRINT((ndo, ""\n\tOptions [%s]"",
+ 		          bittok2str(ospf6_option_values, ""none"",
+ 		          EXTRACT_32BITS(&hellop->hello_options))));"
+"clean up some other bounds checks,","-            ND_TCHECK2(*msg_data, 4);"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","-          ND_TCHECK2(*tptr, ISIS_SUBTLV_SPB_INSTANCE_MIN_LEN);"
+Enforce a limit on how many times smb_fdata() can recurse.,"+		else
++			buf2 = smb_fdata(ndo, buf, fmt, maxbuf, unicodestr);"
+don't print the address as an IPv4 address.,"+	if (pro != ETHERTYPE_IP && pro != ETHERTYPE_TRAIL)
++		ND_PRINT((ndo, ""<wrong proto type>""));"
+The BOOTP parser in tcpdump before 4.9.2 has a buffer over-read in print-bootp.c:bootp_print().," 	if (EXTRACT_16BITS(&bp->bp_secs))
+ 		ND_PRINT((ndo, "", secs %d"", EXTRACT_16BITS(&bp->bp_secs)));"
+hncp_print_rec() validates each HNCP TLV to be within the declared as well as the on-the-wire packet space.,"+        if (i + 4 > length)
++            return -1;"
+The OLSR parser in tcpdump before 4.9.2 has a buffer over-read in print-olsr.c:olsr_print().,"             ND_PRINT((ndo, ""\n\t  Version %u, Entries %u%s"",
+                    EXTRACT_16BITS(msg_data),
+                    name_entries, (name_entries_valid == 0) ? "" (invalid)"" : """"));"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin."," 			if (dp->icmp6_data16[1] & 0xc0)
+ 				ND_PRINT((ndo,"" ""));"
+"The ISO IS-IS parser in tcpdump before 4.9.2 has a buffer over-read in print-isoclns.c, several functions.","-          ND_TCHECK2(*tptr, 8);"
+don't print the address as an IPv4 address.,"+	else if (ATMTPROTO_LEN(ap) != 4)
++		ND_PRINT((ndo, ""<wrong tplen>""));"
+Add a bounds check.,+            ND_TCHECK_16BITS(p+l2info->cookie_len);
+"When bgp_attr_print() tried to decode the variable-length nexthop value for the NSAP VPN case, it did not check that the declared length is good to interpret the value as a mapped IPv4 or IPv6 address.","+                                else if (tlen == BGP_VPN_RD_LEN + 3 + sizeof(struct in6_addr)
++                                         && EXTRACT_24BITS(tptr+BGP_VPN_RD_LEN) ==  0x350000)"
+add checks to make sure the subTLV fits within the TLV.,"+          if (stlv_len < ISIS_SUBTLV_SPB_INSTANCE_MIN_LEN)
++            goto trunc;"
+The LMP parser in tcpdump before 4.9.3 has a buffer over-read in print-lmp.c:lmp_print_data_link_subobjs()., 	    bw.i = EXTRACT_32BITS(obj_tptr+offset+4);
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header;",+			nhdr.len = length;
+Clean up the output a bit while we're at it.,"-        	ND_PRINT((ndo, ""\n\t      Priority: %d, RES: %d, Sel: %d"",
+-        		 tval >> 5, (tval >> 3) & 0x03, (tval & 0x07)));"
+Fix printing of ISAKMPv1 Notification payload data.,"+			ND_PRINT((ndo,"")""));"
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.","+	if (pro != ETHERTYPE_IP && pro != ETHERTYPE_TRAIL)
++		ND_PRINT((ndo, ""<wrong proto type>""));"
+"After we advance the pointer by the length value in the buffer, make sure it points to something in the captured data.","+	ND_TCHECK2(*s, 1);"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",                     subobj_type = (EXTRACT_16BITS(obj_tptr+2))>>8;
+Don't fetch the length field from the header until after we've checked for the existence of a field at or after that field.,-	len = dp->ip6r_len;
+This fixes an infinite loop discovered by Forcepoint's security researchers Otto Airamo & Antti Levom??ki.,"-					ND_PRINT((ndo, ""<LOOP>""));"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","-            ND_TCHECK2(pptr[0], BGP_VPN_RD_LEN);"
+"Using the same variable for the remaining request length and the reply length is confusing at best and can cause errors at worst (if the request had extra stuff at the end, so that the variable is non-zero).",-				plen+= (sizeof(struct rpcap_sockaddr) * 4);
+CVE-2017-13015/EAP: Add more bounds checks.,+                    ND_TCHECK_32BITS(tptr + 6);
+CVE-2017-12901/EIGRP: Do more length checks.,+            if (tlv_tlen < sizeof(*tlv_ptr.eigrp_tlv_at_cable_setup)) {
+This fixes a buffer over-read,"         if (EXTRACT_24BITS(p) == 0xfefe03 || 
+             EXTRACT_24BITS(p) == 0xaaaa03) {"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","                 ND_PRINT((ndo, ""%s  Setup Priority: %u, Holding Priority: %u, Hop-limit: %u, Bandwidth: %.10g Mbps"",
+                        ident,
+                        (int)obj_ptr.rsvp_obj_frr->setup_prio"
+"The Juniper protocols parser in tcpdump before 4.9.2 has a buffer over-read in print-juniper.c, several functions.","         if (EXTRACT_24BITS(p) == 0xfefe03 || 
+             EXTRACT_24BITS(p) == 0xaaaa03) {"
+"Add bounds checks, do a common check to make sure we captured the entire subTLV, add checks to make sure the subTLV fits within the TLV.","+      	if (stlv_len < ISIS_SUBTLV_SPB_MCID_MIN_LEN)
++      	  goto trunc;"
+Check for print routines returning -1 when running past the end.,+	return(-1);
+"The loop can be executed more than once (that's kinda the whole point of a loop), so the check has to be made each time through the loop, not just once before the loop is executed.","-		ND_TCHECK2(tptr[0], 3);"
+The PIMv2 parser in tcpdump before 4.9.2 has a buffer over-read in print-pim.c:pimv2_print().,-				if (EXTRACT_16BITS(bp+2) != 0) {
+This fixes a buffer over-read,"-			ND_PRINT((ndo,""%04x:%04x "", panid, EXTRACT_LE_16BITS(p + 2)));"
+This fixes a buffer over-read,"-		    i -= sizeof(*ni), ++ni) {"
+This fixes an infinite loop.,         	i=i+3;
+This fixes a buffer over-read discovered by Kamil Frankowicz., 	    mflags = EXTRACT_LE_8BITS(rhp->rh_short.sh_flags);
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.","+	else if (PROTO_LEN(ap) != 4)
++		ND_PRINT((ndo, ""<wrong len>""));"
+offset has already been advanced to point to the bitmap; we shouldn't add the amount to advance again., 			offset += 3;
+Clean up the output a bit while we're at it.,"-        	ND_PRINT((ndo, ""Protocol ID: %d"", EXTRACT_16BITS(tptr + i + 5)));"
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header;",+	struct pcap_pkthdr nhdr;
+add DHCPv4-Data bounds checks,"+        if (i + 2 + optlen > length)
++            return -1;"
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,-        len = len - sizeof(struct isis_subtlv_spb_mcid);
+The BGP parser in tcpdump before 4.9.3 has a buffer over-read in print-bgp.c:bgp_attr_print() (MP_REACH_NLRI).,-                                else if (EXTRACT_24BITS(tptr+BGP_VPN_RD_LEN) ==  0x350000)
+The IPv6 routing header parser in tcpdump before 4.9.2 has a buffer over-read in print-rt6.c:rt6_print().,-	uint8_t  ip6r0_segleft;
+"While we're at it, print a truncation error if the packets are truncated, rather than just, in effect, ignoring the result of the routines that print particular packet types.","+		ND_PRINT((ndo, ""%s"", tstr));"
+This fixes a stack exhaustion,"-		buf2 = smb_fdata(ndo, buf, fmt, maxbuf, unicodestr);"
+"Add bounds checks,","+      	if (stlv_len < ISIS_SUBTLV_SPB_MCID_MIN_LEN)
++      	  goto trunc;"
+The Rx parser in tcpdump before 4.9.3 has a buffer over-read in print-rx.c:rx_cache_find() and rx_cache_insert().,-	rxent->serviceId = EXTRACT_32BITS(&rxh->serviceId);
+This fixes a buffer over-read,"             ND_PRINT((ndo, ""\n\t    holdtime: %us, k1 %u, k2 %u, k3 %u, k4 %u, k5 %u"",
+                    EXTRACT_16BITS(tlv_ptr.eigrp_tlv_general_parm->holdtime),"
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.",=B105
+CVE-2017-13725/IPv6 R.H.: Check for the existence of all fields before fetching them.,+	len = dp->ip6r_len;
+add a missing bounds check for Ubik.,+			ND_TCHECK_32BITS(bp);
+"(for 4.9.3) CVE-2018-16229/DCCP: Fix printing ""Timestamp"" and ""Timestamp Echo"" options",+			switch (optlen) {
+CVE-2017-13053/BGP: fix VPN route target bounds checks.,"-	memcpy(&route_target, &pptr[1], (plen + 7) / 8);"
+CVE-2017-13010/BEEP: Do bounds checking when comparing strings.,"+	else if (l_strnstart(ndo, ""END"", 4, (const char *)bp, length))
+ 		ND_PRINT((ndo, "" BEEP END""));"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",-		    rxent->serviceId == EXTRACT_32BITS(&rxh->serviceId) &&
+CVE-2017-13018/PGM: Add a missing bounds check.,"+		if (!ND_TTEST2(*bp, 2)) {"
+fix VPN route target bounds checks,"-	memcpy(&route_target, &pptr[1], (plen + 7) / 8);"
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.","+	if (pro != ETHERTYPE_IP && pro != ETHERTYPE_TRAIL)
++		ND_PRINT((ndo, ""<wrong proto type>""));"
+"However, dhcpv6_print() in the same file didn't do the same for the DHCPv6 options within the HNCP DHCPv6-Data TLV value, which could cause an out-of-bounds read when decoding an invalid packet.",         tlv = cp + i;
+CVE-2017-13024/IPv6 mobility: Add a bounds check before fetching data,+			ND_TCHECK_16BITS(&bp[i+4]);
+The Rx parser in tcpdump before 4.9.3 has a buffer over-read in print-rx.c:rx_cache_find() and rx_cache_insert()., 	rxent->opcode = EXTRACT_32BITS(bp + sizeof(struct rx_header));
+CVE-2017-12996/PIMv2: Make sure PIM TLVs have the right length.,+				if (olen != 4) {
+The BEEP parser in tcpdump before 4.9.2 has a buffer over-read in print-beep.c:l_strnstart().,"-	else if (l_strnstart(""ERR "", 4, (const char *)bp, length))"
+(for 4.9.3) CVE-2018-14466/Rx: fix an over-read bug., 	rxent->opcode = EXTRACT_32BITS(bp + sizeof(struct rx_header));
+CVE-2017-13011/Properly check for buffer overflow in bittok2str_internal().,"+                    if (space_left <= 1)
++                        return (buf);"
+fix bounds checks for UNI,"+                    if(subobj_len < 4 || subobj_len > total_subobj_len)
+                         goto invalid;"
+"decode_multicast_vpn() didn't implement the Source AS field of that structure properly, adjust the offsets to put it right.","-            ND_TCHECK2(pptr[0], BGP_VPN_RD_LEN);"
+CVE-2017-13051/RSVP: fix bounds checks for UNI.,"+                    if (total_subobj_len < 4)
++                        goto invalid;"
+"While we're at it, fix a comment, and clean up printing of V1 Nonce, V2 Authentication payloads, and v2 Notice payloads.","+			ND_PRINT((ndo,"" attrs=(""));"
+This fixes a buffer over-read,-                                if (EXTRACT_32BITS(tptr+BGP_VPN_RD_LEN) ==  0x47000601)
+CVE-2017-13011/Properly check for buffer overflow in bittok2str_internal().,"+                    if (space_left <= 1)
++                        return (buf);"
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,"-            ND_TCHECK2(*tptr, ISIS_SUBTLV_SPB_INSTANCE_VLAN_TUPLE_LEN);"
+(for 4.9.3) CVE-2018-14464/LMP: Add a missing bounds check in lmp_print_data_link_subobjs().,+	    ND_TCHECK_32BITS(obj_tptr + offset + 4);
+The BEEP parser in tcpdump before 4.9.2 has a buffer over-read in print-beep.c:l_strnstart().,"-	if (l_strnstart(""MSG"", 4, (const char *)bp, length))"
+CVE-2017-13038/PPP: Do bounds checking.,+    if (!ND_TTEST_16BITS(p)) {
+"It can fail, so make sure it doesn't before comparing its result with the password.", 		return -1;
+"In isis_print_is_reach_subtlv() one of the case blocks did not check that the sub-TLV ""V"" is actually present and could over-read the input buffer.","+            if (subl == 0)
++                break;"
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.",=B105
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",-	ND_TCHECK(dp->ip6f_offlg);
+"Also, change mobility_print() to return -1 if it runs up against the end of the packet, and stop dissecting if it does so.",+	return(-1);
+CVE-2017-13007/PKTAP: Pass a properly updated struct pcap_pkthdr to the sub-dissector.,+			nhdr = *h;
+Prevent a possible buffer overread in chdlc_print() and replace the custom check in chdlc_if_print() with a standard check in chdlc_print() so that the latter certainly does not over-read even when reached via juniper_chdlc_print().,"-        return (chdlc_print(ndo, p,length));"
+CVE-2017-13037/IP: Add bounds checks when printing time stamp options.,"+		ND_TCHECK2(cp[len], hoplen);"
+The AODV parser in tcpdump before 4.9.2 has a buffer over-read in print-aodv.c:aodv_extension().," 		if (length < sizeof(struct aodv_hello))
+ 			goto trunc;"
+"Add bounds checks,","+    ND_TCHECK2(*(tptr), stlv_len);"
+"rt6_print(), ah_print(), and esp_print() return -1 if they run up against the end of the packet while dissecting; if that happens, stop dissecting, don't try to fetch the next header value, because 1) *it* might be past the end of the packet and 2) we won't be using it in any case, as we'll be exiting the loop.",+	return(-1);
+Several protocol parsers in tcpdump before 4.9.2 could cause a buffer overflow in util-print.c:bittok2str_internal().,"-                    buflen+=snprintf(buf+buflen, sizeof(buf)-buflen, ""%s%s"",
+-                                     sepstr, lp->s);"
+(for 4.9.3) CVE-2018-16227/IEEE 802.11: add a missing bounds check.,+		if (caplen < hdrlen + 1) {
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header;",+	struct pcap_pkthdr nhdr;
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,"-        ND_TCHECK2(*(tptr), ISIS_SUBTLV_SPB_DIGEST_MIN_LEN);"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin."," 	if (ptr < 4 || ((ptr - 4) & (hoplen-1)) || ptr > length + 1)
+ 		ND_PRINT((ndo, ""[bad ptr %u]"", cp[2]));"
+CVE-2017-13690/IKEv2: Fix some bounds checks.,+	ND_TCHECK(*k);
+The Rx protocol parser in tcpdump before 4.9.2 has a buffer over-read in print-rx.c:ubik_print().,+			ND_TCHECK_32BITS(bp);
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","                 ND_TCHECK2(opt[i+2], cap_len);"
+CVE-2017-12985/IPv6: Check for print routines returning -1 when running past the end.,"+            if (ND_TTEST2(ext_dp->icmp_ext_version_res, hlen)) {"
+CVE-2017-12993/Juniper: Add more bounds checks.,"+        ND_TCHECK2(p[0], 3);"
+This fixes a stack exhaustion,"-			if (!bgp_attr_print(ndo, atype, p, alen))"
+we shouldn't add the amount to advance again.,"-			memcpy(tim.bitmap, p + offset + 3, tim.length - 3);"
+This fixes an infinite loop,-            if (!saw_digit)
+"(for 4.9.3) CVE-2018-16229/DCCP: Fix printing ""Timestamp"" and ""Timestamp Echo"" options","+				ND_PRINT((ndo, "" (elapsed time %u)"", EXTRACT_32BITS(option + 6)));"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",+                bw.i = EXTRACT_32BITS(obj_ptr.rsvp_obj_frr->bandwidth);
+offset has already been advanced to point to the bitmap; we shouldn't add the amount to advance again., 			offset += 3;
+"While we're at it, clean up some other bounds checks, so we check that we have a complete IPv4 message header if it's IPv4 and a complete IPv6 message header if it's IPv6.","-            if (msg_tlen < 4)
+-                goto trunc;"
+"While we're at it, clean up some other bounds checks, so we check that we have a complete IPv4 message header if it's IPv4 and a complete IPv6 message header if it's IPv6.","+            ND_TCHECK2(*tptr, sizeof(struct olsr_msg6));"
+This fixes an infinite loop discovered by Forcepoint's security researchers Otto Airamo & Antti Levomäki.,-				chars_processed++;
+CVE-2017-12893/SMB/CIFS: Add a bounds check in name_len().,"+	ND_TCHECK2(*s, 1);"
+"It also fetched the varying number of octets of the route target field from 4 octets lower than the correct offset, put it right.","+	as_printf(ndo, asbuf, sizeof(asbuf), EXTRACT_32BITS(pptr + 1));"
+This fixes a buffer over-read,-                if(len < 1)
+This fixes a buffer over-read,"-		if (j * sizeof(*ni) != length - 4)
+-			ND_PRINT((ndo, "" ripng-req %d[%u]:"", j, length));"
+The RIPng parser in tcpdump before 4.9.2 has a buffer over-read in print-ripng.c:ripng_print().,-		for (ni = rp->rip6_nets; i >= sizeof(*ni);
+This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter.,"-			memcpy(tim.bitmap, p + offset + 3, tim.length - 3);"
+CVE-2017-13024/IPv6 mobility: Add a bounds check before fetching data.,+			ND_TCHECK_16BITS(&bp[i+4]);
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,-        tptr = tptr + sizeof(struct isis_subtlv_spb_mcid);
+(for 4.9.3) CVE-2018-16228/HNCP: make buffer access safer print_prefix() has a buffer and does not initialize it.,"+        if (plenbytes < 0)
++            return plenbytes;"
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.","+	else if (PROTO_LEN(ap) != 4)
++		ND_PRINT((ndo, ""<wrong len>""));"
+"In babel_print_v2() the non-verbose branch for an Update TLV compared the TLV Length against 1 instead of 10 (probably a typo), put it right.","+                if(len < 10)
+                     ND_PRINT((ndo, ""/truncated""));"
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,-        while (len >= ISIS_SUBTLV_SPB_BVID_MIN_LEN)
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,"-          ND_TCHECK2(*(tptr), ISIS_SUBTLV_SPB_BVID_MIN_LEN);"
+The OLSR parser in tcpdump before 4.9.2 has a buffer over-read in print-olsr.c:olsr_print().,"-        ND_TCHECK2(*tptr, sizeof(struct olsr_msg4));"
+CVE-2017-13025/IPv6 mobility: Add a bounds check before fetching data,+			ND_TCHECK_128BITS(&bp[i+2]);
+The IP parser in tcpdump before 4.9.2 has a buffer over-read in print-ip.c:ip_printroute()., 	ptr = cp[2] - 1;
+This fixes a buffer over-read,"-        if (!ND_TTEST2(*tptr, 1))"
+This fixes a buffer over-read discovered by Henri Salo from Nixu Corporation.,+			ND_TCHECK_32BITS(bp);
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.", 	    len = *tptr;
+This fixes a buffer over-read,-		j = length / sizeof(*ni);
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.",=B105
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header; pass an updated header, just as we do for PPI.",+			nhdr.len = length;
+The DECnet parser in tcpdump before 4.9.2 has a buffer over-read in print-decnet.c:decnet_print()., 	int mflags = EXTRACT_LE_8BITS(rhp->rh_short.sh_flags);
+The EAP parser in tcpdump before 4.9.2 has a buffer over-read in print-eap.c:eap_print().,"                 ND_PRINT((ndo, "" FASTv%u"",
+                        EAP_TTLS_VERSION(*(tptr + 5))))"
+(for 4.9.3) SMB: Add two missing bounds checks,"+	if (strcmp((const char *)(data1 + 2), PIPE_LANMAN_STR) == 0) {"
+(for 4.9.3) LMP: Add some missing bounds checks,+	ND_TCHECK_16BITS(obj_tptr + offset);
+The BEEP parser in tcpdump before 4.9.2 has a buffer over-read in print-beep.c:l_strnstart().,"-	else if (l_strnstart(""NUL "", 4, (const char *)bp, length))"
+One of the case blocks in ubik_print() didn't check bounds before fetching 32 bits of packet data and could overread past the captured packet data by that amount.,+			ND_TCHECK_32BITS(bp);
+Pass a properly updated struct pcap_pkthdr to the sub-dissector.,+			nhdr = *h;
+"Always print the SNPA, and flag it as such;"," 		else
++			ND_PRINT((ndo, ""\n\t  SNPA (length: %u): %s"",
++			       snpal,
++			       linkaddr_string(ndo, snpa, LINKADDR_OTHER, snpal)));"
+Don't crash if crypt() fails.,"+		pcap_snprintf(errbuf, PCAP_ERRBUF_SIZE, ""Authentication failed"");"
+has a buffer over-read,-	ND_TCHECK(lshp->ls_seq);
+get_next_file() did not check the return value of strlen() and underflowed an array index if the line read by fgets() from the file started with \0.,"+	if (len > 0 && ptr[len - 1] == '\n')
++		ptr[len - 1] = '\0';"
+"Add bounds checks, do a common check to make sure we captured the entire subTLV, add checks to make sure the subTLV fits within the TLV.","+          if (stlv_len < ISIS_SUBTLV_SPB_INSTANCE_MIN_LEN)
++            goto trunc;"
+CVE-2017-13041/ICMP6: Add more bounds checks.,"+		ND_TCHECK2(*dp, sizeof(*ni6));"
+"While we're at it, print a truncation error if the packets are truncated, rather than just, in effect, ignoring the result of the routines that print particular packet types.","+		ND_PRINT((ndo, ""%s"", tstr));"
+CVE-2017-13022/IP: Add bounds checks to ip_printroute().,+	ND_TCHECK(cp[2]);
+The IPv6 routing header parser in tcpdump before 4.9.2 has a buffer over-read in print-rt6.c:rt6_print().,+	len = dp->ip6r_len;
+CVE-2017-12990/Fix printing of ISAKMPv1 Notification payload data.,"+			ND_PRINT((ndo,"")""));"
+Properly terminate all struct tok arrays.,"+    { 0, NULL}"
+"An IPv6 address plus subnet mask is 32 bytes, not 20 bytes.","+			if (len < 32)
++				ND_PRINT((ndo,"" len=%d [bad: < 32]"", len));"
+CVE-2017-13011/Properly check for buffer overflow in bittok2str_internal().,"-                    buflen+=snprintf(buf+buflen, sizeof(buf)-buflen, ""%s%s"",
+-                                     sepstr, lp->s);"
+"This fixes a buffer overflow discovered by Bhargava Shastry, SecT/TU Berlin.",+                    space_left -= string_size;
+The LDP parser in tcpdump before 4.9.3 has a buffer over-read in print-ldp.c:ldp_tlv_print()., 	ft_flags = EXTRACT_16BITS(tptr);
+CVE-2017-13036/OSPFv3: Add a bounds check before fetching data,+		ND_TCHECK_32BITS(&hellop->hello_options);
+"While we're at it, clean up some other bounds checks, so we check that we have a complete IPv4 message header if it's IPv4 and a complete IPv6 message header if it's IPv6.","+            ND_TCHECK2(*tptr, sizeof(struct olsr_msg6));"
+do sanity checks on PHB header length before allocating memory.,"+                              total_length,"
+add some bounds checks,+        ND_TCHECK(*vqp_obj_tlv);
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.",                 bw.i = EXTRACT_32BITS(tptr);
+CVE-2017-13005/NFS: Add two bounds checks before fetching data., 	xmep->proc = EXTRACT_32BITS(&rp->rm_call.cb_proc);
+Add two bounds checks before fetching data,"+	if (!ND_TTEST(rp->rm_call.cb_vers))
++		return (0);"
+Add bounds checks to ip_printroute().,"+		ND_TCHECK2(cp[len], 4);"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","-          ND_TCHECK2(*tptr, 8);"
+Add two bounds checks before fetching data,"+	if (!ND_TTEST(rp->rm_call.cb_proc))
++		return (0);"
+"(for 4.9.3) CVE-2018-16229/DCCP: Fix printing ""Timestamp"" and ""Timestamp Echo"" options.","+				ND_PRINT((ndo, "" [optlen != 6 or 8 or 10]""));"
+"Fix the bounds checking for the NFSv3 WRITE procedure to check whether the length of the opaque data being written is present in the captured data, not just whether the byte count is present in the captured data.",+				ND_TCHECK(dp[4]);
+"Scan the list of netinfo6 entries based on the supplied packet length, without taking the captured length into account; let the aforementioned bounds checking handle that.","+		for (ni = rp->rip6_nets; length_left >= sizeof(*ni);
++		    length_left -= sizeof(*ni), ++ni) {
++			ND_TCHECK(*ni);"
+Add more bounds checks.,+        ND_TCHECK(*sh);
+The IP parser in tcpdump before 4.9.2 has a buffer over-read in print-ip.c:ip_printts().," 		ND_PRINT((ndo, ""%s%d@%s"", type, EXTRACT_32BITS(&cp[len+hoplen-4]),
+ 		       hoplen!=8 ? """" : ipaddr_string(ndo, &cp[len])));"
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.","+	if (pro != ETHERTYPE_IP && pro != ETHERTYPE_TRAIL)
++		ND_PRINT((ndo, ""<wrong proto type>""));"
+The RSVP parser in tcpdump before 4.9.2 has a buffer over-read in print-rsvp.c:rsvp_obj_print().,                     subobj_type = (EXTRACT_16BITS(obj_tptr+2))>>8;
+CVE-2017-12901/EIGRP: Do more length checks.,+            if (tlv_tlen < sizeof(*tlv_ptr.eigrp_tlv_at_ext)) {
+"Include a test for the ""check before fetching the ""access"" part..."" fix, using the capture supplied by the reporter(s).",+				ND_TCHECK(dp[4]);
+"While we're at it, fix a comment, and clean up printing of V1 Nonce, V2 Authentication payloads, and v2 Notice payloads.","+			ND_PRINT((ndo,"" attrs=(""));"
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header;",+			nhdr = *h;
+"While we're at it, fix a comment, and clean up printing of V1 Nonce, V2 Authentication payloads, and v2 Notice payloads.","+			ND_PRINT((ndo,"" status=(""));"
+This fixes a buffer over-read,-		if (j * sizeof(*ni) != length - 4)
+"If you have a for (i = 0; i < N; i++) loop, you'd better make sure that i is big enough to hold N - not N-1, N. The TLV length here is 9 bits long, not 8 bits long, so an 8-bit loop counter will overflow and you can loop infinitely.",+    u_int i;
+This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter.,"-	else if (l_strnstart(""SEQ "", 4, (const char *)bp, length))"
+CVE-2017-13010/BEEP: Do bounds checking when comparing strings.,"+	else if (l_strnstart(ndo, ""NUL "", 4, (const char *)bp, length))
+ 		ND_PRINT((ndo, "" BEEP NUL""));"
+This fixes a buffer over-read,             bit_length = tlv_ptr.eigrp_tlv_ip_int->plen;
+This fixes a buffer over-read,"-			    print_unknown_data(ndo, tptr+3,""\n\t      "", length-3);"
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header; pass an updated header, just as we do for PPI.",+	struct pcap_pkthdr nhdr;
+(for 4.9.3) CVE-2018-14466/Rx: fix an over-read bug.,-		    rxent->serviceId == EXTRACT_32BITS(&rxh->serviceId) &&
+CVE-2017-13688/OLSR: Do bounds checks before we fetch data.,"+            ND_TCHECK2(*tptr, sizeof(struct olsr_msg6));"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","+                if (subtype == EAP_TYPE_TTLS)
++                    ND_PRINT((ndo, "" TTLSv%u"",
++                           EAP_TTLS_VERSION(*(tptr + 5))));"
+CVE-2017-12989/RESP: Make sure resp_get_length() advances the pointer for invalid lengths.,         if (!(c >= '0' && c <= '9')) {
+CVE-2017-13005/NFS: Add two bounds checks before fetching data., 	xmep->proc = EXTRACT_32BITS(&rp->rm_call.cb_proc);
+The EIGRP parser in tcpdump before 4.9.2 has a buffer over-read in print-eigrp.c:eigrp_print().,"             ND_PRINT((ndo, ""\n\t    Cable-range: %u-%u, Router-ID %u"",
+                    EXTRACT_16BITS(&tlv_ptr.eigrp_tlv_at_cable_setup->cable_start),"
+Use ND_TTEST() rather than comparing against ndo->ndo_snapend ourselves; it's easy to get the tests wrong.,+	if (!ND_TTEST(**pptr)) {
+CVE-2017-13026/IS-IS: Clean up processing of subTLVs.,"-          ND_TCHECK2(*tptr, ISIS_SUBTLV_SPB_INSTANCE_MIN_LEN);"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","                     ND_PRINT((ndo, "" len %u"", EXTRACT_32BITS(tptr + 6)));"
+CVE-2017-12901/EIGRP: Do more length checks.,+            if (tlv_tlen < sizeof(*tlv_ptr.eigrp_tlv_general_parm)) {
+CVE-2017-13015/EAP: Add more bounds checks.,+                    ND_TCHECK_8BITS(tptr+count);
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.","+	else if (ATMTPROTO_LEN(ap) != 4)
++		ND_PRINT((ndo, ""<wrong tplen>""));"
+In aoev1_reserve_print() check bounds before trying to print an Ethernet address.," 		ND_PRINT(""\n\tEthernet Address %u: %s"", i, etheraddr_string(ndo, cp));"
+"This is what BIND 9.11.0-P2 does; it not only detects pointers that loop, as ""point backwards"" means ""point before anything we've processed so far, including what we're processing right now"", so the pointer can't point to itself (as that's what we're processing right now).",+				if (offset >= max_offset) {
+"While we're at it, fix a comment, and clean up printing of V1 Nonce, V2 Authentication payloads, and v2 Notice payloads.","+				ND_PRINT((ndo,"")""));"
+No need to test other fields.,-	ND_TCHECK(lshp->ls_type);
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.","                     ND_PRINT((ndo, "" %s (%u),"",
+                            tok2str(eap_type_values, ""unknown"", *(tptr+count)),
+                            *(tptr + count)));"
+"If the protocol type isn't ETHERTYPE_IP or ETHERTYPE_TRAIL, or if the protocol address length isn't 4, don't print the address as an IPv4 address.","+	if (pro != ETHERTYPE_IP && pro != ETHERTYPE_TRAIL)
++		ND_PRINT((ndo, ""<wrong proto type>""));"
+"Otherwise, if, in our search of the hash table, we come across a byte string that's shorter than the string we're looking for, we'll search past the end of the string in the hash table.","-	while (tp->e_nxt)
+-		if (tp->e_addr0 == i &&
+-		    tp->e_addr1 == j &&
+-		    tp->e_addr2 == k &&
+-		    memcmp((const char *)bs, (const char *)(tp->e_bs), nlen) == 0)"
+The IPv6 fragmentation header parser in tcpdump before 4.9.2 has a buffer over-read in print-frag6.c:frag6_print().,-	ND_TCHECK(dp->ip6f_offlg);
+This fixes an infinite loop,"-		ND_PRINT((ndo,"")""));"
+The RADIUS parser in tcpdump before 4.9.2 has a buffer over-read in print-radius.c:print_attr_string().,"-   for (i=0; *data && i < length ; i++, data++)"
+Do some additional length checks while we're at it.,"+		    if (length < 3)
++			goto trunc;"
+CVE-2017-12993/Juniper: Add more bounds checks.,+        ND_TCHECK(*mh);
+add checks to make sure the subTLV fits within the TLV.,"+    if (len < stlv_len)
++      goto trunc;"
+One of the case blocks in ubik_print() didn't check bounds before fetching 32 bits of packet data and could overread past the captured packet data by that amount.,+			ND_TCHECK_32BITS(bp);
+(for 4.9.3) CVE-2018-14466/Rx: fix an over-read bug, 	rxent->opcode = EXTRACT_32BITS(bp + sizeof(struct rx_header));
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header; pass an updated header, just as we do for PPI.","-			hdrlen += printer(ndo, h, p);"
+"Add bounds checks,","+          if (stlv_len < ISIS_SUBTLV_SPB_INSTANCE_MIN_LEN)
++            goto trunc;"
+"This fixes a buffer over-read discovered by Bhargava Shastry, SecT/TU Berlin.", 	ptr = cp[2] - 1;
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header;","+			hdrlen += printer(ndo, &nhdr, p);"
+"The IKEv2 parser in tcpdump before 4.9.2 has a buffer over-read in print-isakmp.c, several functions.",-	ND_TCHECK(*ext);
+CVE-2017-13053/BGP: fix VPN route target bounds checks.,"+	ND_TCHECK2(pptr[5], (plen + 7) / 8);"
+One of the case blocks in ubik_print() didn't check bounds before fetching 32 bits of packet data and could overread past the captured packet data by that amount., 			temp = EXTRACT_32BITS(bp);
+In babel_print_v2() the non-verbose branch for an Update TLV compared the TLV Length against 1 instead of 10 (probably a typo),-                if(len < 1)
+The IP parser in tcpdump before 4.9.2 has a buffer over-read in print-ip.c:ip_printroute().," 		ND_PRINT((ndo, "" %s"", ipaddr_string(ndo, &cp[len])));"
+"The Juniper protocols parser in tcpdump before 4.9.2 has a buffer over-read in print-juniper.c, several functions.","         if (EXTRACT_24BITS(p) == 0xfefe03 || 
+             EXTRACT_24BITS(p) == 0xaaaa03) {"
+Fix processing of TIM IE.,"+			memcpy(tim.bitmap, p + offset + 3, tim.length - 3);"
+Clean up bounds checking.,"-	if (i < (sizeof(struct rip6) - sizeof(struct netinfo6)))
+-		return;"
+This fixes an infinite loop,-    if (*bp != '\n')
+The PIMv2 parser in tcpdump before 4.9.2 has a buffer over-read in print-pim.c:pimv2_print().,"-					ND_PRINT((ndo, "", interval ""));"
+This fixes an infinite loop discovered by Forcepoint's security researchers Otto Airamo & Antti Levomäki.,-					return (NULL);
+fix an existing bounds check for PMSI Tunnel,"+                ND_TCHECK2(tptr[0], 5);"
+Do bounds checking when comparing strings.,"+	if (l_strnstart(ndo, ""MSG"", 4, (const char *)bp, length)) /* A REQuest */
+ 		ND_PRINT((ndo, "" BEEP MSG""));"
+"The TLV length here is 9 bits long, not 8 bits long, so an 8-bit loop counter will overflow and you can loop infinitely.",-    uint8_t i;
+This fixes a buffer over-read discovered by Brian 'geeknik' Carpenter.,-            vec[0].len = hlen;
+CVE-2017-13013/ARP: Fix printing of ARP protocol addresses.,"+	if (pro != ETHERTYPE_IP && pro != ETHERTYPE_TRAIL)
++		ND_PRINT((ndo, ""<wrong proto type>""));"
+This fixes a buffer over-read," 		if (*p != IAC)
+ 			goto pktend;"
+"An IPv6 address plus subnet mask is 32 bytes, not 20 bytes.","-			if (len < 20)
+-				ND_PRINT((ndo,"" len=%d [bad: < 20]"", len));"
+The RSVP parser in tcpdump before 4.9.2 has a buffer over-read in print-rsvp.c:rsvp_obj_print().,"                 ND_PRINT((ndo, ""%s  Setup Priority: %u, Holding Priority: %u, Hop-limit: %u, Bandwidth: %.10g Mbps"",
+                        ident,
+                        (int)obj_ptr.rsvp_obj_frr->setup_prio"
+"The sub-dissector expects that the length and captured length will reflect the actual remaining data in the packet, not the raw amount including the PKTAP header; pass an updated header, just as we do for PPI.",+			nhdr = *h;
+The DHCPv6 parser in tcpdump before 4.9.2 has a buffer over-read in print-dhcp6.c:dhcp6opt_print()., 			tp = (const u_char *)(dh6o + 1);
